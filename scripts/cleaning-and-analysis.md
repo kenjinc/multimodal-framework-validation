@@ -34,8 +34,11 @@ library(viridis)
 ## Data
 
 ``` r
-sales_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/daily-sales-counts.csv")
+sales_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/daily-sales-counts.csv") 
 foot_traffic_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/daily-sales-traffic.csv")
+emissions_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/item-kg-co2e.csv")
+water_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/item-l-h2o-blue.csv")
+historical_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/historical-transaction-volume.csv")
 ```
 
 ## Cleaning (Global)
@@ -740,6 +743,33 @@ fall_data %>%
     ## 1 Bowl Ramen Chicken        860 0.825 Multimodal (Full)
     ## 2 Bowl Ramen Tofu           182 0.175 Multimodal (Full)
 
+### Grill - Mains and Modifications - Prop
+
+``` r
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main" | item_cat=="Modification") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) 
+```
+
+    ## # A tibble: 12 × 2
+    ##    item                             item_count
+    ##    <chr>                                 <int>
+    ##  1 + Beef Patty                             97
+    ##  2 ADD Burger Salmon Grilled                 1
+    ##  3 ADD Cheese                               45
+    ##  4 ADD Chicken Breast                       21
+    ##  5 Add Egg .99                              18
+    ##  6 Add Impossible Burger Patty               1
+    ##  7 Add Sausage 2 Patty                      20
+    ##  8 Black Bean Burger                        19
+    ##  9 Grilled Chicken Breast Sandwich         125
+    ## 10 Grilled Hamburger                       776
+    ## 11 Seared Salmon Burger                     68
+    ## 12 Trillium Grill Impossible Burger         60
+
 differnce in carbon estiamte for highest and lowest number of options to
 choose between
 
@@ -840,7 +870,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'period'. You can override using the
     ## `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
