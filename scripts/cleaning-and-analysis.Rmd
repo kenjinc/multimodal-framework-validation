@@ -23,7 +23,7 @@ sales_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validatio
 foot_traffic_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/daily-sales-traffic.csv")
 ```
 
-## Cleaning
+## Cleaning (Global)
 
 ### Inconsistencies between sales categories and stations
 
@@ -283,6 +283,199 @@ sales_data %>%
 
 With these global changes to the larger sales=count dataset incorporated, we can now separate the data according to observation period.
 
+```{r}
+fall_data <- sales_data %>%
+  filter(semester=="Fall 2024")
+spring_data <- sales_data %>%
+  filter(semester=="Spring 2025")
+```
+
+
+MUST ALSO ADD PRICING DATA AND EMISSIONS DATA - JOIN
+
+## Study One - Cleaning
+
+The object of the first study is to understand how the nature of diner meal choices compare across the four menu conditions trialed. More specifically, we form these comparisons by monitoring changes in the following four outcome variables: 
+
+* `prop_low`: The proportion of lowest-carbon mains purchased at each treated station (i.e., the quotient of the number of lowest-carbon mains sold during each menu condition divided by the total number of mains sold at that station).
+
+* `prop_high`: The proportion of highest-carbon mains purchased at each treated station (i.e., the quotient of the number of highest-carbon mains sold during each menu condition divided by the total number of mains sold at that station).
+
+* `mean_emit`: The average emissions volume associated with the mains purchased at each treated station (i.e., the quotient of the emissions sum for all mains sold at each treated station divided by the total number of mains sold).
+
+* `mean_cost`: The average amount spent on mains at each treated station (i.e., the quotient of the summed revenue for all mains sold at each treated station divided by the total number of mains sold).
+
+### Between-Condition Observational Differences
+
+We'll first evaluate the differences in the number of observation days and sales counts across study periods.  
+
+* Differences in the number of observation days across menu conditions:
+
+```{r}
+fall_data %>%
+  group_by(period,date) %>%
+  summarise(count=n()) %>%
+  mutate(day_count=1) %>%
+  summarise(observation_days=sum(day_count))
+```
+
+* Differences in global sales volume across menu conditions: 
+
+```{r}
+fall_data %>%
+  group_by(period,date) %>%
+  summarise(count=n()) %>%
+  group_by(period) %>%
+  summarise(sales_count=sum(count))
+```
+
+### Grill - Mains - Prop
+
+```{r}
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(19+125+776+68+60)) %>%
+  mutate(condition="Control")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Carbon Label") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(32+159+935+74+85)) %>%
+  mutate(condition="Carbon Label")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Default") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(33+167+904+76+90)) %>%
+  mutate(condition="Default")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(27+84+624+59+50)) %>%
+  mutate(condition="Multimodal")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal (Extra)") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(14+81+533+66+57)) %>%
+  mutate(condition="Multimodal (Extra)")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal (Extra)"| period=="Multimodal") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(41+165+1157+125+107)) %>%
+  mutate(condition="Multimodal (Full)")
+```
+
+### Ramen - Mains - Prop
+
+```{r}
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(563+108)) %>%
+  mutate(condition="Control")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Carbon Label") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(685+135)) %>%
+  mutate(condition="Carbon Label")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Default") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(698+172)) %>%
+  mutate(condition="Default")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(483+109)) %>%
+  mutate(condition="Multimodal")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal (Extra)") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(377+73)) %>%
+  mutate(condition="Multimodal (Extra)")
+```
+
+```{r}
+fall_data %>%
+  filter(period=="Multimodal (Extra)" | period=="Multimodal") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(860+182)) %>%
+  mutate(condition="Multimodal (Full)")
+```
+
+### Grill - Mains and Modifications - Prop
+
+
+```{r}
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main" | item_cat=="Modification") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) 
+```
 
 
 
@@ -293,6 +486,20 @@ With these global changes to the larger sales=count dataset incorporated, we can
 
 
 
+
+
+
+
+
+
+differnce in carbon estiamte for highest and lowest 
+number of options to choose between
+
+Sides and modifications not factored in currently 
+
+also measure spillover across other stations during same meal interval
+
+measure spillover across other meal interval
 
 
 ### Foot Traffic

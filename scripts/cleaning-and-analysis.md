@@ -38,7 +38,7 @@ sales_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validatio
 foot_traffic_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/daily-sales-traffic.csv")
 ```
 
-## Cleaning
+## Cleaning (Global)
 
 ### Inconsistencies between sales categories and stations
 
@@ -430,6 +430,325 @@ With these global changes to the larger sales=count dataset
 incorporated, we can now separate the data according to observation
 period.
 
+``` r
+fall_data <- sales_data %>%
+  filter(semester=="Fall 2024")
+spring_data <- sales_data %>%
+  filter(semester=="Spring 2025")
+```
+
+MUST ALSO ADD PRICING DATA AND EMISSIONS DATA - JOIN
+
+## Study One - Cleaning
+
+The object of the first study is to understand how the nature of diner
+meal choices compare across the four menu conditions trialed. More
+specifically, we form these comparisons by monitoring changes in the
+following four outcome variables:
+
+- `prop_low`: The proportion of lowest-carbon mains purchased at each
+  treated station (i.e., the quotient of the number of lowest-carbon
+  mains sold during each menu condition divided by the total number of
+  mains sold at that station).
+
+- `prop_high`: The proportion of highest-carbon mains purchased at each
+  treated station (i.e., the quotient of the number of highest-carbon
+  mains sold during each menu condition divided by the total number of
+  mains sold at that station).
+
+- `mean_emit`: The average emissions volume associated with the mains
+  purchased at each treated station (i.e., the quotient of the emissions
+  sum for all mains sold at each treated station divided by the total
+  number of mains sold).
+
+- `mean_cost`: The average amount spent on mains at each treated station
+  (i.e., the quotient of the summed revenue for all mains sold at each
+  treated station divided by the total number of mains sold).
+
+### Between-Condition Observational Differences
+
+We’ll first evaluate the differences in the number of observation days
+and sales counts across study periods.
+
+- Differences in the number of observation days across menu conditions:
+
+``` r
+fall_data %>%
+  group_by(period,date) %>%
+  summarise(count=n()) %>%
+  mutate(day_count=1) %>%
+  summarise(observation_days=sum(day_count))
+```
+
+    ## `summarise()` has grouped output by 'period'. You can override using the
+    ## `.groups` argument.
+
+    ## # A tibble: 5 × 2
+    ##   period             observation_days
+    ##   <chr>                         <dbl>
+    ## 1 Carbon Label                     10
+    ## 2 Control                           8
+    ## 3 Default                          10
+    ## 4 Multimodal                        7
+    ## 5 Multimodal (Extra)               10
+
+- Differences in global sales volume across menu conditions:
+
+``` r
+fall_data %>%
+  group_by(period,date) %>%
+  summarise(count=n()) %>%
+  group_by(period) %>%
+  summarise(sales_count=sum(count))
+```
+
+    ## `summarise()` has grouped output by 'period'. You can override using the
+    ## `.groups` argument.
+
+    ## # A tibble: 5 × 2
+    ##   period             sales_count
+    ##   <chr>                    <int>
+    ## 1 Carbon Label               505
+    ## 2 Control                    409
+    ## 3 Default                    499
+    ## 4 Multimodal                 353
+    ## 5 Multimodal (Extra)         448
+
+### Grill - Mains - Prop
+
+``` r
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(19+125+776+68+60)) %>%
+  mutate(condition="Control")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition
+    ##   <chr>                                 <int>  <dbl> <chr>    
+    ## 1 Black Bean Burger                        19 0.0181 Control  
+    ## 2 Grilled Chicken Breast Sandwich         125 0.119  Control  
+    ## 3 Grilled Hamburger                       776 0.740  Control  
+    ## 4 Seared Salmon Burger                     68 0.0649 Control  
+    ## 5 Trillium Grill Impossible Burger         60 0.0573 Control
+
+``` r
+fall_data %>%
+  filter(period=="Carbon Label") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(32+159+935+74+85)) %>%
+  mutate(condition="Carbon Label")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition   
+    ##   <chr>                                 <int>  <dbl> <chr>       
+    ## 1 Black Bean Burger                        32 0.0249 Carbon Label
+    ## 2 Grilled Chicken Breast Sandwich         159 0.124  Carbon Label
+    ## 3 Grilled Hamburger                       935 0.728  Carbon Label
+    ## 4 Seared Salmon Burger                     74 0.0576 Carbon Label
+    ## 5 Trillium Grill Impossible Burger         85 0.0661 Carbon Label
+
+``` r
+fall_data %>%
+  filter(period=="Default") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(33+167+904+76+90)) %>%
+  mutate(condition="Default")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition
+    ##   <chr>                                 <int>  <dbl> <chr>    
+    ## 1 Black Bean Burger                        33 0.0260 Default  
+    ## 2 Grilled Chicken Breast Sandwich         167 0.131  Default  
+    ## 3 Grilled Hamburger                       904 0.712  Default  
+    ## 4 Seared Salmon Burger                     76 0.0598 Default  
+    ## 5 Trillium Grill Impossible Burger         90 0.0709 Default
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(27+84+624+59+50)) %>%
+  mutate(condition="Multimodal")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition 
+    ##   <chr>                                 <int>  <dbl> <chr>     
+    ## 1 Black Bean Burger                        27 0.0320 Multimodal
+    ## 2 Grilled Chicken Breast Sandwich          84 0.0995 Multimodal
+    ## 3 Grilled Hamburger                       624 0.739  Multimodal
+    ## 4 Seared Salmon Burger                     59 0.0699 Multimodal
+    ## 5 Trillium Grill Impossible Burger         50 0.0592 Multimodal
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal (Extra)") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(14+81+533+66+57)) %>%
+  mutate(condition="Multimodal (Extra)")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition         
+    ##   <chr>                                 <int>  <dbl> <chr>             
+    ## 1 Black Bean Burger                        14 0.0186 Multimodal (Extra)
+    ## 2 Grilled Chicken Breast Sandwich          81 0.108  Multimodal (Extra)
+    ## 3 Grilled Hamburger                       533 0.710  Multimodal (Extra)
+    ## 4 Seared Salmon Burger                     66 0.0879 Multimodal (Extra)
+    ## 5 Trillium Grill Impossible Burger         57 0.0759 Multimodal (Extra)
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal (Extra)"| period=="Multimodal") %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(41+165+1157+125+107)) %>%
+  mutate(condition="Multimodal (Full)")
+```
+
+    ## # A tibble: 5 × 4
+    ##   item                             item_count   prop condition        
+    ##   <chr>                                 <int>  <dbl> <chr>            
+    ## 1 Black Bean Burger                        41 0.0257 Multimodal (Full)
+    ## 2 Grilled Chicken Breast Sandwich         165 0.103  Multimodal (Full)
+    ## 3 Grilled Hamburger                      1157 0.725  Multimodal (Full)
+    ## 4 Seared Salmon Burger                    125 0.0784 Multimodal (Full)
+    ## 5 Trillium Grill Impossible Burger        107 0.0671 Multimodal (Full)
+
+### Ramen - Mains - Prop
+
+``` r
+fall_data %>%
+  filter(period=="Control") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(563+108)) %>%
+  mutate(condition="Control")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition
+    ##   <chr>                   <int> <dbl> <chr>    
+    ## 1 Bowl Ramen Chicken        563 0.839 Control  
+    ## 2 Bowl Ramen Tofu           108 0.161 Control
+
+``` r
+fall_data %>%
+  filter(period=="Carbon Label") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(685+135)) %>%
+  mutate(condition="Carbon Label")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition   
+    ##   <chr>                   <int> <dbl> <chr>       
+    ## 1 Bowl Ramen Chicken        685 0.835 Carbon Label
+    ## 2 Bowl Ramen Tofu           135 0.165 Carbon Label
+
+``` r
+fall_data %>%
+  filter(period=="Default") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(698+172)) %>%
+  mutate(condition="Default")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition
+    ##   <chr>                   <int> <dbl> <chr>    
+    ## 1 Bowl Ramen Chicken        698 0.802 Default  
+    ## 2 Bowl Ramen Tofu           172 0.198 Default
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(483+109)) %>%
+  mutate(condition="Multimodal")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition 
+    ##   <chr>                   <int> <dbl> <chr>     
+    ## 1 Bowl Ramen Chicken        483 0.816 Multimodal
+    ## 2 Bowl Ramen Tofu           109 0.184 Multimodal
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal (Extra)") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(377+73)) %>%
+  mutate(condition="Multimodal (Extra)")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition         
+    ##   <chr>                   <int> <dbl> <chr>             
+    ## 1 Bowl Ramen Chicken        377 0.838 Multimodal (Extra)
+    ## 2 Bowl Ramen Tofu            73 0.162 Multimodal (Extra)
+
+``` r
+fall_data %>%
+  filter(period=="Multimodal (Extra)" | period=="Multimodal") %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(item) %>%
+  summarise(item_count=sum(count)) %>%
+  mutate(prop=item_count/(860+182)) %>%
+  mutate(condition="Multimodal (Full)")
+```
+
+    ## # A tibble: 2 × 4
+    ##   item               item_count  prop condition        
+    ##   <chr>                   <int> <dbl> <chr>            
+    ## 1 Bowl Ramen Chicken        860 0.825 Multimodal (Full)
+    ## 2 Bowl Ramen Tofu           182 0.175 Multimodal (Full)
+
+differnce in carbon estiamte for highest and lowest number of options to
+choose between
+
+Sides and modifications not factored in currently
+
+also measure spillover across other stations during same meal interval
+
+measure spillover across other meal interval
+
 ### Foot Traffic
 
 ``` r
@@ -521,7 +840,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'period'. You can override using the
     ## `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
