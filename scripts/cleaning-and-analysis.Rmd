@@ -24,6 +24,7 @@ foot_traffic_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-va
 emissions_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/item-kg-co2e.csv")
 water_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/item-l-h2o-blue.csv")
 historical_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/historical-transaction-volume.csv")
+ingredient_level_footprint_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-validation/data/parent-data/ingredient-level-footprint-calculations.csv")
 ```
 
 ## Cleaning (Global)
@@ -32,9 +33,9 @@ historical_data <- read.csv("/Users/kenjinchang/github/multimodal-framework-vali
 
 The first item we'll have to address involves the discrepancies in how items are categorized within the point-of-sale (POS) system and the physical dining environment. 
 
-In particular, the "Asian," "Grill," and "Italian" sales categories, as they are represented under the POS system, are—in reality—each representing two independent station concepts: the "Ramen" and "Wok" concepts for the "Asian" category, the "Grill" and "Quesadilla" concepts for the "Grill" category, and the "Pasta" and "Pizza" concepts for the "Italian" category. We will also change the "Mexican" sales category to the "Wrap" station, as reflected by the menu signage at the physical station.
+In particular, the "Asian," "Grill," and "Italian" sales categories, as they are represented within `sales_data` by the POS system, are—in reality—each representing two independent station concepts: the "Ramen" and "Wok" concepts for the "Asian" category, the "Grill" and "Quesadilla" concepts for the "Grill" category, and the "Pasta" and "Pizza" concepts for the "Italian" category. We will also make corresponding changes to the "Mexican" sales category, which flags sales from the "Wrap" station concept.
 
-To help incorporate these distinctions, we'll first use the following code chunks to tease out the nature and number of unique items listed under each of the nine sales categories.
+To help us incorporate this information, we'll first use the following code chunks to tease out both the names and number of unique items listed under each of the nine sales categories.
 
 ```{r}
 sales_data %>%
@@ -51,7 +52,7 @@ sales_data %>%
   count()
 ```
 
-Now that we are able to quantify and reference the unique items listed under each sales category, we will perform a series of checks to see whether there are items—be them modifications, mains, or sides—with the same name sold under different sales categories or, alternatively, items with different names sold under the same sales category.
+With these, we are able to easily reference the information needed to perform two initial checks: one to see whether there are identical items—be them modifications, mains, or sides—with the same name sold under different sales categories and another to see if there are identical items with different names sold under the same sales category.
 
 ```{r}
 sales_data %>%
@@ -60,11 +61,15 @@ sales_data %>%
   arrange(item,sales_cat) 
 ```
 
-From this list, we can tease out two things: 
+From these initial checks, we can tease out a few things: 
 
-* The modification that indicates whether a guest added a beef patty to their order is represented differently under the "Grill" sales category depending on whether the sale was recorded during Fall 2024 (i.e., "ADD Beef Patty $2.99") or Spring 2025 (i.e., "ADD Beef Patty").
+* The modification used to indicate whether a guest added a beef patty to their order is represented differently under the "Grill" sales category depending on whether the sale was made during Fall 2024 (i.e., "ADD Beef Patty $2.99") or Spring 2025 (i.e., "ADD Beef Patty").
 
-* The side order of potato tots (i.e., "Side Potato Tots") is listed with the same item name under both the "Grill" sales category and the "Grab N Go" sales category. During Fall 2024, sales of "Side Potato Tots" were categorized under the "Grab N Go" sales category whereas, during Spring 2025, they were categorized under the "Grill" sales category. On a similar note, the "Fried Chicken Tenders" are categorized under the "Grill" sales category despite being sold at the "Grab N Go" sales category. Because part of our analysis relies on understanding how diners choose between main, side, and modification options at the "Grill," specifically, we will categorize sales of "Fried Chicken Tenders" under the "Grab N Go" sales category and station downstream.
+* "Side Potato Tots" is listed with the same name under both the "Grill" sales category and the "Grab N Go" sales category. During Fall 2024, "Side Potato Tots" sales were categorized under the "Grab N Go" sales category whereas, during Spring 2025, they were categorized under "Grill." 
+
+Furthermore, from our understanding of how the listed items are physically arranged within the dining context, we can also use these checks to determine whether there are items that are represented consistently both within and across sales categories but filed under a category other than the one that where they are sold.
+
+* "Fried Chicken Tenders" are categorized under the "Grill" sales category despite being sold alongside the items listed under "Grab N Go." Because part of our analysis relies on understanding how diners choose between main, side, and modification options at the "Grill," specifically, we will instead opt to file sales of "Fried Chicken Tenders" under "Grab N Go."
 
 Given this, we'll make the following changes for consistency: 
 
@@ -78,8 +83,7 @@ sales_data <- sales_data %>%
   mutate(item=str_replace_all(item,"ADD Beef Patty","+ Beef Patty"))
 ```
 
-
-* We will categorize "Side Potato Tots" and "Fried Chicken Tenders" under the "Grab N GO" sales category across both semesters.
+* We will categorize "Side Potato Tots" and "Fried Chicken Tenders" under the "Grab N Go" sales category across both study periods.
 
 ```{r}
 sales_data <- sales_data %>% 
@@ -89,7 +93,7 @@ sales_data <- sales_data %>%
                              TRUE ~ sales_cat))
 ```
 
-With these initial checks performed and addressed, we can now move on to resolve the inconsistencies between sales categories and station categories. We will accomplish this by creating a new categorical variable, `station`, that pairs items according to the station concepts where they are sold within the physical dining environment. 
+With these initial checks performed, and the prescribed changes addressed, we can now move on to resolve the inconsistencies between the sales categories created via the POS system and the station concepts where those items are actually sold. We will accomplish this by creating a new categorical variable, `station`, that pairs items according to the stations where they are sold within the physical dining environment. 
 
 ```{r}
 sales_data %>%
@@ -172,7 +176,7 @@ sales_data <- sales_data %>%
                            item=="Soup 12 oz"~"Soup"))
 ```
 
-Then, we perform a few quick checks to ensure all of the items were properly coded.
+Then, we perform a few quick checks to ensure all of the items were coded as intended, without duplicates or typos.
 
 ```{r}
 sum(is.na(sales_data$station))
@@ -185,9 +189,11 @@ sales_data %>%
 
 ### Correcting known input errors
 
-Upon receiving the sales data, we corresponded with our research partners to clarify the sales of certain items that did not appear on either the altered or control menus. In particular, we noted that, at the "Ramen" station, there were recorded sales of "Bowl Ramen Pork," despite "Bowl Ramen Pork" not being an option within the dining environment. Our partners clarified that these were likely input errors that occurred at the register, and that we should map those purchases onto sales of "Bowl Ramen Chicken," as opposed to "Bowl Ramen Tofu," on the basis that it was more likely that a sales assistant would misidentify chicken as pork.
+For the next stage of our cleaning process, we corresponded with our research partners at the dining facility to clarify how we ought to treat the sales of items that were noticeably absent from the previously reviewed dining menus. In particular, we noted that, at the "Ramen" station, there were recorded sales of "Bowl Ramen Pork," despite this not being an advertised offering within the dining facility during either of the two study periods.
 
-We make these adjustments below, knowing that we will later have to make additional changes so that the counts on days where there are recorded sales for both "Bowl Ramen Chicken" and "Bowl Ramen Pork" are collapsed: 
+Our site partners noted that these were likely input errors that occurred at the register, in part because it was a previously programmed option to accommodate sales of this item during a prior time period. They correspondingly advised that we should map those purchases onto sales of "Bowl Ramen Chicken," as opposed to "Bowl Ramen Tofu," on the basis that it was more likely that a sales assistant would visually misidentify chicken as pork—as opposed to tofu-at check-out.
+
+As such, we make the following change:
 
 ```{r}
 sales_data <- sales_data %>% 
@@ -196,7 +202,7 @@ sales_data <- sales_data %>%
 
 ### Distinguishing between mains, modifications, and sides
 
-In the interest of separating our analysis between the different types of items listed within our sales data, we will create a new categorical variable, `item_cat` specifying each sales tally according to whether the item references the sale of a side, a main, or a modification made to a main. 
+In the interest of separating our analysis between the different types of items listed within `sales_data`, we will create a new categorical variable, `item_cat` specifying each sales tally according to whether the item references the sale of a side, a main, or a modification made to a main. 
 
 ```{r}
 sales_data <- sales_data %>%
@@ -284,7 +290,113 @@ sales_data %>%
   distinct(item_cat)
 ```
 
-With these global changes to the larger sales=count dataset incorporated, we can now separate the data according to observation period.
+### Distinguishing between meal periods and treatment and non-treatment stations
+
+We use the following code chunks to, first, list out each of the relevant stations and, subsequently, designate them (using `station_type`) as either satellite (i.e., used to measure effects on sales outside of the treated stations) or treatment-receiving (i.e.,used to measure within-station changes in food choice). More specifically, this will offer us an initial, within-period indicator of reactance (i.e., whether there are decreases in sales that temporally correlate with the implementation of any of the various treatment-menu conditions).
+
+```{r}
+sales_data %>%
+  distinct(station) %>%
+  arrange(station)
+```
+
+```{r}
+sales_data <- sales_data %>%
+  mutate(station_type=case_when(station=="Breakfast"~"Satellite",
+                                station=="Deli"~"Satellite",
+                                station=="Grab N Go"~"Satellite",
+                                station=="Grill"~"Treatment",
+                                station=="Pasta"~"Satellite",
+                                station=="Pizza"~"Satellite",
+                                station=="Quesadilla"~"Satellite",
+                                station=="Ramen"~"Treatment",
+                                station=="Salad Bar"~"Satellite",
+                                station=="Soup"~"Satellite",
+                                station=="Wok"~"Satellite",
+                                station=="Wrap"~"Satellite")) 
+write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-traffic.csv")
+```
+
+We will additionally create a new variable, `meal_period`, to distinguish between the different service windows represented within `sales_data`. More specifically, to offer a contrary between-indicator of reactance, we will use the coded categories (i.e., "Breakfast" and "Lunch") to monitor for whether the phases during which the different menu conditions were implemented were associated with any decreases in sales volumes.
+
+```{r}
+sales_data <- sales_data %>%
+  mutate(meal_period=case_when(station=="Breakfast"~"Breakfast",
+                                station=="Deli"~"Lunch",
+                                station=="Grab N Go"~"Lunch",
+                                station=="Grill"~"Lunch",
+                                station=="Pasta"~"Lunch",
+                                station=="Pizza"~"Lunch",
+                                station=="Quesadilla"~"Lunch",
+                                station=="Ramen"~"Lunch",
+                                station=="Salad Bar"~"Lunch",
+                                station=="Soup"~"Lunch",
+                                station=="Wok"~"Lunch",
+                                station=="Wrap"~"Lunch")) 
+write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-traffic.csv")
+```
+
+### Mapping dish-level emissions, water, and cost estimates onto items
+
+In our companion repo, we had—during the planning phases of this project—collated life-cycle analysis data to estimate the carbon and blue-water costs associated with each of the dishes on offer at the two treated stations. In part, the purpose of this recipe-modeling effort was to enable precise estimation o the carbon- and water-footprint labels used during the various menu conditions that required them. However, another benefit of this work is that it also enables us to understand how diner food choices map on to their corresponding climate and resource externalities. This means that, at the station level, we are able to calculate the average emissions and water costs associated with each station across the various menu conditions trialed. 
+
+To avoid premature rounding, we will recalculate the emissions and resource costs associated with the various mains, modifications, and sides on offer at both the "Grill" and "Ramen" stations, rather than use the estimates given in the descriptive footprint labels.
+
+We'll start with process by pairing each of the qualifying offerings with their corresponding water and emissions costs. As a reminder, these are the sales item we need to find correspond carbon- and water-cost data for:
+
+```{r}
+sales_data %>%
+  filter(station=="Grill" | station=="Ramen") %>%
+  distinct(item) %>%
+  arrange()
+```
+
+We'll begin with all composite items (i.e., items comprised of more than one ingredient, as defined by the recipe system): 
+
+```{r}
+ingredient_level_footprint_data %>%
+  group_by(recipe) %>%
+  summarise(carbon_cost=sum(kg_co2e),water_cost=sum(l_h2o_blue)) %>%
+  filter(recipe=="[CYO Grill Component] Burger" | recipe=="[CYO Grill Component] Fries" | recipe=="[CYO Grill Component] Chicken Sandwich" | recipe=="[CYO Grill Component] Salmon Burger" | recipe=="[CYO Grill Component] Impossible Burger" | recipe=="[CYO Grill Component] Sweet Potato Fries" | recipe=="[CYO Grill Component] Black Bean Burger" | recipe=="[CYO Ramen Component] Chicken Bowl" | recipe=="[CYO Ramen Component] Tofu Bowl" | recipe=="[CYO Ramen Component] Ginger Tare")
+```
+
+This leaves us with the following: 
+
+Beef Patty +
+Add Impossible burger patty
+add egg
+add cheese (need to average across cheese options)
+add sausage 2 patty
+add burger salmon grilled
+
+```{r}
+ingredient_level_footprint_data
+```
+
+
+
+```{r}
+emissions_data
+```
+
+```{r}
+water_data
+```
+
+
+
+```{r}
+sales_data %>%
+  filter(station=="Grill") %>%
+  distinct(item)
+```
+
+ distance between highest-carbon offering and next-lowest offering between stations
+ 
+ 
+### Separating global dataset into study-level dataasets 
+
+With these global changes to the larger sales-count dataset incorporated, we can now separate the data according to observation period.
 
 ```{r}
 fall_data <- sales_data %>%
@@ -292,9 +404,6 @@ fall_data <- sales_data %>%
 spring_data <- sales_data %>%
   filter(semester=="Spring 2025")
 ```
-
-
-MUST ALSO ADD PRICING DATA AND EMISSIONS DATA - JOIN
 
 ## Study One - Cleaning
 
@@ -314,9 +423,11 @@ We'll first evaluate the differences in the number of observation days and sales
 
 * Differences in the number of observation days across menu conditions:
 
+menu_condition
+
 ```{r}
 fall_data %>%
-  group_by(period,date) %>%
+  group_by(menu_condition,date) %>%
   summarise(count=n()) %>%
   mutate(day_count=1) %>%
   summarise(observation_days=sum(day_count))
@@ -326,9 +437,9 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  group_by(period,date) %>%
+  group_by(menu_condition,date) %>%
   summarise(count=n()) %>%
-  group_by(period) %>%
+  group_by(menu_condition) %>%
   summarise(sales_count=sum(count))
 ```
 
@@ -336,7 +447,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Control") %>%
+  filter(menu_condition=="Control") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -347,7 +458,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Carbon Label") %>%
+  filter(menu_condition=="Carbon Label") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -358,7 +469,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Default") %>%
+  filter(menu_condition=="Default") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -369,7 +480,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -380,7 +491,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal (Extra)") %>%
+  filter(menu_condition=="Multimodal (Extra)") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -391,7 +502,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal (Extra)"| period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal (Extra)"| period=="Multimodal") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -404,7 +515,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Control") %>%
+  filter(menu_condition=="Control") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -415,7 +526,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Carbon Label") %>%
+  filter(menu_condition=="Carbon Label") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -426,7 +537,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Default") %>%
+  filter(menu_condition=="Default") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -437,7 +548,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -448,7 +559,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal (Extra)") %>%
+  filter(menu_condition=="Multimodal (Extra)") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -459,7 +570,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Multimodal (Extra)" | period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal (Extra)" | period=="Multimodal") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -473,7 +584,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(period=="Control") %>%
+  filter(menu_condition=="Control") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main" | item_cat=="Modification") %>%
   group_by(item) %>%
@@ -509,14 +620,14 @@ measure spillover across other meal interval
 
 ```{r}
 foot_traffic_data %>%
-  select(date,time,count,period) %>%
+  select(date,time,count,menu_condition) %>%
   distinct(time)
 ```
 
 ```{r}
 foot_traffic_data %>%
-  select(date,time,count,period) %>%
-  group_by(period,time) %>%
+  select(date,time,count,menu_condition) %>%
+  group_by(menu_condition,time) %>%
   summarise(transaction_volume=mean(count)) 
 head(5)
 ```
@@ -524,10 +635,10 @@ head(5)
 
 ```{r}
 foot_traffic_data %>%
-  select(date,time,count,period) %>%
-  group_by(period,time) %>%
+  select(date,time,count,menu_condition) %>%
+  group_by(menu_condition,time) %>%
   summarise(transaction_volume=mean(count)) %>%
-  ggplot(aes(x=time,y=transaction_volume,fill=period)) + 
+  ggplot(aes(x=time,y=transaction_volume,fill=menu_condition)) + 
   geom_col(position="dodge") +
   scale_x_discrete(limits=c("6:15 AM","6:30 AM","6:45 AM","7:00 AM","7:15 AM","7:30 AM","7:45 AM","8:00 AM","8:15 AM","8:30 AM","8:45 AM","9:00 AM","9:15 AM","9:30 AM","9:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","1:00 PM","1:15 PM","1:30 PM","1:45 PM","2:00 PM","2:15 PM","2:30 PM","2:45 PM","3:00 PM","3:15 PM","3:30 PM","3:45 PM","4:00 PM"))
 ```
