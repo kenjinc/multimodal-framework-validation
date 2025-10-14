@@ -276,7 +276,6 @@ sales_data <- sales_data %>%
                            item=="Salad by the Pound"~"Main",
                            item=="8 oz Soup"~"Main",
                            item=="Soup 12 oz"~"Main"))
-write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-traffic.csv")
 ```
 
 As we did before, we will perform a series of checks to ensure the new variable was coded as intended.
@@ -314,7 +313,6 @@ sales_data <- sales_data %>%
                                 station=="Soup"~"Satellite",
                                 station=="Wok"~"Satellite",
                                 station=="Wrap"~"Satellite")) 
-write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-traffic.csv")
 ```
 
 We will additionally create a new variable, `meal_period`, to distinguish between the different service windows represented within `sales_data`. More specifically, to offer a contrary between-indicator of reactance, we will use the coded categories (i.e., "Breakfast" and "Lunch") to monitor for whether the phases during which the different menu conditions were implemented were associated with any decreases in sales volumes.
@@ -333,14 +331,13 @@ sales_data <- sales_data %>%
                                 station=="Soup"~"Lunch",
                                 station=="Wok"~"Lunch",
                                 station=="Wrap"~"Lunch")) 
-write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-traffic.csv")
 ```
 
 ### Mapping dish-level emissions, water, and cost estimates onto items
 
-In our companion repo, we had—during the planning phases of this project—collated life-cycle analysis data to estimate the carbon and blue-water costs associated with each of the dishes on offer at the two treated stations. In part, the purpose of this recipe-modeling effort was to enable precise estimation o the carbon- and water-footprint labels used during the various menu conditions that required them. However, another benefit of this work is that it also enables us to understand how diner food choices map on to their corresponding climate and resource externalities. This means that, at the station level, we are able to calculate the average emissions and water costs associated with each station across the various menu conditions trialed. 
+In our companion repo, we had—during the planning phases of this project—collated life-cycle analysis data to estimate the carbon and blue-water costs associated with each of the dishes on offer at the two treated stations. In part, the purpose of this recipe modeling was to enable precise estimations for the carbon- and water-footprint labels used during some of the treatment phases of the study. Another virtue of this work, however, is that it also enables us to understand how diner food choices map on to their corresponding climate and resource costs. In other words, we are able to use these figures to help calculate the mean emissions and water costs associated with item sales at each station across the various menu conditions trialed. This enables us to reasonably detect whether the sustainability of diners' food choices improved during the treatment phases, outside of the simpler proportions used to investigate whether the highest- and lowest-emitting options were chosen less and more, respectively. 
 
-To avoid premature rounding, we will recalculate the emissions and resource costs associated with the various mains, modifications, and sides on offer at both the "Grill" and "Ramen" stations, rather than use the estimates given in the descriptive footprint labels.
+To avoid premature rounding, we will recalculate the emissions and resource costs associated with the various mains, modifications, and sides on offer at both the "Grill" and "Ramen" stations, rather than use the estimates used to populate the descriptive footprint labels.
 
 We'll start with process by pairing each of the qualifying offerings with their corresponding water and emissions costs. As a reminder, these are the sales item we need to find correspond carbon- and water-cost data for:
 
@@ -351,52 +348,101 @@ sales_data %>%
   arrange()
 ```
 
-We'll begin with all composite items (i.e., items comprised of more than one ingredient, as defined by the recipe system): 
+We'll begin by pairing the calculated water- and carbon-footprint estimates to each corresponding composite item (i.e., an item comprised of more than one ingredient, as defined by the research partner's recipe system): 
 
 ```{r}
-ingredient_level_footprint_data %>%
+composite_item_pairing <- ingredient_level_footprint_data %>%
   group_by(recipe) %>%
-  summarise(carbon_cost=sum(kg_co2e),water_cost=sum(l_h2o_blue)) %>%
-  filter(recipe=="[CYO Grill Component] Burger" | recipe=="[CYO Grill Component] Fries" | recipe=="[CYO Grill Component] Chicken Sandwich" | recipe=="[CYO Grill Component] Salmon Burger" | recipe=="[CYO Grill Component] Impossible Burger" | recipe=="[CYO Grill Component] Sweet Potato Fries" | recipe=="[CYO Grill Component] Black Bean Burger" | recipe=="[CYO Ramen Component] Chicken Bowl" | recipe=="[CYO Ramen Component] Tofu Bowl" | recipe=="[CYO Ramen Component] Ginger Tare")
+  summarise(ind_carbon_cost=sum(kg_co2e),ind_water_cost=sum(l_h2o_blue)) %>%
+  filter(recipe=="[CYO Grill Component] Burger" | recipe=="[CYO Grill Component] Fries" | recipe=="[CYO Grill Component] Chicken Sandwich" | recipe=="[CYO Grill Component] Salmon Burger" | recipe=="[CYO Grill Component] Impossible Burger" | recipe=="[CYO Grill Component] Sweet Potato Fries" | recipe=="[CYO Grill Component] Black Bean Burger" | recipe=="[CYO Ramen Component] Chicken Bowl" | recipe=="[CYO Ramen Component] Tofu Bowl" | recipe=="[CYO Ramen Component] Ginger Tare") %>%
+  mutate(item=case_when(recipe=="[CYO Grill Component] Black Bean Burger"~"Black Bean Burger",
+                        recipe=="[CYO Grill Component] Burger"~"Grilled Hamburger",
+                        recipe=="[CYO Grill Component] Chicken Sandwich"~"Grilled Chicken Breast Sandwich",
+                        recipe=="[CYO Grill Component] Fries"~"French Fries",
+                        recipe=="[CYO Grill Component] Impossible Burger"~"Trillium Grill Impossible Burger",
+                        recipe=="[CYO Grill Component] Salmon Burger"~"Seared Salmon Burger",
+                        recipe=="[CYO Grill Component] Sweet Potato Fries"~"Sweet Potato Fries",
+                        recipe=="[CYO Ramen Component] Chicken Bowl"~"Bowl Ramen Chicken",
+                        recipe=="[CYO Ramen Component] Ginger Tare"~"Add Extra Toppings",
+                        recipe=="[CYO Ramen Component] Tofu Bowl"~"Bowl Ramen Tofu")) %>%
+  select(item,ind_carbon_cost,ind_water_cost)
 ```
 
-This leaves us with the following: 
-
-Beef Patty +
-Add Impossible burger patty
-add egg
-add cheese (need to average across cheese options)
-add sausage 2 patty
-add burger salmon grilled
+This leaves us with seven items left to pair, each of which are listed within the recipe system as single ingredients (i.e., simple recipes). We'll handle the "ADD Cheese" modification separately because, unlike the remaining six items, this option requires us to calculate the average cost associated with each of the six different topping varieties offered. 
 
 ```{r}
-ingredient_level_footprint_data
-```
-
-
-
-```{r}
-emissions_data
-```
-
-```{r}
-water_data
-```
-
-
-
-```{r}
-sales_data %>%
+variable_item_pairing <- ingredient_level_footprint_data %>%
   filter(station=="Grill") %>%
-  distinct(item)
+  filter(recipe=="[CYO Grill Component] Toppings, American Cheese" | recipe=="[CYO Grill Component] Toppings, Cheddar Cheese" | recipe=="[CYO Grill Component] Toppings, Pepper Jack Cheese" | recipe=="[CYO Grill Component] Toppings, Provolone Cheese" | recipe=="[CYO Grill Component] Toppings, Blue Cheese" | recipe=="[CYO Grill Component] Toppings, Vegan Cheese") %>%
+  select(recipe,kg_co2e,l_h2o_blue) %>% 
+  mutate(item="ADD Cheese") %>%
+  group_by(item) %>%
+  summarise(ind_carbon_cost=mean(kg_co2e),ind_water_cost=mean(l_h2o_blue))
 ```
 
- distance between highest-carbon offering and next-lowest offering between stations
- 
- 
+With that sorted, we can now move on to the last six remaining simple recipes:
+
+```{r}
+simple_item_pairing <- ingredient_level_footprint_data %>%
+  filter(ingredient=="80/20 Beef Patty" | ingredient=="\"Impossible Burger\" Patty [Patty \"Impossible Burger\" Trillium]" | ingredient=="Bacon Pork Raw" | ingredient=="5 Oz Bnls Skinles Chicken Breast" | ingredient=="Salmon Burger Patty" | ingredient=="Egg Whole Fresh Medium Flat [Egg Sous Vide]") %>%
+  select(ingredient,kg_co2e,l_h2o_blue) %>%
+  mutate(item=case_when(ingredient=="80/20 Beef Patty"~"+ Beef Patty",
+                        ingredient=="5 Oz Bnls Skinles Chicken Breast"~"ADD Chicken Breast",
+                        ingredient=="Salmon Burger Patty"~"ADD Burger Salmon Grilled",
+                        ingredient=="\"Impossible Burger\" Patty [Patty \"Impossible Burger\" Trillium]"~"Add Impossible Burger Patty",
+                        ingredient=="Bacon Pork Raw"~"Add Sausage 2 Patty",
+                        ingredient=="Egg Whole Fresh Medium Flat [Egg Sous Vide]"~"Add Egg .99")) %>%
+  rename(ind_carbon_cost=kg_co2e,ind_water_cost=l_h2o_blue) %>%
+  select(item,ind_carbon_cost,ind_water_cost) %>%
+  distinct()
+```
+
+Now that we've mapped the corresponding emissions- and resource-costs associated with each of the items offered at the treatment station, we can perform a join to incorporate this information into `sales_data`. Before that, though, we need to add the monetary costs of each changes, too, to help us understand whether sales revenue varied across the different menu conditions trialled.
+
+While we have most of the pricing information available to accomplish this, we assume a flat 2.99 fee for all additional patty modifications, with the exception of the "Add Sausage 2 Patty" modification, which instead maps on to the bacon addition presented on the "Grill" menu. We also assume a $0.99 fee "Add Extra Toppings" modification at the "Ramen" station, which maps on to the Ginger Tare that appears in our recipe modeling.
+
+```{r}
+item_pairing <- bind_rows(composite_item_pairing,variable_item_pairing,simple_item_pairing)
+item_pairing <- item_pairing %>%
+  mutate(ind_dollar_cost=case_when(item=="Black Bean Burger"~8.69,
+                                  item=="Grilled Hamburger"~8.99,
+                                  item=="Grilled Chicken Breast Sandwich"~8.49,
+                                  item=="French Fries"~2.99,
+                                  item=="Trillium Grill Impossible Burger"~10.49,
+                                  item=="Seared Salmon Burger"~8.49,
+                                  item=="Sweet Potato Fries"~2.99,
+                                  item=="Bowl Ramen Chicken"~9.49,
+                                  item=="Add Extra Toppings"~.99,
+                                  item=="Bowl Ramen Tofu"~9.49,
+                                  item=="ADD Cheese"~1.99,
+                                  item=="+ Beef Patty"~2.99,
+                                  item=="ADD Chicken Breast"~2.99,
+                                  item=="ADD Burger Salmon Grilled"~2.99,
+                                  item=="Add Impossible Burger Patty"~2.99,
+                                  item=="Add Sausage 2 Patty"~1.99,
+                                  item=="Add Egg .99"~.99))
+item_pairing
+```
+
+Now, we can add the individual, item-level costs for each of the mains, modifications, and sides sold at the two treatment stations.
+
+```{r}
+sales_data <- left_join(sales_data,item_pairing,join_by(item))
+```
+
+In addition to adding `ind_carbon_cost`, `ind_water_cost`, and `ind_dollar_cost` to `sales_data`, which map on to the individual costs of each of the items sold at the treatment stations, we will also add `corr_carbon_cost`, `corr_water_cost`, and `corr_dollar_cost`, which will map on to the corespoding costs of each of the items sold at the treatment stations. These variables will instead represent the daily aggregated costs associated with the sales of those items, based on the total quantity sold.
+
+```{r}
+sales_data <- sales_data %>%
+  mutate(corr_carbon_cost=count*ind_carbon_cost) %>%
+  mutate(corr_water_cost=count*ind_water_cost) %>%
+  mutate(corr_dollar_cost=count*ind_dollar_cost) 
+write.csv(sales_data,"/Users/kenjinchang/github/multimodal-framework-validation/data/cleaned_daily-sales-counts.csv")
+```
+
 ### Separating global dataset into study-level dataasets 
 
-With these global changes to the larger sales-count dataset incorporated, we can now separate the data according to observation period.
+With these global changes to `sales_data` now incorporated, we can separate the data according to observation period.
 
 ```{r}
 fall_data <- sales_data %>%
@@ -405,17 +451,984 @@ spring_data <- sales_data %>%
   filter(semester=="Spring 2025")
 ```
 
-## Study One - Cleaning
+## Cleaning and Analysis (Fall 2024)
 
-The object of the first study is to understand how the nature of diner meal choices compare across the four menu conditions trialed. More specifically, we form these comparisons by monitoring changes in the following four outcome variables: 
+The object of the first study is to understand how diner meal choices compared across the four menu conditions trialed. More specifically, we wish to form these comparisons by monitoring specific changes in the following outcome variables: 
 
 * `prop_low`: The proportion of lowest-carbon mains purchased at each treated station (i.e., the quotient of the number of lowest-carbon mains sold during each menu condition divided by the total number of mains sold at that station).
 
 * `prop_high`: The proportion of highest-carbon mains purchased at each treated station (i.e., the quotient of the number of highest-carbon mains sold during each menu condition divided by the total number of mains sold at that station).
 
-* `mean_emit`: The average emissions volume associated with the mains purchased at each treated station (i.e., the quotient of the emissions sum for all mains sold at each treated station divided by the total number of mains sold).
+* `mean_carbon_cost`: The mean emissions cost across the mains, sides, and modifications sold at each treated station (i.e., the quotient of the aggregated emissions costs for the items sold at each treated station divided by the total number of items sold).
 
-* `mean_cost`: The average amount spent on mains at each treated station (i.e., the quotient of the summed revenue for all mains sold at each treated station divided by the total number of mains sold).
+* `mean_spend`: The average revenue gained on mains, sides, and modifications at each treated station (i.e., the quotient of the aggregated revenue for gained for the items sold at each treated station divided by the total number of items sold).
+
+### Proportion of lowest-carbon selections
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_low=case_when(item=="Black Bean Burger" & menu_condition=="Carbon Label" ~ total_count/(32+159+935+74+85),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Carbon Label" ~ total_count/(685+135),
+                            item=="Black Bean Burger" & menu_condition=="Control" ~ total_count/(19+125+776+68+60),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Control" ~ total_count/(563+108),
+                            item=="Black Bean Burger" & menu_condition=="Default" ~ total_count/(33+167+904+76+90),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Default" ~ total_count/(698+172),
+                            item=="Black Bean Burger" & menu_condition=="Multimodal" ~ total_count/(41+165+1157+125+107),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Multimodal" ~ total_count/(860+182))) %>%
+  drop_na(prop_low)
+```
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_low=case_when(item=="Black Bean Burger" & menu_condition=="Carbon Label" ~ total_count/(32+159+935+74+85),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Carbon Label" ~ total_count/(685+135),
+                            item=="Black Bean Burger" & menu_condition=="Control" ~ total_count/(19+125+776+68+60),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Control" ~ total_count/(563+108),
+                            item=="Black Bean Burger" & menu_condition=="Default" ~ total_count/(33+167+904+76+90),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Default" ~ total_count/(698+172),
+                            item=="Black Bean Burger" & menu_condition=="Multimodal" ~ total_count/(41+165+1157+125+107),
+                            item=="Bowl Ramen Tofu" & menu_condition=="Multimodal" ~ total_count/(860+182))) %>%
+  drop_na(prop_low) %>%
+  ggplot(aes(x=menu_condition,y=prop_low,fill=station)) +
+  geom_col(position="dodge") + 
+  scale_x_discrete(limits=c("Control","Carbon Label","Default","Multimodal"))
+```
+
+daily prop-low
+
+```{r}
+daily_prop_low_fall_data <- fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_low=case_when(item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(94),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(47),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(72),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(41),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(68),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(49),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="11-Nov"~total_count/(112),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="11-Nov"~total_count/(81),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(99),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(55),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="12-Nov"~total_count/(134),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="12-Nov"~total_count/(95),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(66),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(57),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="13-Nov"~total_count/(139),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="13-Nov"~total_count/(91),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="14-Nov"~total_count/(145),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="14-Nov"~total_count/(99),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="15-Nov"~total_count/(94),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="15-Nov"~total_count/(76),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(70),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(47),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="16-Oct"~total_count/(123),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="16-Oct"~total_count/(104),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(87),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(41),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="17-Oct"~total_count/(153),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="17-Oct"~total_count/(82),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(71),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(46),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="18-Nov"~total_count/(130),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="18-Nov"~total_count/(77),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="18-Oct"~total_count/(89),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="18-Oct"~total_count/(65),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(50),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(14),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="19-Nov"~total_count/(167),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="19-Nov"~total_count/(98),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(118),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(113),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(39),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(23),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="20-Nov"~total_count/(129),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="20-Nov"~total_count/(99),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="21-Nov"~total_count/(144),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="21-Nov"~total_count/(97),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="21-Oct"~total_count/(143),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="21-Oct"~total_count/(85),
+                             item=="Black Bean Burger"&menu_condition=="Default"&date=="22-Nov"~total_count/(76),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="22-Nov"~total_count/(57),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="22-Oct"~total_count/(163),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="22-Oct"~total_count/(83),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="23-Oct"~total_count/(135),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="23-Oct"~total_count/(92),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="24-Oct"~total_count/(145),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="24-Oct"~total_count/(107),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(98),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(66),
+                             item=="Black Bean Burger"&menu_condition=="Control"&date=="25-Oct"~total_count/(97),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="25-Oct"~total_count/(53),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(75),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(51),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(127),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(76),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(145),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(80),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(131),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(97),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(132),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(82),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(149),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(89),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(146),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(97),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(114),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(85),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(173),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(92),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(138),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(84),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(103),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(76),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(137),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(107),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(142),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(97),
+                             item=="Black Bean Burger"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(107),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(73),
+                             item=="Black Bean Burger"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(128),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(77))) %>%
+  drop_na(prop_low) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(daily_prop_low_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(daily_prop_low_fall_data,aes(x=date,y=prop_low,color=station)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[dates_vline]),linetype=2)
+```
+
+### Proportion of highest-emitting selections
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_high=case_when(item=="Grilled Hamburger" & menu_condition=="Carbon Label" ~ total_count/(32+159+935+74+85),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Carbon Label" ~ total_count/(685+135),
+                            item=="Grilled Hamburger" & menu_condition=="Control" ~ total_count/(19+125+776+68+60),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Control" ~ total_count/(563+108),
+                            item=="Grilled Hamburger" & menu_condition=="Default" ~ total_count/(33+167+904+76+90),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Default" ~ total_count/(698+172),
+                            item=="Grilled Hamburger" & menu_condition=="Multimodal" ~ total_count/(41+165+1157+125+107),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Multimodal" ~ total_count/(860+182))) %>%
+  drop_na(prop_high)
+```
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_high=case_when(item=="Grilled Hamburger" & menu_condition=="Carbon Label" ~ total_count/(32+159+935+74+85),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Carbon Label" ~ total_count/(685+135),
+                            item=="Grilled Hamburger" & menu_condition=="Control" ~ total_count/(19+125+776+68+60),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Control" ~ total_count/(563+108),
+                            item=="Grilled Hamburger" & menu_condition=="Default" ~ total_count/(33+167+904+76+90),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Default" ~ total_count/(698+172),
+                            item=="Grilled Hamburger" & menu_condition=="Multimodal" ~ total_count/(41+165+1157+125+107),
+                            item=="Bowl Ramen Chicken" & menu_condition=="Multimodal" ~ total_count/(860+182))) %>%
+  drop_na(prop_high) %>%
+  ggplot(aes(x=menu_condition,y=prop_high,fill=station)) +
+  geom_col(position="dodge") + 
+  scale_x_discrete(limits=c("Control","Carbon Label","Default","Multimodal"))
+```
+
+Now on a daily level to see if there are diminishing effects over time across each menu condition
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,station) %>%
+  summarise(daily_station_count=sum(count)) 
+```
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_high=case_when(item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(94),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(47),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(72),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(41),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(68),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(49),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="11-Nov"~total_count/(112),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="11-Nov"~total_count/(81),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(99),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(55),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="12-Nov"~total_count/(134),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="12-Nov"~total_count/(95),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(66),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(57),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="13-Nov"~total_count/(139),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="13-Nov"~total_count/(91),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="14-Nov"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="14-Nov"~total_count/(99),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="15-Nov"~total_count/(94),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="15-Nov"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(70),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(47),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="16-Oct"~total_count/(123),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="16-Oct"~total_count/(104),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(87),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(41),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="17-Oct"~total_count/(153),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="17-Oct"~total_count/(82),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(71),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(46),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="18-Nov"~total_count/(130),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="18-Nov"~total_count/(77),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="18-Oct"~total_count/(89),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="18-Oct"~total_count/(65),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(50),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(14),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="19-Nov"~total_count/(167),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="19-Nov"~total_count/(98),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(118),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(113),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(39),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(23),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="20-Nov"~total_count/(129),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="20-Nov"~total_count/(99),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="21-Nov"~total_count/(144),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="21-Nov"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="21-Oct"~total_count/(143),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="21-Oct"~total_count/(85),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="22-Nov"~total_count/(76),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="22-Nov"~total_count/(57),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="22-Oct"~total_count/(163),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="22-Oct"~total_count/(83),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="23-Oct"~total_count/(135),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="23-Oct"~total_count/(92),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="24-Oct"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="24-Oct"~total_count/(107),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(98),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(66),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="25-Oct"~total_count/(97),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="25-Oct"~total_count/(53),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(75),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(51),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(127),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(80),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(131),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(132),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(82),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(149),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(89),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(146),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(114),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(85),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(173),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(92),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(138),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(84),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(103),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(137),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(107),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(142),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(107),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(73),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(128),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(77))) %>%
+  drop_na(prop_high) 
+```
+```{r}
+daily_prop_high_fall_data <- fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_high=case_when(item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(94),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(47),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(72),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(41),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(68),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(49),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="11-Nov"~total_count/(112),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="11-Nov"~total_count/(81),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(99),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(55),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="12-Nov"~total_count/(134),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="12-Nov"~total_count/(95),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(66),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(57),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="13-Nov"~total_count/(139),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="13-Nov"~total_count/(91),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="14-Nov"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="14-Nov"~total_count/(99),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="15-Nov"~total_count/(94),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="15-Nov"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(70),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(47),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="16-Oct"~total_count/(123),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="16-Oct"~total_count/(104),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(87),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(41),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="17-Oct"~total_count/(153),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="17-Oct"~total_count/(82),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(71),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(46),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="18-Nov"~total_count/(130),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="18-Nov"~total_count/(77),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="18-Oct"~total_count/(89),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="18-Oct"~total_count/(65),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(50),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(14),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="19-Nov"~total_count/(167),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="19-Nov"~total_count/(98),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(118),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(113),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(39),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(23),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="20-Nov"~total_count/(129),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="20-Nov"~total_count/(99),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="21-Nov"~total_count/(144),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="21-Nov"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="21-Oct"~total_count/(143),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="21-Oct"~total_count/(85),
+                             item=="Grilled Hamburger"&menu_condition=="Default"&date=="22-Nov"~total_count/(76),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Default"&date=="22-Nov"~total_count/(57),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="22-Oct"~total_count/(163),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="22-Oct"~total_count/(83),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="23-Oct"~total_count/(135),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="23-Oct"~total_count/(92),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="24-Oct"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="24-Oct"~total_count/(107),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(98),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(66),
+                             item=="Grilled Hamburger"&menu_condition=="Control"&date=="25-Oct"~total_count/(97),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Control"&date=="25-Oct"~total_count/(53),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(75),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(51),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(127),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(145),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(80),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(131),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(132),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(82),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(149),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(89),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(146),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(114),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(85),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(173),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(92),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(138),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(84),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(103),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(76),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(137),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(107),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(142),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(97),
+                             item=="Grilled Hamburger"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(107),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(73),
+                             item=="Grilled Hamburger"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(128),
+                             item=="Bowl Ramen Chicken"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(77))) %>%
+  drop_na(prop_high) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(daily_prop_high_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(daily_prop_high_fall_data,aes(x=date,y=prop_high,color=station)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_high_fall_data$date[dates_vline]),linetype=2)
+```
+
+### Proportion of medium-emitting selections???? OMG Consider fixing code for prop-low and prop-high
+
+menu_condition level
+
+```{r}
+period_prop_middle_fall_data <- fall_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(item=="Black Bean Burger"&menu_condition=="Carbon Label"~total_count/(32+159+935+74+85),
+                        item=="Grilled Chicken Breast Sandwich"&menu_condition=="Carbon Label"~total_count/(32+159+935+74+85),
+                        item=="Grilled Hamburger"&menu_condition=="Carbon Label"~total_count/(32+159+935+74+85),
+                        item=="Seared Salmon Burger"&menu_condition=="Carbon Label"~total_count/(32+159+935+74+85),
+                        item=="Trillium Grill Impossible Burger"&menu_condition=="Carbon Label"~total_count/(32+159+935+74+85),
+                        item=="Black Bean Burger"&menu_condition=="Control"~total_count/(19+125+776+68+60),
+                        item=="Grilled Chicken Breast Sandwich"&menu_condition=="Control"~total_count/(19+125+776+68+60),
+                        item=="Grilled Hamburger"&menu_condition=="Control"~total_count/(19+125+776+68+60),
+                        item=="Seared Salmon Burger"&menu_condition=="Control"~total_count/(19+125+776+68+60),
+                        item=="Trillium Grill Impossible Burger"&menu_condition=="Control"~total_count/(19+125+776+68+60),
+                        item=="Black Bean Burger"&menu_condition=="Default"~total_count/(33+167+904+76+90),
+                        item=="Grilled Chicken Breast Sandwich"&menu_condition=="Default"~total_count/(33+167+904+76+90),
+                        item=="Grilled Hamburger"&menu_condition=="Default"~total_count/(33+167+904+76+90),
+                        item=="Seared Salmon Burger"&menu_condition=="Default"~total_count/(33+167+904+76+90),
+                        item=="Trillium Grill Impossible Burger"&menu_condition=="Default"~total_count/(33+167+904+76+90),
+                        item=="Black Bean Burger"&menu_condition=="Multimodal"~total_count/(41+165+1157+125+107),
+                        item=="Grilled Chicken Breast Sandwich"&menu_condition=="Multimodal"~total_count/(41+165+1157+125+107),
+                        item=="Grilled Hamburger"&menu_condition=="Multimodal"~total_count/(41+165+1157+125+107),
+                        item=="Seared Salmon Burger"&menu_condition=="Multimodal"~total_count/(41+165+1157+125+107),
+                        item=="Trillium Grill Impossible Burger"&menu_condition=="Multimodal"~total_count/(41+165+1157+125+107)))
+period_prop_middle_fall_data
+```
+
+```{r}
+period_prop_middle_fall_data %>%
+  filter(item=="Grilled Chicken Breast Sandwich"|item=="Seared Salmon Burger"|item=="Trillium Grill Impossible Burger") %>%
+  ggplot(aes(x=menu_condition,y=prop,fill=item)) +
+  geom_col(position="dodge") +
+  scale_x_discrete(limits=c("Control","Carbon Label","Default","Multimodal"))
+```
+
+```{r}
+daily_prop_middle_fall_data <-fall_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(94),
+                        menu_condition=="Multimodal"&date=="10-Dec"~total_count/(72),
+                        menu_condition=="Multimodal"&date=="11-Dec"~total_count/(68),
+                        menu_condition=="Default"&date=="11-Nov"~total_count/(112),
+                        menu_condition=="Multimodal"&date=="12-Dec"~total_count/(99),
+                        menu_condition=="Default"&date=="12-Nov"~total_count/(134),
+                        menu_condition=="Multimodal"&date=="13-Dec"~total_count/(66),
+                        menu_condition=="Default"&date=="13-Nov"~total_count/(139),
+                        menu_condition=="Default"&date=="14-Nov"~total_count/(145),
+                        menu_condition=="Default"&date=="15-Nov"~total_count/(94),
+                        menu_condition=="Multimodal"&date=="16-Dec"~total_count/(70),
+                        menu_condition=="Control"&date=="16-Oct"~total_count/(123),
+                        menu_condition=="Multimodal"&date=="17-Dec"~total_count/(87),
+                        menu_condition=="Control"&date=="17-Oct"~total_count/(153),
+                        menu_condition=="Multimodal"&date=="18-Dec"~total_count/(71),
+                        menu_condition=="Default"&date=="18-Nov"~total_count/(130),
+                        menu_condition=="Control"&date=="18-Oct"~total_count/(89),
+                        menu_condition=="Multimodal"&date=="19-Dec"~total_count/(50),
+                        menu_condition=="Default"&date=="19-Nov"~total_count/(167),
+                        menu_condition=="Multimodal"&date=="2-Dec"~total_count/(118),
+                        menu_condition=="Multimodal"&date=="20-Dec"~total_count/(39),
+                        menu_condition=="Default"&date=="20-Nov"~total_count/(129),
+                        menu_condition=="Default"&date=="21-Nov"~total_count/(144),
+                        menu_condition=="Control"&date=="21-Oct"~total_count/(143),
+                        menu_condition=="Default"&date=="22-Nov"~total_count/(76),
+                        menu_condition=="Control"&date=="22-Oct"~total_count/(163),
+                        menu_condition=="Control"&date=="23-Oct"~total_count/(135),
+                        menu_condition=="Control"&date=="24-Oct"~total_count/(145),
+                        menu_condition=="Multimodal"&date=="25-Nov"~total_count/(98),
+                        menu_condition=="Control"&date=="25-Oct"~total_count/(97),
+                        menu_condition=="Multimodal"&date=="26-Nov"~total_count/(75),
+                        menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(127),
+                        menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(145),
+                        menu_condition=="Multimodal"&date=="3-Dec"~total_count/(131),
+                        menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(132),
+                        menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(149),
+                        menu_condition=="Multimodal"&date=="4-Dec"~total_count/(146),
+                        menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(114),
+                        menu_condition=="Multimodal"&date=="5-Dec"~total_count/(173),
+                        menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(138),
+                        menu_condition=="Multimodal"&date=="6-Dec"~total_count/(103),
+                        menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(137),
+                        menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(142),
+                        menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(107),
+                        menu_condition=="Multimodal"&date=="9-Dec"~total_count/(128))) 
+```
+
+```{r}
+daily_prop_middle_fall_data <- daily_prop_middle_fall_data %>%
+  filter(item=="Grilled Chicken Breast Sandwich"|item=="Seared Salmon Burger"|item=="Trillium Grill Impossible Burger") %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(daily_prop_middle_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(daily_prop_middle_fall_data,aes(x=date,y=prop,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_middle_fall_data$date[dates_vline]),linetype=2)
+```
+
+Now trying just prop of all items at grill
+
+```{r}
+daily_prop_fall_data <-fall_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(94),
+                        menu_condition=="Multimodal"&date=="10-Dec"~total_count/(72),
+                        menu_condition=="Multimodal"&date=="11-Dec"~total_count/(68),
+                        menu_condition=="Default"&date=="11-Nov"~total_count/(112),
+                        menu_condition=="Multimodal"&date=="12-Dec"~total_count/(99),
+                        menu_condition=="Default"&date=="12-Nov"~total_count/(134),
+                        menu_condition=="Multimodal"&date=="13-Dec"~total_count/(66),
+                        menu_condition=="Default"&date=="13-Nov"~total_count/(139),
+                        menu_condition=="Default"&date=="14-Nov"~total_count/(145),
+                        menu_condition=="Default"&date=="15-Nov"~total_count/(94),
+                        menu_condition=="Multimodal"&date=="16-Dec"~total_count/(70),
+                        menu_condition=="Control"&date=="16-Oct"~total_count/(123),
+                        menu_condition=="Multimodal"&date=="17-Dec"~total_count/(87),
+                        menu_condition=="Control"&date=="17-Oct"~total_count/(153),
+                        menu_condition=="Multimodal"&date=="18-Dec"~total_count/(71),
+                        menu_condition=="Default"&date=="18-Nov"~total_count/(130),
+                        menu_condition=="Control"&date=="18-Oct"~total_count/(89),
+                        menu_condition=="Multimodal"&date=="19-Dec"~total_count/(50),
+                        menu_condition=="Default"&date=="19-Nov"~total_count/(167),
+                        menu_condition=="Multimodal"&date=="2-Dec"~total_count/(118),
+                        menu_condition=="Multimodal"&date=="20-Dec"~total_count/(39),
+                        menu_condition=="Default"&date=="20-Nov"~total_count/(129),
+                        menu_condition=="Default"&date=="21-Nov"~total_count/(144),
+                        menu_condition=="Control"&date=="21-Oct"~total_count/(143),
+                        menu_condition=="Default"&date=="22-Nov"~total_count/(76),
+                        menu_condition=="Control"&date=="22-Oct"~total_count/(163),
+                        menu_condition=="Control"&date=="23-Oct"~total_count/(135),
+                        menu_condition=="Control"&date=="24-Oct"~total_count/(145),
+                        menu_condition=="Multimodal"&date=="25-Nov"~total_count/(98),
+                        menu_condition=="Control"&date=="25-Oct"~total_count/(97),
+                        menu_condition=="Multimodal"&date=="26-Nov"~total_count/(75),
+                        menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(127),
+                        menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(145),
+                        menu_condition=="Multimodal"&date=="3-Dec"~total_count/(131),
+                        menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(132),
+                        menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(149),
+                        menu_condition=="Multimodal"&date=="4-Dec"~total_count/(146),
+                        menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(114),
+                        menu_condition=="Multimodal"&date=="5-Dec"~total_count/(173),
+                        menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(138),
+                        menu_condition=="Multimodal"&date=="6-Dec"~total_count/(103),
+                        menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(137),
+                        menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(142),
+                        menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(107),
+                        menu_condition=="Multimodal"&date=="9-Dec"~total_count/(128))) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(daily_prop_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(daily_prop_fall_data,aes(x=date,y=prop,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_fall_data$date[dates_vline]),linetype=2)
+```
+
+### Mean carbon costs 
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station) %>%
+  summarise(tot_carbon_cost=sum(corr_carbon_cost),tot_water_cost=sum(corr_water_cost),tot_dollar_cost=sum(corr_dollar_cost),tot_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=tot_carbon_cost/tot_sales) %>%
+  mutate(mean_water_cost=tot_water_cost/tot_sales) %>%
+  mutate(mean_spend=tot_dollar_cost/tot_sales) %>%
+  ggplot(aes(x=menu_condition,y=mean_carbon_cost,fill=station)) + 
+  geom_col(position="dodge") + 
+  scale_x_discrete(limits=c("Control","Carbon Label","Default","Multimodal"))
+```
+
+```{r}
+mean_per_day_carbon_cost_fall_data <- fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(mean_per_day_carbon_cost_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(mean_per_day_carbon_cost_fall_data,aes(x=date,y=mean_carbon_cost,color=station)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(mean_per_day_carbon_cost_fall_data$date[dates_vline]),linetype=2)
+```
+
+### Mean spend
+
+```{r}
+fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station) %>%
+  summarise(tot_carbon_cost=sum(corr_carbon_cost),tot_water_cost=sum(corr_water_cost),tot_dollar_cost=sum(corr_dollar_cost),tot_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=tot_carbon_cost/tot_sales) %>%
+  mutate(mean_water_cost=tot_water_cost/tot_sales) %>%
+  mutate(mean_spend=tot_dollar_cost/tot_sales) %>%
+  ggplot(aes(x=menu_condition,y=mean_spend,fill=station)) + 
+  geom_col(position="dodge") + 
+  scale_x_discrete(limits=c("Control","Carbon Label","Default","Multimodal","Multimodal (Extra)"))
+```
+
+```{r}
+mean_daily_spend_fall_data <- fall_data %>%
+  filter(station_type=="Treatment") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_spend=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_spend=total_spend/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) 
+```
+
+```{r}
+dates_vline <- as.Date(c("2024-10-28","2024-11-11","2024-11-25"))
+dates_vline <- which(mean_daily_spend_fall_data$date %in% dates_vline)
+```
+
+```{r}
+ggplot(mean_daily_spend_fall_data,aes(x=date,y=mean_spend,color=station)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(mean_daily_spend_fall_data$date[dates_vline]),linetype=2)
+```
+
+
+
+
+
+
+
+We'll need to do checks to see whether there are differences in the purchase of different item categories across menu conditions, whether there are differences in the sales total across menu conditions, differences in the number of observation days across menu conditions, differences in the daily sales average across menu conditions 
+
+Spillover within meal period and between meal period 
+
+also look at diminishing effects over time by looking at outcomes at day level, not just by period 
+
+
+
+
+
+
+
+
+
+
+
+need to figure out modifications sales between periods because that changes the denominator
+
+```{r}
+fall_data %>%
+  filter(station=="Grill") %>%
+  group_by(menu_condition,item_cat) %>%
+  summarise(sum(count)) 
+```
+
 
 ### Between-Condition Observational Differences
 
@@ -442,6 +1455,11 @@ fall_data %>%
   group_by(menu_condition) %>%
   summarise(sales_count=sum(count))
 ```
+
+
+* Daily Sales volume 
+
+
 
 ### Grill - Mains - Prop
 
@@ -502,7 +1520,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(menu_condition=="Multimodal (Extra)"| period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal (Extra)"| menu_condition=="Multimodal") %>%
   filter(station=="Grill") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -570,7 +1588,7 @@ fall_data %>%
 
 ```{r}
 fall_data %>%
-  filter(menu_condition=="Multimodal (Extra)" | period=="Multimodal") %>%
+  filter(menu_condition=="Multimodal (Extra)" | menu_condition=="Multimodal") %>%
   filter(station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   group_by(item) %>%
@@ -596,6 +1614,19 @@ fall_data %>%
 
 
 
+
+
+
+
+
+
+
+
+
+CONSIDER distance between highest-carbon offering and next-lowest offering between stations
+Price relativity 
+Number of veg options
+ 
 
 
 
