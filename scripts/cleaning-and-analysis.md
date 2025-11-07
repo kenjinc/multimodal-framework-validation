@@ -2560,6 +2560,98 @@ spring_data %>%
     ## 14 Unimodal       Grill   Seared Salmon Burger                      67 0.0539
     ## 15 Unimodal       Grill   Trillium Grill Impossible Burger          74 0.0595
 
+period level
+
+``` r
+spring_data <- spring_data %>%
+  mutate(phase_interval=case_when(date=="21-Jan"~"1",
+                                  date=="22-Jan"~"1",
+                                  date=="23-Jan"~"1",
+                                  date=="24-Jan"~"1",
+                                  date=="27-Jan"~"1",
+                                  date=="28-Jan"~"1",
+                                  date=="29-Jan"~"1",
+                                  date=="30-Jan"~"1",
+                                  date=="31-Jan"~"1",
+                                  date=="3-Feb"~"2",
+                                  date=="4-Feb"~"2",
+                                  date=="5-Feb"~"2",
+                                  date=="6-Feb"~"2",
+                                  date=="7-Feb"~"2",
+                                  date=="10-Feb"~"2",
+                                  date=="11-Feb"~"2",
+                                  date=="12-Feb"~"2",
+                                  date=="13-Feb"~"2",
+                                  date=="14-Feb"~"2",
+                                  date=="19-Feb"~"2",
+                                  date=="20-Feb"~"2",
+                                  date=="21-Feb"~"2",
+                                  date=="24-Feb"~"3",
+                                  date=="25-Feb"~"3",
+                                  date=="26-Feb"~"3",
+                                  date=="27-Feb"~"3",
+                                  date=="28-Feb"~"3",
+                                  date=="3-Mar"~"3",
+                                  date=="4-Mar"~"3",
+                                  date=="5-Mar"~"3",
+                                  date=="6-Mar"~"3",
+                                  date=="7-Mar"~"3",
+                                  date=="10-Mar"~"4",
+                                  date=="11-Mar"~"4",
+                                  date=="12-Mar"~"4",
+                                  date=="13-Mar"~"4",
+                                  date=="14-Mar"~"4",
+                                  date=="17-Mar"~"4",
+                                  date=="18-Mar"~"4",
+                                  date=="19-Mar"~"4",
+                                  date=="20-Mar"~"4",
+                                  date=="21-Mar"~"4",
+                                  date=="24-Mar"~"5",
+                                  date=="25-Mar"~"5",
+                                  date=="26-Mar"~"5",
+                                  date=="27-Mar"~"5",
+                                  date=="28-Mar"~"5",
+                                  date=="7-Apr"~"5",
+                                  date=="8-Apr"~"5",
+                                  date=="9-Apr"~"5",
+                                  date=="10-Apr"~"5",
+                                  date=="11-Apr"~"5",
+                                  date=="14-Apr"~"5",
+                                  date=="15-Apr"~"5",
+                                  date=="16-Apr"~"5",
+                                  date=="17-Apr"~"5",
+                                  date=="18-Apr"~"5")) 
+```
+
+fall_data %\>% filter(station_type==“Treatment”) %\>%
+filter(item_cat==“Main”) %\>% group_by(menu_condition,station) %\>%
+summarise(tot_carbon_cost=sum(corr_carbon_cost),tot_water_cost=sum(corr_water_cost),tot_dollar_cost=sum(corr_dollar_cost),tot_sales=sum(count))
+%\>% mutate(mean_carbon_cost=tot_carbon_cost/tot_sales) %\>%
+mutate(mean_water_cost=tot_water_cost/tot_sales) %\>%
+mutate(mean_spend=tot_dollar_cost/tot_sales) %\>%
+filter(station==“Grill”) %\>%
+select(menu_condition,mean_carbon_cost,mean_spend)
+
+``` r
+spring_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>%
+  summarise(tot_carbon_cost=sum(corr_carbon_cost),tot_dollar_cost=sum(corr_dollar_cost),tot_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=tot_carbon_cost/tot_sales) %>%
+  mutate(mean_spend=tot_dollar_cost/tot_sales) %>%
+  select(phase_interval,mean_carbon_cost,mean_spend)
+```
+
+    ## # A tibble: 5 × 3
+    ##   phase_interval mean_carbon_cost mean_spend
+    ##   <chr>                     <dbl>      <dbl>
+    ## 1 1                          2.90       8.99
+    ## 2 2                          2.93       8.96
+    ## 3 3                          2.94       8.96
+    ## 4 4                          2.92       8.98
+    ## 5 5                          2.84       8.98
+
 daily
 
 ``` r
@@ -2738,7 +2830,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-67-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
 
 ``` r
 grill_prop_high_s2 <- daily_prop_spring_data %>%
@@ -2767,7 +2859,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-68-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-70-1.png)<!-- -->
 
 ``` r
 grill_prop_middle_s2 <- daily_prop_spring_data %>%
@@ -2796,7 +2888,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -2817,7 +2909,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-70-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
 
 We’ll need to do checks to see whether there are differences in the
 purchase of different item categories across menu conditions, whether
@@ -3260,7 +3352,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
