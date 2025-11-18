@@ -3252,6 +3252,26 @@ fall_data %>%
 CONSIDER distance between highest-carbon offering and next-lowest
 offering between stations Price relativity Number of veg options
 
+``` r
+fall_data %>%
+  filter(station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+
+    ##   sum(count)
+    ## 1       8601
+
+``` r
+spring_data %>%
+  filter(station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+
+    ##   sum(count)
+    ## 1      11873
+
 differnce in carbon estiamte for highest and lowest number of options to
 choose between
 
@@ -3352,7 +3372,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-93-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken

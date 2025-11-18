@@ -2488,8 +2488,20 @@ Number of veg options
 
 
 
+```{r}
+fall_data %>%
+  filter(station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
 
 
+```{r}
+spring_data %>%
+  filter(station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
 
 
 
