@@ -1476,6 +1476,17 @@ treatment_prop_low
 
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
+``` r
+ggarrange(treatment_prop_low,grill_prop_low,ramen_prop_low,
+          labels=c("A","B","C"))
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+
 ### Proportion of highest-emitting selections
 
 ``` r
@@ -1534,7 +1545,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition', 'station'. You can
     ## override using the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-42-1.png)<!-- -->
 
 Now on a daily level to see if there are diminishing effects over time
 across each menu condition
@@ -1841,7 +1852,7 @@ ggplot(daily_prop_high_fall_data,aes(x=date,y=prop_high,color=station)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
 
 ``` r
 grill_prop_high <- daily_prop_high_fall_data %>%
@@ -1868,7 +1879,7 @@ grill_prop_high
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
 
 ### Proportion of medium-emitting selections???? OMG Consider fixing code for prop-low and prop-high
 
@@ -1955,7 +1966,7 @@ period_prop_middle_fall_data %>%
   geom_col(position="dodge") 
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
 
 ``` r
 daily_prop_middle_fall_data <-fall_data %>%
@@ -2088,7 +2099,7 @@ grill_prop_mid
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-53-1.png)<!-- -->
 
 Now trying just prop of all items at grill
 
@@ -2203,7 +2214,7 @@ ggplot(daily_prop_fall_data,aes(x=date,y=prop,color=item)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-54-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
 
 ### Mean carbon costs
 
@@ -2249,7 +2260,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-56-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
 
 ``` r
 mean_per_day_carbon_cost_fall_data <- fall_data %>%
@@ -2318,7 +2329,7 @@ ggplot(mean_per_day_carbon_cost_fall_data,aes(x=date,y=mean_carbon_cost,color=st
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
 
 ``` r
 grill_mean_carbon_cost <- fall_data %>%
@@ -2401,7 +2412,7 @@ grill_mean_carbon_cost
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-60-1.png)<!-- -->
 
 ### Mean spend
 
@@ -2422,7 +2433,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-60-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-61-1.png)<!-- -->
 
 ``` r
 mean_daily_spend_fall_data <- fall_data %>%
@@ -2491,7 +2502,7 @@ ggplot(mean_daily_spend_fall_data,aes(x=date,y=mean_spend,color=station)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-62-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-63-1.png)<!-- -->
 
 ``` r
 mean_spend <- fall_data %>%
@@ -2574,7 +2585,7 @@ mean_spend
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-63-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-64-1.png)<!-- -->
 
 ## CLeaning and Analysis (Spring 2025)
 
@@ -2675,7 +2686,7 @@ spring_data %>%
     ## `summarise()` has grouped output by 'phase_interval'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-64-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-65-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -3099,7 +3110,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
 
 ``` r
 grill_prop_high_s2 <- daily_prop_spring_data %>%
@@ -3128,7 +3139,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-73-1.png)<!-- -->
 
 ``` r
 grill_prop_middle_s2 <- daily_prop_spring_data %>%
@@ -3157,7 +3168,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-73-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-74-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -3178,7 +3189,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-74-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-75-1.png)<!-- -->
 
 We’ll need to do checks to see whether there are differences in the
 purchase of different item categories across menu conditions, whether
@@ -3757,7 +3768,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-97-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-98-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken

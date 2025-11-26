@@ -1089,6 +1089,12 @@ ggsave(filename="treatment_prop_low.png",plot=treatment_prop_low,path="/Users/ke
 treatment_prop_low
 ```
 
+```{r}
+ggarrange(treatment_prop_low,grill_prop_low,ramen_prop_low,
+          labels=c("A","B","C"))
+```
+
+
 ### Proportion of highest-emitting selections
 
 ```{r}
