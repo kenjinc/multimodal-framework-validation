@@ -1207,6 +1207,275 @@ grill_prop_low
 
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
+``` r
+ramen_prop_low <- fall_data %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop_low=case_when(item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(34+13),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(37+4),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(42+7),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="11-Nov"~total_count/(69+12),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(46+9),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="12-Nov"~total_count/(76+19),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(50+7),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="13-Nov"~total_count/(74+17),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="14-Nov"~total_count/(78+21),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="15-Nov"~total_count/(59+17),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(40+7),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="16-Oct"~total_count/(88+16),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(35+6),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="17-Oct"~total_count/(68+14),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(39+7),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="18-Nov"~total_count/(66+11),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="18-Oct"~total_count/(44+21),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(10+4),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="19-Nov"~total_count/(70+28),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(94+19),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(21+2),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="20-Nov"~total_count/(80+19),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="21-Nov"~total_count/(77+20),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="21-Oct"~total_count/(71+14),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Default"&date=="22-Nov"~total_count/(49+8),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="22-Oct"~total_count/(73+10),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="23-Oct"~total_count/(83+9),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="24-Oct"~total_count/(92+15),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(56+10),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Control"&date=="25-Oct"~total_count/(44+9),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(45+6),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(65+11),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(67+13),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(76+21),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(70+12),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(79+10),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(84+13),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(65+20),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(70+22),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(73+11),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(58+18),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(90+17),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(83+14),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(59+14),
+                             item=="Bowl Ramen Tofu"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(57+20))) %>%
+drop_na(prop_low) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=prop_low,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("Proportion of Station Sales") +
+  scale_color_brewer(palette="Paired",name="") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10)) +
+  annotate("text",x=as.Date("2024-10-20"),y=0.25,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=0.25,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=0.25,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=0.25,label="Multimodal",size=10/.pt) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition', 'station'. You
+    ## can override using the `.groups` argument.
+
+``` r
+  ggsave(filename="ramen_prop_low.png",plot=ramen_prop_low,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+``` r
+ramen_prop_low
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+
+``` r
+treatment_prop_low <- fall_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(item=case_when(item=="Bowl Ramen Tofu"~"Lowest-Carbon Offering",
+                        item=="Black Bean Burger"~"Lowest=Carbon Offering",
+                        item=="Bowl Ramen Chicken"~"High",
+                        item=="Grilled Hamburger"~"High",
+                        item=="Grilled Chicken Breast Sandwich"~"Middle",
+                        item=="Seared Salmon Burger"~"Middle",
+                        item=="Trillium Grill Impossible Burger"~"Middle")) %>%
+  group_by(date,menu_condition,item) %>%
+  summarise(total_count=sum(total_count)) %>%
+  mutate(prop_low=case_when(item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="1-Nov"~total_count/(100+16+25),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="10-Dec"~total_count/(89+4+20),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="11-Dec"~total_count/(89+9+19),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="11-Nov"~total_count/(150+15+28),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="12-Dec"~total_count/(115+10+29),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="12-Nov"~total_count/(165+22+42),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="13-Dec"~total_count/(99+8+16),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="13-Nov"~total_count/(181+19+30),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="14-Nov"~total_count/(177+24+43),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="15-Nov"~total_count/(131+21+18),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="16-Dec"~total_count/(95+8+14),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="16-Oct"~total_count/(179+18+30),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="17-Dec"~total_count/(96+9+23),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="17-Oct"~total_count/(177+15+43),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="18-Dec"~total_count/(86+8+23),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="18-Nov"~total_count/(148+18+41),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="18-Oct"~total_count/(110+23+21),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="19-Dec"~total_count/(43+4+17),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="19-Nov"~total_count/(192+31+42),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="2-Dec"~total_count/(191+25+15),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="20-Dec"~total_count/(45+3+14),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="20-Nov"~total_count/(172+22+34),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="21-Nov"~total_count/(186+24+31),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="21-Oct"~total_count/(176+15+37),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Default"&date=="22-Nov"~total_count/(100+9+24),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="22-Oct"~total_count/(200+12+34),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="23-Oct"~total_count/(183+11+33),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="24-Oct"~total_count/(199+20+33),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="25-Nov"~total_count/(123+12+29),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Control"&date=="25-Oct"~total_count/(115+13+22),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="26-Nov"~total_count/(97+9+20),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="28-Oct"~total_count/(161+15+27),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="29-Oct"~total_count/(169+19+37),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="3-Dec"~total_count/(173+25+30),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="30-Oct"~total_count/(165+17+32),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="31-Oct"~total_count/(186+11+41),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="4-Dec"~total_count/(201+14+28),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="4-Nov"~total_count/(145+24+30),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="5-Dec"~total_count/(188+28+49),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="5-Nov"~total_count/(180+13+29),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="6-Dec"~total_count/(134+23+22),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="6-Nov"~total_count/(194+19+31),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="7-Nov"~total_count/(181+18+40),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Carbon Label"&date=="8-Nov"~total_count/(139+15+26),
+                             item=="Lowest-Carbon Offering"&menu_condition=="Multimodal"&date=="9-Dec"~total_count/(153+24+29))) %>%
+  drop_na(prop_low) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=prop_low,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("Proportion of Station Sales") +
+  scale_color_brewer(palette="Paired",name="") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10)) +
+  annotate("text",x=as.Date("2024-10-20"),y=0.12,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=0.12,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=0.12,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=0.12,label="Multimodal",size=10/.pt)
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition', 'station'. You
+    ## can override using the `.groups` argument.
+    ## `summarise()` has grouped output by 'date', 'menu_condition'. You can override
+    ## using the `.groups` argument.
+
+``` r
+ggsave(filename="treatment_prop_low.png",plot=treatment_prop_low,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+``` r
+treatment_prop_low
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+
 ### Proportion of highest-emitting selections
 
 ``` r
@@ -1265,7 +1534,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition', 'station'. You can
     ## override using the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
 
 Now on a daily level to see if there are diminishing effects over time
 across each menu condition
@@ -1572,7 +1841,7 @@ ggplot(daily_prop_high_fall_data,aes(x=date,y=prop_high,color=station)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
 
 ``` r
 grill_prop_high <- daily_prop_high_fall_data %>%
@@ -1599,7 +1868,7 @@ grill_prop_high
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
 
 ### Proportion of medium-emitting selections???? OMG Consider fixing code for prop-low and prop-high
 
@@ -1686,7 +1955,7 @@ period_prop_middle_fall_data %>%
   geom_col(position="dodge") 
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
 
 ``` r
 daily_prop_middle_fall_data <-fall_data %>%
@@ -1819,7 +2088,7 @@ grill_prop_mid
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-50-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
 
 Now trying just prop of all items at grill
 
@@ -1934,7 +2203,7 @@ ggplot(daily_prop_fall_data,aes(x=date,y=prop,color=item)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-52-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-54-1.png)<!-- -->
 
 ### Mean carbon costs
 
@@ -1980,7 +2249,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-54-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-56-1.png)<!-- -->
 
 ``` r
 mean_per_day_carbon_cost_fall_data <- fall_data %>%
@@ -2049,7 +2318,7 @@ ggplot(mean_per_day_carbon_cost_fall_data,aes(x=date,y=mean_carbon_cost,color=st
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-56-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
 
 ``` r
 grill_mean_carbon_cost <- fall_data %>%
@@ -2132,7 +2401,7 @@ grill_mean_carbon_cost
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
 
 ### Mean spend
 
@@ -2153,7 +2422,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-58-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-60-1.png)<!-- -->
 
 ``` r
 mean_daily_spend_fall_data <- fall_data %>%
@@ -2222,7 +2491,7 @@ ggplot(mean_daily_spend_fall_data,aes(x=date,y=mean_spend,color=station)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-60-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-62-1.png)<!-- -->
 
 ``` r
 mean_spend <- fall_data %>%
@@ -2305,7 +2574,7 @@ mean_spend
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-61-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-63-1.png)<!-- -->
 
 ## CLeaning and Analysis (Spring 2025)
 
@@ -2406,7 +2675,7 @@ spring_data %>%
     ## `summarise()` has grouped output by 'phase_interval'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-62-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-64-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -2830,7 +3099,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
 
 ``` r
 grill_prop_high_s2 <- daily_prop_spring_data %>%
@@ -2859,7 +3128,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-70-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
 
 ``` r
 grill_prop_middle_s2 <- daily_prop_spring_data %>%
@@ -2888,7 +3157,7 @@ grill_prop_low_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-73-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -2909,7 +3178,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-72-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-74-1.png)<!-- -->
 
 We’ll need to do checks to see whether there are differences in the
 purchase of different item categories across menu conditions, whether
@@ -3254,6 +3523,122 @@ offering between stations Price relativity Number of veg options
 
 ``` r
 fall_data %>%
+  distinct(date)
+```
+
+    ##      date
+    ## 1  16-Oct
+    ## 2  17-Oct
+    ## 3  18-Oct
+    ## 4  21-Oct
+    ## 5  22-Oct
+    ## 6  23-Oct
+    ## 7  24-Oct
+    ## 8  25-Oct
+    ## 9  28-Oct
+    ## 10 29-Oct
+    ## 11 30-Oct
+    ## 12 31-Oct
+    ## 13  1-Nov
+    ## 14  4-Nov
+    ## 15  5-Nov
+    ## 16  6-Nov
+    ## 17  7-Nov
+    ## 18  8-Nov
+    ## 19 11-Nov
+    ## 20 12-Nov
+    ## 21 13-Nov
+    ## 22 14-Nov
+    ## 23 15-Nov
+    ## 24 18-Nov
+    ## 25 19-Nov
+    ## 26 20-Nov
+    ## 27 21-Nov
+    ## 28 22-Nov
+    ## 29 25-Nov
+    ## 30 26-Nov
+    ## 31  2-Dec
+    ## 32  3-Dec
+    ## 33  4-Dec
+    ## 34  5-Dec
+    ## 35  6-Dec
+    ## 36  9-Dec
+    ## 37 10-Dec
+    ## 38 11-Dec
+    ## 39 12-Dec
+    ## 40 13-Dec
+    ## 41 16-Dec
+    ## 42 17-Dec
+    ## 43 18-Dec
+    ## 44 19-Dec
+    ## 45 20-Dec
+
+``` r
+spring_data %>%
+  distinct(date)
+```
+
+    ##      date
+    ## 1  21-Jan
+    ## 2  22-Jan
+    ## 3  23-Jan
+    ## 4  24-Jan
+    ## 5  27-Jan
+    ## 6  28-Jan
+    ## 7  29-Jan
+    ## 8  30-Jan
+    ## 9  31-Jan
+    ## 10  3-Feb
+    ## 11  4-Feb
+    ## 12  5-Feb
+    ## 13  6-Feb
+    ## 14  7-Feb
+    ## 15 10-Feb
+    ## 16 11-Feb
+    ## 17 12-Feb
+    ## 18 13-Feb
+    ## 19 14-Feb
+    ## 20 19-Feb
+    ## 21 20-Feb
+    ## 22 21-Feb
+    ## 23 24-Feb
+    ## 24 25-Feb
+    ## 25 26-Feb
+    ## 26 27-Feb
+    ## 27 28-Feb
+    ## 28  3-Mar
+    ## 29  4-Mar
+    ## 30  5-Mar
+    ## 31  6-Mar
+    ## 32  7-Mar
+    ## 33 10-Mar
+    ## 34 11-Mar
+    ## 35 12-Mar
+    ## 36 13-Mar
+    ## 37 14-Mar
+    ## 38 17-Mar
+    ## 39 18-Mar
+    ## 40 19-Mar
+    ## 41 20-Mar
+    ## 42 21-Mar
+    ## 43 24-Mar
+    ## 44 25-Mar
+    ## 45 26-Mar
+    ## 46 27-Mar
+    ## 47 28-Mar
+    ## 48  7-Apr
+    ## 49  8-Apr
+    ## 50  9-Apr
+    ## 51 10-Apr
+    ## 52 11-Apr
+    ## 53 14-Apr
+    ## 54 15-Apr
+    ## 55 16-Apr
+    ## 56 17-Apr
+    ## 57 18-Apr
+
+``` r
+fall_data %>%
   filter(station=="Grill"|station=="Ramen") %>%
   filter(item_cat=="Main") %>%
   summarise(sum(count))
@@ -3372,7 +3757,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-93-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-97-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
