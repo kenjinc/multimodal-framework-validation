@@ -1112,9 +1112,7 @@ fall_data %>%
 
 ****** Now do same for day level ********
 
-```{r}
 
-```
 
 
 ### Proportion of highest-emitting selections
