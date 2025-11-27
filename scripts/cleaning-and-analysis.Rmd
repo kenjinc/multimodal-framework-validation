@@ -1093,6 +1093,28 @@ treatment_prop_low
 ggarrange(treatment_prop_low,grill_prop_low,ramen_prop_low,
           labels=c("A","B","C"))
 ```
+```{r}
+fall_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(menu_condition=="Carbon Label"&item=="Create Your Pasta Bowl MEAT"~total_count/(1159+249),
+                        menu_condition=="Carbon Label"&item=="Create Your Pasta Bowl VEG"~total_count/(1159+249),
+                        menu_condition=="Control"&item=="Create Your Pasta Bowl MEAT"~total_count/(951+207),
+                        menu_condition=="Control"&item=="Create Your Pasta Bowl VEG"~total_count/(951+207),
+                        menu_condition=="Default"&item=="Create Your Pasta Bowl MEAT"~total_count/(1101+240),
+                        menu_condition=="Default"&item=="Create Your Pasta Bowl VEG"~total_count/(1101+240),
+                        menu_condition=="Multimodal"&item=="Create Your Pasta Bowl MEAT"~total_count/(1068+261),
+                        menu_condition=="Multimodal"&item=="Create Your Pasta Bowl VEG"~total_count/(1068+261)))
+```
+
+
+****** Now do same for day level ********
+
+```{r}
+
+```
 
 
 ### Proportion of highest-emitting selections
