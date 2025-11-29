@@ -3353,6 +3353,401 @@ daily_prop_spring_data %>%
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-77-1.png)<!-- -->
+FOR RAMEN STATION
+
+``` r
+spring_data %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(phase_interval=="1"~total_count/(740+152),
+                        phase_interval=="2"~total_count/(928+213),
+                        phase_interval=="3"~total_count/(726+176),
+                        phase_interval=="4"~total_count/(602+163),
+                        phase_interval=="5"~total_count/(890+262))) 
+```
+
+    ## `summarise()` has grouped output by 'phase_interval', 'station'. You can
+    ## override using the `.groups` argument.
+
+    ## # A tibble: 10 × 5
+    ## # Groups:   phase_interval, station [5]
+    ##    phase_interval station item               total_count  prop
+    ##    <chr>          <chr>   <chr>                    <int> <dbl>
+    ##  1 1              Ramen   Bowl Ramen Chicken         740 0.830
+    ##  2 1              Ramen   Bowl Ramen Tofu            152 0.170
+    ##  3 2              Ramen   Bowl Ramen Chicken         928 0.813
+    ##  4 2              Ramen   Bowl Ramen Tofu            213 0.187
+    ##  5 3              Ramen   Bowl Ramen Chicken         726 0.805
+    ##  6 3              Ramen   Bowl Ramen Tofu            176 0.195
+    ##  7 4              Ramen   Bowl Ramen Chicken         602 0.787
+    ##  8 4              Ramen   Bowl Ramen Tofu            163 0.213
+    ##  9 5              Ramen   Bowl Ramen Chicken         890 0.773
+    ## 10 5              Ramen   Bowl Ramen Tofu            262 0.227
+
+    NOW DAILY
+
+FOR AGGREGATE
+
+FOR CONTROL PASTA STATION
+
+``` r
+spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(phase_interval=="1"~total_count/(1126+226),
+                        phase_interval=="2"~total_count/(1336+296),
+                        phase_interval=="3"~total_count/(1017+207),
+                        phase_interval=="4"~total_count/(945+213),
+                        phase_interval=="5"~total_count/(1319+336))) 
+```
+
+    ## `summarise()` has grouped output by 'phase_interval', 'station'. You can
+    ## override using the `.groups` argument.
+
+    ## # A tibble: 10 × 5
+    ## # Groups:   phase_interval, station [5]
+    ##    phase_interval station item                        total_count  prop
+    ##    <chr>          <chr>   <chr>                             <int> <dbl>
+    ##  1 1              Pasta   Create Your Pasta Bowl MEAT        1126 0.833
+    ##  2 1              Pasta   Create Your Pasta Bowl VEG          226 0.167
+    ##  3 2              Pasta   Create Your Pasta Bowl MEAT        1336 0.819
+    ##  4 2              Pasta   Create Your Pasta Bowl VEG          296 0.181
+    ##  5 3              Pasta   Create Your Pasta Bowl MEAT        1017 0.831
+    ##  6 3              Pasta   Create Your Pasta Bowl VEG          207 0.169
+    ##  7 4              Pasta   Create Your Pasta Bowl MEAT         945 0.816
+    ##  8 4              Pasta   Create Your Pasta Bowl VEG          213 0.184
+    ##  9 5              Pasta   Create Your Pasta Bowl MEAT        1319 0.797
+    ## 10 5              Pasta   Create Your Pasta Bowl VEG          336 0.203
+
+``` r
+spring_control_prop_low <- spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(date=="10-Apr"~total_count/(96+29),
+                        date=="10-Feb"~total_count/(121+19),
+                        date=="10-Mar"~total_count/(106+20),
+                        date=="11-Apr"~total_count/(56+10),
+                        date=="11-Feb"~total_count/(111+23),
+                        date=="11-Mar"~total_count/(81+29),
+                        date=="12-Feb"~total_count/(133+22),
+                        date=="12-Mar"~total_count/(107+20),
+                        date=="13-Feb"~total_count/(81+20),
+                        date=="13-Mar"~total_count/(92+19),
+                        date=="14-Apr"~total_count/(100+28),
+                        date=="14-Feb"~total_count/(34+16),
+                        date=="14-Mar"~total_count/(71+14),
+                        date=="15-Apr"~total_count/(83+23),
+                        date=="16-Apr"~total_count/(118+26),
+                        date=="17-Apr"~total_count/(85+27),
+                        date=="17-Mar"~total_count/(126+18),
+                        date=="18-Apr"~total_count/(63+18),
+                        date=="18-Mar"~total_count/(89+27),
+                        date=="19-Feb"~total_count/(104+28),
+                        date=="19-Mar"~total_count/(106+20),
+                        date=="20-Feb"~total_count/(93+27),
+                        date=="20-Mar"~total_count/(98+28),
+                        date=="21-Feb"~total_count/(78+16),
+                        date=="21-Jan"~total_count/(138+42),
+                        date=="21-Mar"~total_count/(69+18),
+                        date=="22-Jan"~total_count/(175+23),
+                        date=="23-Jan"~total_count/(105+27),
+                        date=="24-Feb"~total_count/(130+22),
+                        date=="24-Jan"~total_count/(86+15),
+                        date=="24-Mar"~total_count/(87+21),
+                        date=="25-Feb"~total_count/(105+16),
+                        date=="25-Mar"~total_count/(94+24),
+                        date=="26-Feb"~total_count/(136+19),
+                        date=="26-Mar"~total_count/(103+20),
+                        date=="27-Feb"~total_count/(89+30),
+                        date=="27-Jan"~total_count/(162+21),
+                        date=="27-Mar"~total_count/(74+27),
+                        date=="28-Feb"~total_count/(84+13),
+                        date=="28-Jan"~total_count/(102+35),
+                        date=="28-Mar"~total_count/(34+10),
+                        date=="29-Jan"~total_count/(150+22),
+                        date=="3-Feb"~total_count/(140+18),
+                        date=="3-Mar"~total_count/(107+13),
+                        date=="30-Jan"~total_count/(118+33),
+                        date=="31-Jan"~total_count/(90+8),
+                        date=="4-Feb"~total_count/(101+24),
+                        date=="4-Mar"~total_count/(86+29),
+                        date=="5-Feb"~total_count/(144+26),
+                        date=="5-Mar"~total_count/(132+20),
+                        date=="6-Feb"~total_count/(116+42),
+                        date=="6-Mar"~total_count/(93+23),
+                        date=="7-Apr"~total_count/(93+21),
+                        date=="7-Feb"~total_count/(80+15),
+                        date=="7-Mar"~total_count/(55+22),
+                        date=="8-Apr"~total_count/(108+29),
+                        date=="9-Apr"~total_count/(125+23))) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  filter(item=="Create Your Pasta Bowl VEG") %>% ### Lowest-carbon offering
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=prop,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  scale_color_brewer(palette="Set2") + 
+  xlab("Date") + 
+  ylab("Proportion of Station Sales") + 
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10)) + 
+  annotate("text",x=as.Date("2025-01-27"),y=0.3,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=0.3,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=0.3,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=0.3,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=0.3,label="Control",size=10/.pt) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition', 'station'. You
+    ## can override using the `.groups` argument.
+
+``` r
+ggsave(filename="spring_control_prop_low.png",plot=spring_control_prop_low,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+``` r
+spring_control_prop_low
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range (`stat_smooth()`).
+    ## Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-80-1.png)<!-- -->
+
+``` r
+spring_control_prop_high <- spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station,item) %>%
+  summarise(total_count=sum(count)) %>%
+  mutate(prop=case_when(date=="10-Apr"~total_count/(96+29),
+                        date=="10-Feb"~total_count/(121+19),
+                        date=="10-Mar"~total_count/(106+20),
+                        date=="11-Apr"~total_count/(56+10),
+                        date=="11-Feb"~total_count/(111+23),
+                        date=="11-Mar"~total_count/(81+29),
+                        date=="12-Feb"~total_count/(133+22),
+                        date=="12-Mar"~total_count/(107+20),
+                        date=="13-Feb"~total_count/(81+20),
+                        date=="13-Mar"~total_count/(92+19),
+                        date=="14-Apr"~total_count/(100+28),
+                        date=="14-Feb"~total_count/(34+16),
+                        date=="14-Mar"~total_count/(71+14),
+                        date=="15-Apr"~total_count/(83+23),
+                        date=="16-Apr"~total_count/(118+26),
+                        date=="17-Apr"~total_count/(85+27),
+                        date=="17-Mar"~total_count/(126+18),
+                        date=="18-Apr"~total_count/(63+18),
+                        date=="18-Mar"~total_count/(89+27),
+                        date=="19-Feb"~total_count/(104+28),
+                        date=="19-Mar"~total_count/(106+20),
+                        date=="20-Feb"~total_count/(93+27),
+                        date=="20-Mar"~total_count/(98+28),
+                        date=="21-Feb"~total_count/(78+16),
+                        date=="21-Jan"~total_count/(138+42),
+                        date=="21-Mar"~total_count/(69+18),
+                        date=="22-Jan"~total_count/(175+23),
+                        date=="23-Jan"~total_count/(105+27),
+                        date=="24-Feb"~total_count/(130+22),
+                        date=="24-Jan"~total_count/(86+15),
+                        date=="24-Mar"~total_count/(87+21),
+                        date=="25-Feb"~total_count/(105+16),
+                        date=="25-Mar"~total_count/(94+24),
+                        date=="26-Feb"~total_count/(136+19),
+                        date=="26-Mar"~total_count/(103+20),
+                        date=="27-Feb"~total_count/(89+30),
+                        date=="27-Jan"~total_count/(162+21),
+                        date=="27-Mar"~total_count/(74+27),
+                        date=="28-Feb"~total_count/(84+13),
+                        date=="28-Jan"~total_count/(102+35),
+                        date=="28-Mar"~total_count/(34+10),
+                        date=="29-Jan"~total_count/(150+22),
+                        date=="3-Feb"~total_count/(140+18),
+                        date=="3-Mar"~total_count/(107+13),
+                        date=="30-Jan"~total_count/(118+33),
+                        date=="31-Jan"~total_count/(90+8),
+                        date=="4-Feb"~total_count/(101+24),
+                        date=="4-Mar"~total_count/(86+29),
+                        date=="5-Feb"~total_count/(144+26),
+                        date=="5-Mar"~total_count/(132+20),
+                        date=="6-Feb"~total_count/(116+42),
+                        date=="6-Mar"~total_count/(93+23),
+                        date=="7-Apr"~total_count/(93+21),
+                        date=="7-Feb"~total_count/(80+15),
+                        date=="7-Mar"~total_count/(55+22),
+                        date=="8-Apr"~total_count/(108+29),
+                        date=="9-Apr"~total_count/(125+23))) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  filter(item=="Create Your Pasta Bowl MEAT") %>% ### Highest-carbon offering
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=prop,color=item)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  scale_color_brewer(palette="Set2") + 
+  xlab("Date") + 
+  ylab("Proportion of Station Sales") + 
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10)) + 
+  annotate("text",x=as.Date("2025-01-27"),y=0.9,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=0.9,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=0.9,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=0.9,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=0.9,label="Control",size=10/.pt) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition', 'station'. You
+    ## can override using the `.groups` argument.
+
+``` r
+ggsave(filename="spring_control_prop_high.png",plot=spring_control_prop_high,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+``` r
+spring_control_prop_high
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    ## Warning: Removed 1 row containing non-finite outside the scale range (`stat_smooth()`).
+    ## Removed 1 row containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-81-1.png)<!-- -->
 
 We’ll need to do checks to see whether there are differences in the
 purchase of different item categories across menu conditions, whether
@@ -3931,7 +4326,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-100-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-104-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
