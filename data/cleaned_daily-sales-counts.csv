@@ -29,8 +29,8 @@
 "28","16-Oct","1 Wok Entree",1,"Asian","Fall 2024","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "29","16-Oct","Side Vegetables",1,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "30","16-Oct","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"31","16-Oct","Create Your Pasta Bowl MEAT",149,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"32","16-Oct","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"31","16-Oct","Create Your Pasta Bowl MEAT",149,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,93.2137290312343,7127.93930825801,1339.51
+"32","16-Oct","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
 "33","16-Oct","Pizza Cheese",28,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "34","16-Oct","Add Extra Meat",34,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "35","16-Oct","Pizza with Toppings",16,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -79,8 +79,8 @@
 "78","17-Oct","Side Vegetarian Lo Mein",3,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "79","17-Oct","Side Vegetables",2,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "80","17-Oct","Side White or Brown Rice",2,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"81","17-Oct","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"82","17-Oct","Create Your Pasta Bowl VEG",33,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"81","17-Oct","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,80.0762235973019,6123.33041246326,1150.72
+"82","17-Oct","Create Your Pasta Bowl VEG",33,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.62972036570628,348.221039806294,280.17
 "83","17-Oct","Pizza with Toppings",37,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "84","17-Oct","Pizza Cheese",27,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "85","17-Oct","Add Extra Meat",24,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -141,10 +141,10 @@
 "140","18-Oct","Pancake Single",6,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "141","18-Oct","Trillium Home Fries",2,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "142","18-Oct","PC Jelly",1,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"143","18-Oct","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"143","18-Oct","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,51.9244262388755,3970.59706433164,746.17
 "144","18-Oct","Pizza with Toppings",23,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "145","18-Oct","Pizza Cheese",27,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"146","18-Oct","Create Your Pasta Bowl VEG",13,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"146","18-Oct","Create Your Pasta Bowl VEG",13,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.8238292349752,137.177985378237,110.37
 "147","18-Oct","Add Extra Meat",14,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "148","18-Oct","Burrito Bowl BYO",81,"Mexican","Fall 2024","Control","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "149","18-Oct","Single Taco",4,"Mexican","Fall 2024","Control","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -179,8 +179,8 @@
 "178","21-Oct","1 Wok Entree",3,"Asian","Fall 2024","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "179","21-Oct","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "180","21-Oct","Side White or Brown Rice",1,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"181","21-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"182","21-Oct","Create Your Pasta Bowl VEG",37,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"181","21-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,77.5738416098862,5931.97633707378,1114.76
+"182","21-Oct","Create Your Pasta Bowl VEG",37,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.1908985918525,390.429650691906,314.13
 "183","21-Oct","Pizza with Toppings",38,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "184","21-Oct","Pizza Cheese",23,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "185","21-Oct","Add Extra Meat",22,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -228,8 +228,8 @@
 "227","22-Oct","1 Wok Entree",1,"Asian","Fall 2024","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "228","22-Oct","Side White or Brown Rice",3,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "229","22-Oct","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"230","22-Oct","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"231","22-Oct","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"230","22-Oct","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,82.5786055847176,6314.68448785273,1186.68
+"231","22-Oct","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
 "232","22-Oct","Pizza with Toppings",35,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "233","22-Oct","Pizza Cheese",24,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "234","22-Oct","Add Extra Meat",21,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -281,8 +281,8 @@
 "280","23-Oct","Side Vegetarian Lo Mein",3,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "281","23-Oct","Side White or Brown Rice",5,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "282","23-Oct","Side Vegetables",2,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"283","23-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"284","23-Oct","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"283","23-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,77.5738416098862,5931.97633707378,1114.76
+"284","23-Oct","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "285","23-Oct","Pizza with Toppings",38,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "286","23-Oct","Pizza Cheese",23,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "287","23-Oct","Add Extra Meat",25,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -332,8 +332,8 @@
 "331","24-Oct","1 Wok Entree",2,"Asian","Fall 2024","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "332","24-Oct","Side Vegetarian Fried Rice with",3,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "333","24-Oct","Side White or Brown Rice",5,"Asian","Fall 2024","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"334","24-Oct","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"335","24-Oct","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"334","24-Oct","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,81.9530100878637,6266.84596900536,1177.69
+"335","24-Oct","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
 "336","24-Oct","Pizza with Toppings",39,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "337","24-Oct","Pizza Cheese",32,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "338","24-Oct","Add Extra Meat",16,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -395,9 +395,9 @@
 "394","25-Oct","Trillium Home Fries",3,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "395","25-Oct","Pancake Single",2,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "396","25-Oct","2 Slices Toast",1,"Breakfast","Fall 2024","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"397","25-Oct","Create Your Pasta Bowl MEAT",80,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"397","25-Oct","Create Your Pasta Bowl MEAT",80,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,50.0476397483137,3827.08150778954,719.2
 "398","25-Oct","Pizza with Toppings",24,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"399","25-Oct","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"399","25-Oct","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.96412379151176,147.73013809964,118.86
 "400","25-Oct","Pizza Cheese",11,"Italian","Fall 2024","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "401","25-Oct","Add Extra Meat",12,"Italian","Fall 2024","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "402","25-Oct","Burrito Bowl BYO",50,"Mexican","Fall 2024","Control","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -434,8 +434,8 @@
 "433","28-Oct","Side Vegetables",2,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "434","28-Oct","Side White or Brown Rice",3,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "435","28-Oct","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"436","28-Oct","Create Your Pasta Bowl MEAT",127,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"437","28-Oct","Create Your Pasta Bowl VEG",38,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"436","28-Oct","Create Your Pasta Bowl MEAT",127,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,79.450628100448,6075.49189361589,1141.73
+"437","28-Oct","Create Your Pasta Bowl VEG",38,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.33119314838905,400.981803413308,322.62
 "438","28-Oct","Pizza with Toppings",34,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "439","28-Oct","Pizza Cheese",22,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "440","28-Oct","Add Extra Meat",27,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -495,9 +495,9 @@
 "494","29-Oct","Trillium Home Fries",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "495","29-Oct","2 Slices Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "496","29-Oct","Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"497","29-Oct","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"497","29-Oct","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,67.5643136602235,5166.56003551587,970.92
 "498","29-Oct","Pizza with Toppings",39,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"499","29-Oct","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"499","29-Oct","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.50736391341385,263.803818035071,212.25
 "500","29-Oct","Pizza Cheese",22,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "501","29-Oct","Add Extra Meat",20,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "502","29-Oct","Burrito Bowl BYO",102,"Mexican","Fall 2024","Carbon Label","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -534,8 +534,8 @@
 "533","30-Oct","1 Wok Entree",3,"Asian","Fall 2024","Carbon Label","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "534","30-Oct","Side White or Brown Rice",5,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "535","30-Oct","Side Vegetables",1,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"536","30-Oct","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"537","30-Oct","Create Your Pasta Bowl VEG",23,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"536","30-Oct","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,85.0809875721333,6506.03856324221,1222.64
+"537","30-Oct","Create Your Pasta Bowl VEG",23,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "538","30-Oct","Pizza with Toppings",31,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "539","30-Oct","Pizza Cheese",17,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "540","30-Oct","Add Extra Meat",28,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -598,8 +598,8 @@
 "597","31-Oct","Pancake Single",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "598","31-Oct","Toast",2,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "599","31-Oct","2 Slices Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"600","31-Oct","Create Your Pasta Bowl MEAT",120,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"601","31-Oct","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"600","31-Oct","Create Your Pasta Bowl MEAT",120,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,75.0714596224706,5740.6222616843,1078.8
+"601","31-Oct","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "602","31-Oct","Pizza with Toppings",23,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "603","31-Oct","Pizza Cheese",25,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "604","31-Oct","Add Extra Meat",16,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -648,9 +648,9 @@
 "647","1-Nov","Two Eggs",10,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "648","1-Nov","Trillium Home Fries",4,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "649","1-Nov","Pancake Single",4,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"650","1-Nov","Create Your Pasta Bowl MEAT",87,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"650","1-Nov","Create Your Pasta Bowl MEAT",87,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,54.4268082262912,4161.95113972112,782.13
 "651","1-Nov","Pizza with Toppings",17,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"652","1-Nov","Create Your Pasta Bowl VEG",8,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"652","1-Nov","Create Your Pasta Bowl VEG",8,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.12235645229243,84.4172217712228,67.92
 "653","1-Nov","Pizza Cheese",13,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "654","1-Nov","Add Extra Meat",7,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "655","1-Nov","Burrito Bowl BYO",59,"Mexican","Fall 2024","Carbon Label","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -697,8 +697,8 @@
 "696","4-Nov","Pancake Single",3,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "697","4-Nov","2 Slices Toast",2,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "698","4-Nov","Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"699","4-Nov","Create Your Pasta Bowl MEAT",118,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"700","4-Nov","Create Your Pasta Bowl VEG",34,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"699","4-Nov","Create Your Pasta Bowl MEAT",118,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,73.8202686287627,5644.94522398956,1060.82
+"700","4-Nov","Create Your Pasta Bowl VEG",34,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.77001492224284,358.773192527697,288.66
 "701","4-Nov","Pizza with Toppings",27,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "702","4-Nov","Pizza Cheese",17,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "703","4-Nov","Add Extra Meat",27,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -745,9 +745,9 @@
 "744","5-Nov","Pancake Single",5,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "745","5-Nov","2 Slices Toast",3,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "746","5-Nov","Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"747","5-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"747","5-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,64.4363361759539,4927.36744127903,925.97
 "748","5-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"749","5-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"749","5-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "750","5-Nov","Pizza Cheese",20,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "751","5-Nov","Add Extra Meat",6,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "752","5-Nov","Side Bread Pasta Station",1,"Italian","Fall 2024","Carbon Label","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -787,8 +787,8 @@
 "786","6-Nov","Side Vegetarian Fried Rice with",7,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "787","6-Nov","Side White or Brown Rice",13,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "788","6-Nov","Side Vegetables",2,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"789","6-Nov","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"790","6-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"789","6-Nov","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,85.0809875721333,6506.03856324221,1222.64
+"790","6-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.20883669609662,316.564581642086,254.7
 "791","6-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "792","6-Nov","Pizza Cheese",20,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "793","6-Nov","Add Extra Meat",27,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -838,8 +838,8 @@
 "837","7-Nov","Side White or Brown Rice",5,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "838","7-Nov","Bowl Ramen Chicken",1,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "839","7-Nov","Side Vegetable Spring Rolls",2,"Asian","Fall 2024","Carbon Label","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"840","7-Nov","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"841","7-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"840","7-Nov","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,82.5786055847176,6314.68448785273,1186.68
+"841","7-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "842","7-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "843","7-Nov","Pizza Cheese",21,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "844","7-Nov","Add Extra Meat",18,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -899,8 +899,8 @@
 "898","8-Nov","Trillium Home Fries",4,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "899","8-Nov","2 Slices Toast",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "900","8-Nov","PC Peanut Butter",1,"Breakfast","Fall 2024","Carbon Label","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"901","8-Nov","Create Your Pasta Bowl MEAT",92,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"902","8-Nov","Create Your Pasta Bowl VEG",16,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"901","8-Nov","Create Your Pasta Bowl MEAT",92,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,57.5547857105608,4401.14373395797,827.08
+"902","8-Nov","Create Your Pasta Bowl VEG",16,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.24471290458486,168.834443542446,135.84
 "903","8-Nov","Pizza with Toppings",22,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "904","8-Nov","Pizza Cheese",12,"Italian","Fall 2024","Carbon Label","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "905","8-Nov","Add Extra Meat",12,"Italian","Fall 2024","Carbon Label","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -940,8 +940,8 @@
 "939","11-Nov","Side Vegetables",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "940","11-Nov","Side Vegetable Spring Rolls",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "941","11-Nov","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"942","11-Nov","Create Your Pasta Bowl MEAT",119,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"943","11-Nov","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"942","11-Nov","Create Your Pasta Bowl MEAT",119,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,74.4458641256166,5692.78374283693,1069.81
+"943","11-Nov","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.50736391341385,263.803818035071,212.25
 "944","11-Nov","Pizza with Toppings",34,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "945","11-Nov","Pizza Cheese",16,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "946","11-Nov","Add Extra Meat",26,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -999,9 +999,9 @@
 "998","12-Nov","Trillium Home Fries",7,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "999","12-Nov","Pancake Single",4,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1000","12-Nov","Toast",3,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1001","12-Nov","Create Your Pasta Bowl MEAT",112,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1001","12-Nov","Create Your Pasta Bowl MEAT",112,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.0666956476392,5357.91411090535,1006.88
 "1002","12-Nov","Pizza with Toppings",33,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1003","12-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1003","12-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "1004","12-Nov","Pizza Cheese",19,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1005","12-Nov","Add Extra Meat",14,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1006","12-Nov","Burrito Bowl BYO",93,"Mexican","Fall 2024","Default","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1039,8 +1039,8 @@
 "1038","13-Nov","Side Vegetable Spring Rolls",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1039","13-Nov","Side White or Brown Rice",3,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1040","13-Nov","Side Fried Spring Roll",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1041","13-Nov","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1042","13-Nov","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1041","13-Nov","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.6922911444931,5405.75262975272,1015.87
+"1042","13-Nov","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
 "1043","13-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1044","13-Nov","Pizza Cheese",19,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1045","13-Nov","Add Extra Meat",22,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1097,8 +1097,8 @@
 "1096","14-Nov","Pancake Single",5,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1097","14-Nov","Trillium Home Fries",4,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1098","14-Nov","2 Slices Toast",3,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1099","14-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1100","14-Nov","Create Your Pasta Bowl VEG",31,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1099","14-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,64.4363361759539,4927.36744127903,925.97
+"1100","14-Nov","Create Your Pasta Bowl VEG",31,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.34913125263317,327.116734363488,263.19
 "1101","14-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1102","14-Nov","Pizza Cheese",22,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1103","14-Nov","Add Extra Meat",16,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1147,9 +1147,9 @@
 "1146","15-Nov","Trillium Home Fries",4,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1147","15-Nov","Toast",1,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1148","15-Nov","PC Peanut Butter",1,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1149","15-Nov","Create Your Pasta Bowl MEAT",79,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1149","15-Nov","Create Your Pasta Bowl MEAT",79,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,49.4220442514598,3779.24298894217,710.21
 "1150","15-Nov","Pizza with Toppings",23,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1151","15-Nov","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1151","15-Nov","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
 "1152","15-Nov","Pizza Cheese",12,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1153","15-Nov","Add Extra Meat",19,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1154","15-Nov","Side Bread Pasta Station",1,"Italian","Fall 2024","Default","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1185,8 +1185,8 @@
 "1184","18-Nov","Side White or Brown Rice",4,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1185","18-Nov","Side Vegetable Spring Rolls",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1186","18-Nov","Side Vegetarian Fried Rice with",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1187","18-Nov","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1188","18-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1187","18-Nov","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,72.5690776350549,5549.26818629483,1042.84
+"1188","18-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.20883669609662,316.564581642086,254.7
 "1189","18-Nov","Pizza with Toppings",35,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1190","18-Nov","Pizza Cheese",21,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1191","18-Nov","Add Extra Meat",18,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1236,8 +1236,8 @@
 "1235","19-Nov","Side White or Brown Rice",12,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1236","19-Nov","Side Vegetable Spring Rolls",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1237","19-Nov","Side Vegetarian Fried Rice with",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1238","19-Nov","Create Your Pasta Bowl MEAT",115,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1239","19-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1238","19-Nov","Create Your Pasta Bowl MEAT",115,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,71.943482138201,5501.42966744746,1033.85
+"1239","19-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "1240","19-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1241","19-Nov","Pizza Cheese",22,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1242","19-Nov","Add Extra Meat",18,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1287,8 +1287,8 @@
 "1286","20-Nov","Side Vegetables",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1287","20-Nov","Side Vegetable Spring Rolls",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1288","20-Nov","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1289","20-Nov","Create Your Pasta Bowl MEAT",143,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1290","20-Nov","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1289","20-Nov","Create Your Pasta Bowl MEAT",143,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,89.4601560501108,6840.9081951738,1285.57
+"1290","20-Nov","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
 "1291","20-Nov","Add Extra Meat",20,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1292","20-Nov","Pizza Cheese",10,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1293","20-Nov","Pizza with Toppings",8,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1338,9 +1338,9 @@
 "1337","21-Nov","1 Wok Entree",3,"Asian","Fall 2024","Default","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1338","21-Nov","Side White or Brown Rice",5,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1339","21-Nov","Side Vegetarian Fried Rice with",2,"Asian","Fall 2024","Default","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1340","21-Nov","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1340","21-Nov","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,81.9530100878637,6266.84596900536,1177.69
 "1341","21-Nov","Pizza with Toppings",38,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1342","21-Nov","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1342","21-Nov","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
 "1343","21-Nov","Pizza Cheese",22,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1344","21-Nov","Add Extra Meat",15,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1345","21-Nov","Burrito Breakfast",75,"Breakfast","Fall 2024","Default","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -1401,10 +1401,10 @@
 "1400","22-Nov","Trillium Home Fries",1,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1401","22-Nov","PC Jelly",2,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1402","22-Nov","PC Peanut Butter",1,"Breakfast","Fall 2024","Default","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1403","22-Nov","Create Your Pasta Bowl MEAT",70,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1403","22-Nov","Create Your Pasta Bowl MEAT",70,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,43.7916847797745,3348.69631931584,629.3
 "1404","22-Nov","Pizza with Toppings",21,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1405","22-Nov","Pizza Cheese",18,"Italian","Fall 2024","Default","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1406","22-Nov","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1406","22-Nov","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.26265100882899,94.9693744926257,76.41
 "1407","22-Nov","Add Extra Meat",11,"Italian","Fall 2024","Default","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1408","22-Nov","Burrito Bowl BYO",51,"Mexican","Fall 2024","Default","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1409","22-Nov","Single Taco",6,"Mexican","Fall 2024","Default","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1440,8 +1440,8 @@
 "1439","25-Nov","Side Vegetables",3,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1440","25-Nov","1 Wok Entree",1,"Asian","Fall 2024","Multimodal","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1441","25-Nov","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1442","25-Nov","Create Your Pasta Bowl MEAT",55,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1443","25-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1442","25-Nov","Create Your Pasta Bowl MEAT",55,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,34.4077523269657,2631.11853660531,494.45
+"1443","25-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "1444","25-Nov","Pizza with Toppings",23,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1445","25-Nov","Pizza Cheese",11,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1446","25-Nov","Add Extra Meat",10,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1494,9 +1494,9 @@
 "1493","26-Nov","Pancake Single",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1494","26-Nov","2 Slices Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1495","26-Nov","Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1496","26-Nov","Create Your Pasta Bowl MEAT",29,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1496","26-Nov","Create Your Pasta Bowl MEAT",29,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,18.1422694087637,1387.31704657371,260.71
 "1497","26-Nov","Pizza with Toppings",14,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1498","26-Nov","Create Your Pasta Bowl VEG",6,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1498","26-Nov","Create Your Pasta Bowl VEG",6,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.841767339219324,63.3129163284171,50.94
 "1499","26-Nov","Pizza Cheese",6,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1500","26-Nov","Add Extra Meat",2,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1501","26-Nov","Burrito Bowl BYO",42,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1531,8 +1531,8 @@
 "1530","2-Dec","Side Vegetarian Lo Mein",9,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1531","2-Dec","Side White or Brown Rice",9,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1532","2-Dec","Side Vegetables",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1533","2-Dec","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1534","2-Dec","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1533","2-Dec","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,80.0762235973019,6123.33041246326,1150.72
+"1534","2-Dec","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
 "1535","2-Dec","Pizza Cheese",32,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1536","2-Dec","Pizza with Toppings",22,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1537","2-Dec","Add Extra Meat",21,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1584,8 +1584,8 @@
 "1583","3-Dec","Side Fried Spring Roll",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1584","3-Dec","Side Vegetables",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1585","3-Dec","Add Extra Toppings",1,"Asian","Fall 2024","Multimodal","Ramen","Modification","Treatment","Lunch",0.0010464372365658,0.0220745767324265,0.99,0.0010464372365658,0.0220745767324265,0.99
-"1586","3-Dec","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1587","3-Dec","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1586","3-Dec","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,72.5690776350549,5549.26818629483,1042.84
+"1587","3-Dec","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "1588","3-Dec","Pizza with Toppings",39,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1589","3-Dec","Pizza Cheese",20,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1590","3-Dec","Add Extra Meat",21,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1638,8 +1638,8 @@
 "1637","4-Dec","Side Vegetables",2,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1638","4-Dec","Side Fried Spring Roll",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1639","4-Dec","Side Vegetarian Fried Rice with",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1640","4-Dec","Create Your Pasta Bowl MEAT",142,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1641","4-Dec","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1640","4-Dec","Create Your Pasta Bowl MEAT",142,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,88.8345605532568,6793.06967632643,1276.58
+"1641","4-Dec","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "1642","4-Dec","Pizza with Toppings",22,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1643","4-Dec","Pizza Cheese",22,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1644","4-Dec","Add Extra Meat",36,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1691,8 +1691,8 @@
 "1690","5-Dec","Side Fried Spring Roll",2,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1691","5-Dec","Side Vegetables",2,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1692","5-Dec","Side Vegetable Spring Rolls",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1693","5-Dec","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1694","5-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1693","5-Dec","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.6922911444931,5405.75262975272,1015.87
+"1694","5-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
 "1695","5-Dec","Pizza with Toppings",37,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1696","5-Dec","Pizza Cheese",23,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1697","5-Dec","Add Extra Meat",23,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1754,9 +1754,9 @@
 "1753","6-Dec","2 Slices Toast",5,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1754","6-Dec","Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1755","6-Dec","PC Peanut Butter",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1756","6-Dec","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1756","6-Dec","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,51.9244262388755,3970.59706433164,746.17
 "1757","6-Dec","Pizza with Toppings",28,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1758","6-Dec","Create Your Pasta Bowl VEG",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1758","6-Dec","Create Your Pasta Bowl VEG",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.68353467843865,126.625832656834,101.88
 "1759","6-Dec","Pizza Cheese",19,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1760","6-Dec","Add Extra Meat",26,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1761","6-Dec","Burrito Bowl BYO",66,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1790,8 +1790,8 @@
 "1789","9-Dec","1 Wok Entree",3,"Asian","Fall 2024","Multimodal","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1790","9-Dec","Side White or Brown Rice",7,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1791","9-Dec","Side Vegetable Spring Rolls",3,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1792","9-Dec","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1793","9-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1792","9-Dec","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,67.5643136602235,5166.56003551587,970.92
+"1793","9-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
 "1794","9-Dec","Pizza with Toppings",28,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1795","9-Dec","Pizza Cheese",17,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1796","9-Dec","Add Extra Meat",28,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1835,9 +1835,9 @@
 "1834","10-Dec","Side Vegetable Spring Rolls",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1835","10-Dec","Side Vegetarian Lo Mein",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1836","10-Dec","Side White or Brown Rice",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1837","10-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1837","10-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.1517973584265,2152.73334813161,404.55
 "1838","10-Dec","Pizza with Toppings",22,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1839","10-Dec","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1839","10-Dec","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.26265100882899,94.9693744926257,76.41
 "1840","10-Dec","Pizza Cheese",11,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1841","10-Dec","Add Extra Meat",12,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1842","10-Dec","Burrito Breakfast",36,"Breakfast","Fall 2024","Multimodal","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -1882,8 +1882,8 @@
 "1881","11-Dec","Side White or Brown Rice",5,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1882","11-Dec","Side Vegetarian Fried Rice with",2,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1883","11-Dec","Side Vegetable Spring Rolls",1,"Asian","Fall 2024","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1884","11-Dec","Create Your Pasta Bowl MEAT",41,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1885","11-Dec","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1884","11-Dec","Create Your Pasta Bowl MEAT",41,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,25.6494153710108,1961.37927274214,368.59
+"1885","11-Dec","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
 "1886","11-Dec","Pizza with Toppings",17,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1887","11-Dec","Pizza Cheese",6,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1888","11-Dec","Add Extra Meat",5,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1942,8 +1942,8 @@
 "1941","12-Dec","Pancake Single",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1942","12-Dec","Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1943","12-Dec","PC Jelly",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1944","12-Dec","Create Your Pasta Bowl MEAT",34,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1945","12-Dec","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1944","12-Dec","Create Your Pasta Bowl MEAT",34,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,21.2702468930333,1626.50964081055,305.66
+"1945","12-Dec","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.96412379151176,147.73013809964,118.86
 "1946","12-Dec","Pizza with Toppings",19,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1947","12-Dec","Pizza Cheese",9,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1948","12-Dec","Add Extra Meat",9,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -1989,10 +1989,10 @@
 "1988","13-Dec","Pancake Single",3,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1989","13-Dec","Trillium Home Fries",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "1990","13-Dec","2 Slices Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"1991","13-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1991","13-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.1517973584265,2152.73334813161,404.55
 "1992","13-Dec","Pizza with Toppings",13,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1993","13-Dec","Pizza Cheese",10,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"1994","13-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"1994","13-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.70147278268277,52.7607636070143,42.45
 "1995","13-Dec","Add Extra Meat",5,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1996","13-Dec","Burrito Bowl BYO",32,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "1997","13-Dec","Single Taco",3,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2036,9 +2036,9 @@
 "2035","16-Dec","Two Eggs",11,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2036","16-Dec","Trillium Home Fries",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2037","16-Dec","2 Slices Toast",2,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2038","16-Dec","Create Your Pasta Bowl MEAT",46,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2038","16-Dec","Create Your Pasta Bowl MEAT",46,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.7773928552804,2200.57186697898,413.54
 "2039","16-Dec","Pizza with Toppings",16,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2040","16-Dec","Create Your Pasta Bowl VEG",7,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2040","16-Dec","Create Your Pasta Bowl VEG",7,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.982061895755878,73.86506904982,59.43
 "2041","16-Dec","Pizza Cheese",8,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2042","16-Dec","Add Extra Meat",9,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2043","16-Dec","Burrito Bowl BYO",32,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2076,9 +2076,9 @@
 "2075","17-Dec","Add Bacon",15,"Breakfast","Fall 2024","Multimodal","Breakfast","Modification","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2076","17-Dec","Two Eggs",6,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2077","17-Dec","2 Slices Toast",2,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2078","17-Dec","Create Your Pasta Bowl MEAT",30,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2078","17-Dec","Create Your Pasta Bowl MEAT",30,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,18.7678649056176,1435.15556542108,269.7
 "2079","17-Dec","Pizza with Toppings",16,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2080","17-Dec","Create Your Pasta Bowl VEG",10,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2080","17-Dec","Create Your Pasta Bowl VEG",10,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.40294556536554,105.521527214029,84.9
 "2081","17-Dec","Pizza Cheese",12,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2082","17-Dec","Add Extra Meat",2,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2083","17-Dec","Burrito Bowl BYO",45,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2121,9 +2121,9 @@
 "2120","18-Dec","Trillium Home Fries",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2121","18-Dec","2 Slices Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2122","18-Dec","Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2123","18-Dec","Create Your Pasta Bowl MEAT",25,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2123","18-Dec","Create Your Pasta Bowl MEAT",25,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,15.639887421348,1195.96297118423,224.75
 "2124","18-Dec","Pizza with Toppings",19,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2125","18-Dec","Create Your Pasta Bowl VEG",11,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2125","18-Dec","Create Your Pasta Bowl VEG",11,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.54324012190209,116.073679935431,93.39
 "2126","18-Dec","Pizza Cheese",10,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2127","18-Dec","Add Extra Meat",4,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2128","18-Dec","Burrito Bowl BYO",27,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2163,10 +2163,10 @@
 "2162","19-Dec","Trillium Home Fries",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2163","19-Dec","2 Slices Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2164","19-Dec","Toast",1,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2165","19-Dec","Create Your Pasta Bowl MEAT",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2165","19-Dec","Create Your Pasta Bowl MEAT",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,7.50714596224706,574.06222616843,107.88
 "2166","19-Dec","Pizza with Toppings",13,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2167","19-Dec","Pizza Cheese",11,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2168","19-Dec","Create Your Pasta Bowl VEG",4,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2168","19-Dec","Create Your Pasta Bowl VEG",4,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.561178226146216,42.2086108856114,33.96
 "2169","19-Dec","Add Extra Meat",4,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2170","19-Dec","Burrito Bowl BYO",26,"Mexican","Fall 2024","Multimodal","Wrap","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2171","19-Dec","Soup 12 oz",14,"Soup","Fall 2024","Multimodal","Soup","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2200,8 +2200,8 @@
 "2199","20-Dec","Add Bacon",7,"Breakfast","Fall 2024","Multimodal","Breakfast","Modification","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2200","20-Dec","Two Eggs",4,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2201","20-Dec","2 Slices Toast",3,"Breakfast","Fall 2024","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2202","20-Dec","Create Your Pasta Bowl MEAT",16,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2203","20-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2202","20-Dec","Create Your Pasta Bowl MEAT",16,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,10.0095279496627,765.416301557907,143.84
+"2203","20-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.70147278268277,52.7607636070143,42.45
 "2204","20-Dec","Pizza with Toppings",6,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2205","20-Dec","Pizza Cheese",5,"Italian","Fall 2024","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2206","20-Dec","Add Extra Meat",1,"Italian","Fall 2024","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2241,8 +2241,8 @@
 "2240","21-Jan","Side White or Brown Rice",7,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2241","21-Jan","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2242","21-Jan","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2243","21-Jan","Create Your Pasta Bowl MEAT",138,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2244","21-Jan","Create Your Pasta Bowl VEG",42,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2243","21-Jan","Create Your Pasta Bowl MEAT",138,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,86.3321785658411,6601.71560093695,1240.62
+"2244","21-Jan","Create Your Pasta Bowl VEG",42,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.89237137453527,443.19041429892,356.58
 "2245","21-Jan","Pizza with Toppings",34,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2246","21-Jan","Pizza Cheese",24,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2247","21-Jan","Add Extra Meat",14,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2291,8 +2291,8 @@
 "2290","22-Jan","Side White or Brown Rice",7,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2291","22-Jan","Side Vegetarian Fried Rice with",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2292","22-Jan","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2293","22-Jan","Create Your Pasta Bowl MEAT",175,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2294","22-Jan","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2293","22-Jan","Create Your Pasta Bowl MEAT",175,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,109.479211949436,8371.74079828961,1573.25
+"2294","22-Jan","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "2295","22-Jan","Pizza with Toppings",32,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2296","22-Jan","Add Extra Meat",38,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2297","22-Jan","Pizza Cheese",22,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2340,8 +2340,8 @@
 "2339","23-Jan","Side White or Brown Rice",5,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2340","23-Jan","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2341","23-Jan","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2342","23-Jan","Create Your Pasta Bowl MEAT",105,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2343","23-Jan","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2342","23-Jan","Create Your Pasta Bowl MEAT",105,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,65.6875271696617,5023.04447897377,943.95
+"2343","23-Jan","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "2344","23-Jan","Pizza with Toppings",28,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2345","23-Jan","Pizza Cheese",18,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2346","23-Jan","Add Extra Meat",21,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2393,9 +2393,9 @@
 "2392","24-Jan","Side White or Brown Rice",7,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2393","24-Jan","Side Vegetables",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2394","24-Jan","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2395","24-Jan","Create Your Pasta Bowl MEAT",86,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2395","24-Jan","Create Your Pasta Bowl MEAT",86,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,53.8012127294372,4114.11262087375,773.14
 "2396","24-Jan","Pizza with Toppings",26,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2397","24-Jan","Create Your Pasta Bowl VEG",15,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2397","24-Jan","Create Your Pasta Bowl VEG",15,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
 "2398","24-Jan","Pizza Cheese",14,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2399","24-Jan","Add Extra Meat",19,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2400","24-Jan","Burrito Breakfast",70,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -2443,8 +2443,8 @@
 "2442","27-Jan","Side Vegetarian Fried Rice with",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2443","27-Jan","Side White or Brown Rice",5,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2444","27-Jan","Bowl Ramen Chicken",1,"Asian","Spring 2025","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
-"2445","27-Jan","Create Your Pasta Bowl MEAT",162,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2446","27-Jan","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2445","27-Jan","Create Your Pasta Bowl MEAT",162,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,101.346470490335,7749.84005327381,1456.38
+"2446","27-Jan","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.94618568726763,221.59520714946,178.29
 "2447","27-Jan","Pizza with Toppings",26,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2448","27-Jan","Add Extra Meat",34,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2449","27-Jan","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2493,8 +2493,8 @@
 "2492","28-Jan","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2493","28-Jan","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2494","28-Jan","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2495","28-Jan","Create Your Pasta Bowl MEAT",102,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2496","28-Jan","Create Your Pasta Bowl VEG",35,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2495","28-Jan","Create Your Pasta Bowl MEAT",102,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,63.8107406791,4879.52892243166,916.98
+"2496","28-Jan","Create Your Pasta Bowl VEG",35,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.91030947877939,369.3253452491,297.15
 "2497","28-Jan","Pizza with Toppings",31,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2498","28-Jan","Pizza Cheese",25,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2499","28-Jan","Add Extra Meat",18,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2545,9 +2545,9 @@
 "2544","29-Jan","1 Wok Entree",4,"Asian","Spring 2025","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2545","29-Jan","Side White or Brown Rice",7,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2546","29-Jan","Side Vegetable Spring Rolls",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2547","29-Jan","Create Your Pasta Bowl MEAT",150,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2547","29-Jan","Create Your Pasta Bowl MEAT",150,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,93.8393245280882,7175.77782710538,1348.5
 "2548","29-Jan","Pizza with Toppings",38,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2549","29-Jan","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2549","29-Jan","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.08648024380419,232.147359870863,186.78
 "2550","29-Jan","Pizza Cheese",23,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2551","29-Jan","Add Extra Meat",32,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2552","29-Jan","Burrito Breakfast",86,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -2596,8 +2596,8 @@
 "2595","30-Jan","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2596","30-Jan","Side Vegetables",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2597","30-Jan","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2598","30-Jan","Create Your Pasta Bowl MEAT",118,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2599","30-Jan","Create Your Pasta Bowl VEG",33,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2598","30-Jan","Create Your Pasta Bowl MEAT",118,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,73.8202686287627,5644.94522398956,1060.82
+"2599","30-Jan","Create Your Pasta Bowl VEG",33,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.62972036570628,348.221039806294,280.17
 "2600","30-Jan","Pizza with Toppings",45,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2601","30-Jan","Pizza Cheese",27,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2602","30-Jan","Add Extra Meat",31,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2645,10 +2645,10 @@
 "2644","31-Jan","Bowl Ramen Chicken",1,"Asian","Spring 2025","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "2645","31-Jan","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2646","31-Jan","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2647","31-Jan","Create Your Pasta Bowl MEAT",90,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2647","31-Jan","Create Your Pasta Bowl MEAT",90,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,56.3035947168529,4305.46669626323,809.1
 "2648","31-Jan","Pizza with Toppings",35,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2649","31-Jan","Pizza Cheese",18,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2650","31-Jan","Create Your Pasta Bowl VEG",8,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2650","31-Jan","Create Your Pasta Bowl VEG",8,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.12235645229243,84.4172217712228,67.92
 "2651","31-Jan","Add Extra Meat",22,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2652","31-Jan","Side Bread Pasta Station",1,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2653","31-Jan","Burrito Breakfast",74,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -2696,9 +2696,9 @@
 "2695","3-Feb","Side Vegetable Spring Rolls",3,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2696","3-Feb","Side Vegetables",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2697","3-Feb","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2698","3-Feb","Create Your Pasta Bowl MEAT",140,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2698","3-Feb","Create Your Pasta Bowl MEAT",140,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,87.583369559549,6697.39263863169,1258.6
 "2699","3-Feb","Pizza with Toppings",39,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2700","3-Feb","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2700","3-Feb","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.52530201765797,189.938748985251,152.82
 "2701","3-Feb","Add Extra Meat",36,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2702","3-Feb","Pizza Cheese",16,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2703","3-Feb","Side Bread Pasta Station",1,"Italian","Spring 2025","Multimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2750,9 +2750,9 @@
 "2749","4-Feb","Side Vegetables",3,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2750","4-Feb","Side Vegetarian Fried Rice with",3,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2751","4-Feb","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2752","4-Feb","Create Your Pasta Bowl MEAT",101,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2752","4-Feb","Create Your Pasta Bowl MEAT",101,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,63.185145182246,4831.69040358429,907.99
 "2753","4-Feb","Pizza with Toppings",52,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2754","4-Feb","Create Your Pasta Bowl VEG",24,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2754","4-Feb","Create Your Pasta Bowl VEG",24,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
 "2755","4-Feb","Pizza Cheese",20,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2756","4-Feb","Add Extra Meat",17,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2757","4-Feb","Side Bread Pasta Station",2,"Italian","Spring 2025","Multimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2801,9 +2801,9 @@
 "2800","5-Feb","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2801","5-Feb","Side White or Brown Rice",3,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2802","5-Feb","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2803","5-Feb","Create Your Pasta Bowl MEAT",144,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2803","5-Feb","Create Your Pasta Bowl MEAT",144,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,90.0857515469647,6888.74671402116,1294.56
 "2804","5-Feb","Pizza with Toppings",42,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2805","5-Feb","Create Your Pasta Bowl VEG",26,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2805","5-Feb","Create Your Pasta Bowl VEG",26,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
 "2806","5-Feb","Add Extra Meat",40,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2807","5-Feb","Pizza Cheese",15,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2808","5-Feb","Side Bread Pasta Station",1,"Italian","Spring 2025","Multimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2844,8 +2844,8 @@
 "2843","6-Feb","Sweet Potato Fries",28,"Grill","Spring 2025","Multimodal","Grill","Side","Treatment","Lunch",0.0422551714366103,3.97622481710592,2.99,1.18314480022509,111.334294878966,83.72
 "2844","6-Feb","Add Egg .99",8,"Grill","Spring 2025","Multimodal","Grill","Modification","Treatment","Lunch",0.0903881853779601,25.3348662383603,0.99,0.723105483023681,202.678929906882,7.92
 "2845","6-Feb","Side Potato Tots",2,"Grab N Go","Spring 2025","Multimodal","Grab N Go","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2846","6-Feb","Create Your Pasta Bowl MEAT",116,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2847","6-Feb","Create Your Pasta Bowl VEG",42,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2846","6-Feb","Create Your Pasta Bowl MEAT",116,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,72.5690776350549,5549.26818629483,1042.84
+"2847","6-Feb","Create Your Pasta Bowl VEG",42,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.89237137453527,443.19041429892,356.58
 "2848","6-Feb","Pizza with Toppings",61,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2849","6-Feb","Pizza Cheese",22,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2850","6-Feb","Add Extra Meat",18,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2898,8 +2898,8 @@
 "2897","7-Feb","Trillium Home Fries",4,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2898","7-Feb","2 Slices Toast",1,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "2899","7-Feb","PC Peanut Butter",1,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"2900","7-Feb","Create Your Pasta Bowl MEAT",80,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2901","7-Feb","Create Your Pasta Bowl VEG",15,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2900","7-Feb","Create Your Pasta Bowl MEAT",80,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,50.0476397483137,3827.08150778954,719.2
+"2901","7-Feb","Create Your Pasta Bowl VEG",15,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
 "2902","7-Feb","Pizza with Toppings",18,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2903","7-Feb","Add Extra Meat",28,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2904","7-Feb","Pizza Cheese",10,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2937,8 +2937,8 @@
 "2936","10-Feb","Side White or Brown Rice",6,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2937","10-Feb","Side Vegetables",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2938","10-Feb","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2939","10-Feb","Create Your Pasta Bowl MEAT",121,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2940","10-Feb","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2939","10-Feb","Create Your Pasta Bowl MEAT",121,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,75.6970551193245,5788.46078053167,1087.79
+"2940","10-Feb","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.66559657419453,200.490901706654,161.31
 "2941","10-Feb","Add Extra Meat",33,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2942","10-Feb","Pizza Cheese",16,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2943","10-Feb","Pizza with Toppings",12,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -2990,8 +2990,8 @@
 "2989","11-Feb","Side Vegetables",3,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2990","11-Feb","Bowl Ramen Chicken",1,"Asian","Spring 2025","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "2991","11-Feb","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2992","11-Feb","Create Your Pasta Bowl MEAT",111,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"2993","11-Feb","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"2992","11-Feb","Create Your Pasta Bowl MEAT",111,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,69.4411001507853,5310.07559205798,997.89
+"2993","11-Feb","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "2994","11-Feb","Pizza with Toppings",23,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2995","11-Feb","Pizza Cheese",21,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "2996","11-Feb","Add Extra Meat",20,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3044,8 +3044,8 @@
 "3043","12-Feb","Bowl Ramen Chicken",1,"Asian","Spring 2025","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "3044","12-Feb","Side Vegetables",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3045","12-Feb","Side White or Brown Rice",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3046","12-Feb","Create Your Pasta Bowl MEAT",133,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3047","12-Feb","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3046","12-Feb","Create Your Pasta Bowl MEAT",133,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,83.2042010815715,6362.5230067001,1195.67
+"3047","12-Feb","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.08648024380419,232.147359870863,186.78
 "3048","12-Feb","Pizza Cheese",25,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3049","12-Feb","Add Extra Meat",39,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3050","12-Feb","Pizza with Toppings",17,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3107,8 +3107,8 @@
 "3106","13-Feb","2 Slices Toast",2,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3107","13-Feb","Toast",1,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3108","13-Feb","PC Peanut Butter",1,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"3109","13-Feb","Create Your Pasta Bowl MEAT",81,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3110","13-Feb","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3109","13-Feb","Create Your Pasta Bowl MEAT",81,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,50.6732352451676,3874.9200266369,728.19
+"3110","13-Feb","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "3111","13-Feb","Pizza with Toppings",30,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3112","13-Feb","Pizza Cheese",17,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3113","13-Feb","Add Extra Meat",19,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3156,8 +3156,8 @@
 "3155","14-Feb","Pancake Single",5,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3156","14-Feb","Trillium Home Fries",2,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3157","14-Feb","Toast",1,"Breakfast","Spring 2025","Multimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"3158","14-Feb","Create Your Pasta Bowl MEAT",34,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3159","14-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3158","14-Feb","Create Your Pasta Bowl MEAT",34,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,21.2702468930333,1626.50964081055,305.66
+"3159","14-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.24471290458486,168.834443542446,135.84
 "3160","14-Feb","Pizza with Toppings",16,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3161","14-Feb","Pizza Cheese",13,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3162","14-Feb","Add Extra Meat",14,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3200,8 +3200,8 @@
 "3199","19-Feb","Bowl Ramen Chicken",1,"Asian","Spring 2025","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "3200","19-Feb","Side Vegetables",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3201","19-Feb","Side Vegetarian Fried Rice with",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3202","19-Feb","Create Your Pasta Bowl MEAT",104,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3203","19-Feb","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3202","19-Feb","Create Your Pasta Bowl MEAT",104,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,65.0619316728078,4975.2059601264,934.96
+"3203","19-Feb","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "3204","19-Feb","Pizza with Toppings",20,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3205","19-Feb","Pizza Cheese",24,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3206","19-Feb","Add Extra Meat",27,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3251,8 +3251,8 @@
 "3250","20-Feb","Side White or Brown Rice",4,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3251","20-Feb","Side Vegetarian Fried Rice with",2,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3252","20-Feb","Side Fried Spring Roll",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3253","20-Feb","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3254","20-Feb","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3253","20-Feb","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,58.1803812074147,4448.98225280533,836.07
+"3254","20-Feb","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "3255","20-Feb","Pizza with Toppings",32,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3256","20-Feb","Pizza Cheese",19,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3257","20-Feb","Add Extra Meat",24,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3301,9 +3301,9 @@
 "3300","21-Feb","Side White or Brown Rice",5,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3301","21-Feb","Side Fried Spring Roll",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3302","21-Feb","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Multimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3303","21-Feb","Create Your Pasta Bowl MEAT",78,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3303","21-Feb","Create Your Pasta Bowl MEAT",78,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,48.7964487546059,3731.4044700948,701.22
 "3304","21-Feb","Pizza with Toppings",28,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3305","21-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3305","21-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.24471290458486,168.834443542446,135.84
 "3306","21-Feb","Pizza Cheese",15,"Italian","Spring 2025","Multimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3307","21-Feb","Add Extra Meat",12,"Italian","Spring 2025","Multimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3308","21-Feb","Burrito Breakfast",66,"Breakfast","Spring 2025","Multimodal","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -3351,8 +3351,8 @@
 "3350","24-Feb","Side White or Brown Rice",6,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3351","24-Feb","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3352","24-Feb","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3353","24-Feb","Create Your Pasta Bowl MEAT",130,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3354","24-Feb","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3353","24-Feb","Create Your Pasta Bowl MEAT",130,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,81.3274145910098,6219.007450158,1168.7
+"3354","24-Feb","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.08648024380419,232.147359870863,186.78
 "3355","24-Feb","Pizza with Toppings",32,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3356","24-Feb","Add Extra Meat",31,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3357","24-Feb","Pizza Cheese",15,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3403,9 +3403,9 @@
 "3402","25-Feb","Side Vegetarian Fried Rice with",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3403","25-Feb","Side White or Brown Rice",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3404","25-Feb","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3405","25-Feb","Create Your Pasta Bowl MEAT",105,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3405","25-Feb","Create Your Pasta Bowl MEAT",105,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,65.6875271696617,5023.04447897377,943.95
 "3406","25-Feb","Pizza with Toppings",42,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3407","25-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3407","25-Feb","Create Your Pasta Bowl VEG",16,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.24471290458486,168.834443542446,135.84
 "3408","25-Feb","Pizza Cheese",23,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3409","25-Feb","Add Extra Meat",24,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3410","25-Feb","Side Bread Pasta Station",1,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3457,9 +3457,9 @@
 "3456","26-Feb","Side Vegetables",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3457","26-Feb","Side Vegetarian Lo Mein",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3458","26-Feb","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3459","26-Feb","Create Your Pasta Bowl MEAT",136,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3459","26-Feb","Create Your Pasta Bowl MEAT",136,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,85.0809875721333,6506.03856324221,1222.64
 "3460","26-Feb","Pizza with Toppings",34,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3461","26-Feb","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3461","26-Feb","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.66559657419453,200.490901706654,161.31
 "3462","26-Feb","Pizza Cheese",19,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3463","26-Feb","Add Extra Meat",31,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3464","26-Feb","Side Bread Pasta Station",2,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3511,8 +3511,8 @@
 "3510","27-Feb","Side White or Brown Rice",5,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3511","27-Feb","Side Fried Spring Roll",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3512","27-Feb","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3513","27-Feb","Create Your Pasta Bowl MEAT",89,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3514","27-Feb","Create Your Pasta Bowl VEG",30,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3513","27-Feb","Create Your Pasta Bowl MEAT",89,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,55.677999219999,4257.62817741586,800.11
+"3514","27-Feb","Create Your Pasta Bowl VEG",30,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.20883669609662,316.564581642086,254.7
 "3515","27-Feb","Pizza with Toppings",36,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3516","27-Feb","Pizza Cheese",24,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3517","27-Feb","Add Extra Meat",33,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3569,9 +3569,9 @@
 "3568","28-Feb","Two Eggs",5,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3569","28-Feb","Toast",3,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3570","28-Feb","2 Slices Toast",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"3571","28-Feb","Create Your Pasta Bowl MEAT",84,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3571","28-Feb","Create Your Pasta Bowl MEAT",84,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,52.5500217357294,4018.43558317901,755.16
 "3572","28-Feb","Pizza with Toppings",23,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3573","28-Feb","Create Your Pasta Bowl VEG",13,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3573","28-Feb","Create Your Pasta Bowl VEG",13,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.8238292349752,137.177985378237,110.37
 "3574","28-Feb","Pizza Cheese",14,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3575","28-Feb","Add Extra Meat",21,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3576","28-Feb","Side Bread Pasta Station",1,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3614,9 +3614,9 @@
 "3613","3-Mar","Side Vegetables",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3614","3-Mar","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3615","3-Mar","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3616","3-Mar","Create Your Pasta Bowl MEAT",107,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3616","3-Mar","Create Your Pasta Bowl MEAT",107,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,66.9387181633696,5118.7215166685,961.93
 "3617","3-Mar","Pizza with Toppings",36,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3618","3-Mar","Create Your Pasta Bowl VEG",13,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3618","3-Mar","Create Your Pasta Bowl VEG",13,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.8238292349752,137.177985378237,110.37
 "3619","3-Mar","Pizza Cheese",20,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3620","3-Mar","Add Extra Meat",19,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3621","3-Mar","Burrito Breakfast",87,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -3673,8 +3673,8 @@
 "3672","4-Mar","Trillium Home Fries",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3673","4-Mar","PC Jelly",3,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3674","4-Mar","2 Slices Toast",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"3675","4-Mar","Create Your Pasta Bowl MEAT",86,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3676","4-Mar","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3675","4-Mar","Create Your Pasta Bowl MEAT",86,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,53.8012127294372,4114.11262087375,773.14
+"3676","4-Mar","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.06854213956007,306.012428920683,246.21
 "3677","4-Mar","Pizza with Toppings",39,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3678","4-Mar","Pizza Cheese",24,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3679","4-Mar","Add Extra Meat",18,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3718,8 +3718,8 @@
 "3717","5-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3718","5-Mar","Side Vegetables",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3719","5-Mar","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3720","5-Mar","Create Your Pasta Bowl MEAT",132,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3721","5-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3720","5-Mar","Create Your Pasta Bowl MEAT",132,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,82.5786055847176,6314.68448785273,1186.68
+"3721","5-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "3722","5-Mar","Pizza with Toppings",24,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3723","5-Mar","Add Extra Meat",40,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3724","5-Mar","Pizza Cheese",20,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3772,9 +3772,9 @@
 "3771","6-Mar","Bowl Ramen Chicken",1,"Asian","Spring 2025","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "3772","6-Mar","Side Fried Spring Roll",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3773","6-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3774","6-Mar","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3774","6-Mar","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,58.1803812074147,4448.98225280533,836.07
 "3775","6-Mar","Pizza with Toppings",37,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3776","6-Mar","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3776","6-Mar","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "3777","6-Mar","Pizza Cheese",20,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3778","6-Mar","Add Extra Meat",21,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3779","6-Mar","Burrito Breakfast",78,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -3831,8 +3831,8 @@
 "3830","7-Mar","Pancake Single",3,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3831","7-Mar","2 Slices Toast",4,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "3832","7-Mar","PC Peanut Butter",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"3833","7-Mar","Create Your Pasta Bowl MEAT",55,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3834","7-Mar","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3833","7-Mar","Create Your Pasta Bowl MEAT",55,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,34.4077523269657,2631.11853660531,494.45
+"3834","7-Mar","Create Your Pasta Bowl VEG",22,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.08648024380419,232.147359870863,186.78
 "3835","7-Mar","Pizza with Toppings",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3836","7-Mar","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3837","7-Mar","Add Extra Meat",22,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3874,8 +3874,8 @@
 "3873","10-Mar","Side Fried Spring Roll",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3874","10-Mar","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3875","10-Mar","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3876","10-Mar","Create Your Pasta Bowl MEAT",106,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3877","10-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3876","10-Mar","Create Your Pasta Bowl MEAT",106,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,66.3131226665157,5070.88299782113,952.94
+"3877","10-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "3878","10-Mar","Pizza with Toppings",25,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3879","10-Mar","Pizza Cheese",19,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3880","10-Mar","Add Extra Meat",22,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3925,8 +3925,8 @@
 "3924","11-Mar","Side Vegetarian Lo Mein",6,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3925","11-Mar","Side Fried Spring Roll",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3926","11-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3927","11-Mar","Create Your Pasta Bowl MEAT",81,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3928","11-Mar","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3927","11-Mar","Create Your Pasta Bowl MEAT",81,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,50.6732352451676,3874.9200266369,728.19
+"3928","11-Mar","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.06854213956007,306.012428920683,246.21
 "3929","11-Mar","Pizza with Toppings",35,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3930","11-Mar","Pizza Cheese",15,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3931","11-Mar","Add Extra Meat",16,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -3980,9 +3980,9 @@
 "3979","12-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3980","12-Mar","Side Fried Spring Roll",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3981","12-Mar","Side Vegetables",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3982","12-Mar","Create Your Pasta Bowl MEAT",107,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3982","12-Mar","Create Your Pasta Bowl MEAT",107,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,66.9387181633696,5118.7215166685,961.93
 "3983","12-Mar","Pizza with Toppings",36,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"3984","12-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"3984","12-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "3985","12-Mar","Add Extra Meat",32,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3986","12-Mar","Pizza Cheese",16,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "3987","12-Mar","Burrito Breakfast",108,"Breakfast","Spring 2025","Unimodal","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -4030,9 +4030,9 @@
 "4029","13-Mar","Side Vegetable Spring Rolls",4,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4030","13-Mar","Side Vegetables",3,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4031","13-Mar","Side Fried Spring Roll",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4032","13-Mar","Create Your Pasta Bowl MEAT",92,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4032","13-Mar","Create Your Pasta Bowl MEAT",92,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,57.5547857105608,4401.14373395797,827.08
 "4033","13-Mar","Pizza with Toppings",39,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4034","13-Mar","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4034","13-Mar","Create Your Pasta Bowl VEG",19,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.66559657419453,200.490901706654,161.31
 "4035","13-Mar","Pizza Cheese",18,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4036","13-Mar","Add Extra Meat",24,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4037","13-Mar","Side Bread Pasta Station",1,"Italian","Spring 2025","Unimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4099,9 +4099,9 @@
 "4098","14-Mar","2 Slices Toast",2,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4099","14-Mar","PC Jelly",3,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4100","14-Mar","PC Peanut Butter",2,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4101","14-Mar","Create Your Pasta Bowl MEAT",71,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4101","14-Mar","Create Your Pasta Bowl MEAT",71,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,44.4172802766284,3396.53483816321,638.29
 "4102","14-Mar","Pizza with Toppings",27,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4103","14-Mar","Create Your Pasta Bowl VEG",14,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4103","14-Mar","Create Your Pasta Bowl VEG",14,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.96412379151176,147.73013809964,118.86
 "4104","14-Mar","Pizza Cheese",11,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4105","14-Mar","Add Extra Meat",15,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4106","14-Mar","Side Bread Pasta Station",2,"Italian","Spring 2025","Unimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4143,9 +4143,9 @@
 "4142","17-Mar","Side White or Brown Rice",7,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4143","17-Mar","Side Fried Spring Roll",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4144","17-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4145","17-Mar","Create Your Pasta Bowl MEAT",126,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4145","17-Mar","Create Your Pasta Bowl MEAT",126,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,78.8250326035941,6027.65337476852,1132.74
 "4146","17-Mar","Pizza with Toppings",28,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4147","17-Mar","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4147","17-Mar","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.52530201765797,189.938748985251,152.82
 "4148","17-Mar","Add Extra Meat",31,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4149","17-Mar","Pizza Cheese",17,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4150","17-Mar","Side Bread Pasta Station",1,"Italian","Spring 2025","Unimodal","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4205,8 +4205,8 @@
 "4204","18-Mar","Two Eggs",10,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4205","18-Mar","Pancake Single",1,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4206","18-Mar","2 Slices Toast",1,"Breakfast","Spring 2025","Unimodal","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4207","18-Mar","Create Your Pasta Bowl MEAT",89,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4208","18-Mar","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4207","18-Mar","Create Your Pasta Bowl MEAT",89,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,55.677999219999,4257.62817741586,800.11
+"4208","18-Mar","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "4209","18-Mar","Pizza with Toppings",31,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4210","18-Mar","Pizza Cheese",18,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4211","18-Mar","Add Extra Meat",24,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4252,8 +4252,8 @@
 "4251","19-Mar","Side Fried Spring Roll",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4252","19-Mar","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4253","19-Mar","Add Extra Toppings",1,"Asian","Spring 2025","Unimodal","Ramen","Modification","Treatment","Lunch",0.0010464372365658,0.0220745767324265,0.99,0.0010464372365658,0.0220745767324265,0.99
-"4254","19-Mar","Create Your Pasta Bowl MEAT",106,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4255","19-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4254","19-Mar","Create Your Pasta Bowl MEAT",106,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,66.3131226665157,5070.88299782113,952.94
+"4255","19-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "4256","19-Mar","Pizza with Toppings",29,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4257","19-Mar","Pizza Cheese",20,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4258","19-Mar","Add Extra Meat",22,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4304,8 +4304,8 @@
 "4303","20-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4304","20-Mar","Side White or Brown Rice",2,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4305","20-Mar","Side Vegetables",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4306","20-Mar","Create Your Pasta Bowl MEAT",98,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4307","20-Mar","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4306","20-Mar","Create Your Pasta Bowl MEAT",98,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,61.3083586916843,4688.17484704218,881.02
+"4307","20-Mar","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "4308","20-Mar","Pizza with Toppings",32,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4309","20-Mar","Pizza Cheese",16,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4310","20-Mar","Add Extra Meat",20,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4358,8 +4358,8 @@
 "4357","21-Mar","Side White or Brown Rice",5,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4358","21-Mar","Side Fried Spring Roll",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4359","21-Mar","Side Vegetables",1,"Asian","Spring 2025","Unimodal","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4360","21-Mar","Create Your Pasta Bowl MEAT",69,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4361","21-Mar","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4360","21-Mar","Create Your Pasta Bowl MEAT",69,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,43.1660892829206,3300.85780046847,620.31
+"4361","21-Mar","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Unimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.52530201765797,189.938748985251,152.82
 "4362","21-Mar","Pizza with Toppings",22,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4363","21-Mar","Pizza Cheese",17,"Italian","Spring 2025","Unimodal","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4364","21-Mar","Add Extra Meat",15,"Italian","Spring 2025","Unimodal","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4409,9 +4409,9 @@
 "4408","24-Mar","Side Vegetarian Lo Mein",9,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4409","24-Mar","Side White or Brown Rice",8,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4410","24-Mar","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4411","24-Mar","Create Your Pasta Bowl MEAT",87,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4411","24-Mar","Create Your Pasta Bowl MEAT",87,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,54.4268082262912,4161.95113972112,782.13
 "4412","24-Mar","Pizza with Toppings",36,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4413","24-Mar","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4413","24-Mar","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.94618568726763,221.59520714946,178.29
 "4414","24-Mar","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4415","24-Mar","Add Extra Meat",24,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4416","24-Mar","Burrito Breakfast",93,"Breakfast","Spring 2025","Control","Breakfast","Main","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
@@ -4475,8 +4475,8 @@
 "4474","25-Mar","2 Slices Toast",2,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4475","25-Mar","PC Peanut Butter",2,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4476","25-Mar","PC Jelly",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4477","25-Mar","Create Your Pasta Bowl MEAT",94,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4478","25-Mar","Create Your Pasta Bowl VEG",24,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4477","25-Mar","Create Your Pasta Bowl MEAT",94,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,58.8059767042686,4496.8207716527,845.06
+"4478","25-Mar","Create Your Pasta Bowl VEG",24,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
 "4479","25-Mar","Pizza with Toppings",25,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4480","25-Mar","Pizza Cheese",21,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4481","25-Mar","Add Extra Meat",21,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4523,9 +4523,9 @@
 "4522","26-Mar","Side White or Brown Rice",10,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4523","26-Mar","Side Vegetables",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4524","26-Mar","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4525","26-Mar","Create Your Pasta Bowl MEAT",103,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4525","26-Mar","Create Your Pasta Bowl MEAT",103,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,64.4363361759539,4927.36744127903,925.97
 "4526","26-Mar","Pizza with Toppings",31,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4527","26-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4527","26-Mar","Create Your Pasta Bowl VEG",20,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
 "4528","26-Mar","Add Extra Meat",32,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4529","26-Mar","Pizza Cheese",14,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4530","26-Mar","Side Bread Pasta Station",1,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4586,8 +4586,8 @@
 "4585","27-Mar","Pancake Single",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4586","27-Mar","2 Slices Toast",2,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4587","27-Mar","PC Peanut Butter",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4588","27-Mar","Create Your Pasta Bowl MEAT",74,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4589","27-Mar","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4588","27-Mar","Create Your Pasta Bowl MEAT",74,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,46.2940667671902,3540.05039470532,665.26
+"4589","27-Mar","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "4590","27-Mar","Pizza with Toppings",32,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4591","27-Mar","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4592","27-Mar","Add Extra Meat",22,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4639,9 +4639,9 @@
 "4638","28-Mar","Two Eggs",6,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4639","28-Mar","Pancake Single",4,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4640","28-Mar","2 Slices Toast",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4641","28-Mar","Create Your Pasta Bowl MEAT",34,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4641","28-Mar","Create Your Pasta Bowl MEAT",34,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,21.2702468930333,1626.50964081055,305.66
 "4642","28-Mar","Pizza with Toppings",19,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4643","28-Mar","Create Your Pasta Bowl VEG",10,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4643","28-Mar","Create Your Pasta Bowl VEG",10,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.40294556536554,105.521527214029,84.9
 "4644","28-Mar","Pizza Cheese",10,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4645","28-Mar","Add Extra Meat",7,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4646","28-Mar","Side Bread Pasta Station",2,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4680,8 +4680,8 @@
 "4679","7-Apr","Side White or Brown Rice",8,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4680","7-Apr","Bowl Ramen Chicken",1,"Asian","Spring 2025","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
 "4681","7-Apr","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4682","7-Apr","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4683","7-Apr","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4682","7-Apr","Create Your Pasta Bowl MEAT",93,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,58.1803812074147,4448.98225280533,836.07
+"4683","7-Apr","Create Your Pasta Bowl VEG",21,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.94618568726763,221.59520714946,178.29
 "4684","7-Apr","Pizza with Toppings",22,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4685","7-Apr","Add Extra Meat",33,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4686","7-Apr","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4745,8 +4745,8 @@
 "4744","8-Apr","PC Butter",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4745","8-Apr","PC Jelly",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4746","8-Apr","PC Peanut Butter",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4747","8-Apr","Create Your Pasta Bowl MEAT",108,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4748","8-Apr","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4747","8-Apr","Create Your Pasta Bowl MEAT",108,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,67.5643136602235,5166.56003551587,970.92
+"4748","8-Apr","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.06854213956007,306.012428920683,246.21
 "4749","8-Apr","Pizza with Toppings",32,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4750","8-Apr","Add Extra Meat",29,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4751","8-Apr","Pizza Cheese",17,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4793,8 +4793,8 @@
 "4792","9-Apr","Side Fried Spring Roll",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4793","9-Apr","Side Vegetables",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4794","9-Apr","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4795","9-Apr","Create Your Pasta Bowl MEAT",125,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4796","9-Apr","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4795","9-Apr","Create Your Pasta Bowl MEAT",125,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,78.1994371067402,5979.81485592115,1123.75
+"4796","9-Apr","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "4797","9-Apr","Pizza with Toppings",23,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4798","9-Apr","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4799","9-Apr","Add Extra Meat",23,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4853,8 +4853,8 @@
 "4852","10-Apr","Two Eggs",20,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4853","10-Apr","Trillium Home Fries",9,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4854","10-Apr","2 Slices Toast",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4855","10-Apr","Create Your Pasta Bowl MEAT",96,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4856","10-Apr","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4855","10-Apr","Create Your Pasta Bowl MEAT",96,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,60.0571676979765,4592.49780934744,863.04
+"4856","10-Apr","Create Your Pasta Bowl VEG",29,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.06854213956007,306.012428920683,246.21
 "4857","10-Apr","Pizza with Toppings",29,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4858","10-Apr","Pizza Cheese",17,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4859","10-Apr","Add Extra Meat",19,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4907,9 +4907,9 @@
 "4906","11-Apr","Two Eggs",11,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4907","11-Apr","Trillium Home Fries",3,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "4908","11-Apr","Toast",1,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"4909","11-Apr","Create Your Pasta Bowl MEAT",56,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4909","11-Apr","Create Your Pasta Bowl MEAT",56,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,35.0333478238196,2678.95705545267,503.44
 "4910","11-Apr","Pizza with Toppings",22,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4911","11-Apr","Create Your Pasta Bowl VEG",10,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4911","11-Apr","Create Your Pasta Bowl VEG",10,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.40294556536554,105.521527214029,84.9
 "4912","11-Apr","Pizza Cheese",9,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4913","11-Apr","Add Extra Meat",13,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4914","11-Apr","Side Bread Pasta Station",1,"Italian","Spring 2025","Control","Pasta","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -4953,8 +4953,8 @@
 "4952","14-Apr","Side Fried Spring Roll",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4953","14-Apr","Side Vegetable Spring Rolls",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4954","14-Apr","Side Vegetarian Fried Rice with",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4955","14-Apr","Create Your Pasta Bowl MEAT",100,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"4956","14-Apr","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"4955","14-Apr","Create Your Pasta Bowl MEAT",100,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,62.5595496853921,4783.85188473692,899
+"4956","14-Apr","Create Your Pasta Bowl VEG",28,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
 "4957","14-Apr","Pizza with Toppings",25,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4958","14-Apr","Add Extra Meat",33,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "4959","14-Apr","Pizza Cheese",18,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -5017,8 +5017,8 @@
 "5016","15-Apr","Two Eggs",14,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "5017","15-Apr","Pancake Single",5,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "5018","15-Apr","Trillium Home Fries",2,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"5019","15-Apr","Create Your Pasta Bowl MEAT",83,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5020","15-Apr","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"5019","15-Apr","Create Your Pasta Bowl MEAT",83,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,51.9244262388755,3970.59706433164,746.17
+"5020","15-Apr","Create Your Pasta Bowl VEG",23,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
 "5021","15-Apr","Pizza with Toppings",22,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5022","15-Apr","Pizza Cheese",25,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5023","15-Apr","Add Extra Meat",26,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -5063,8 +5063,8 @@
 "5062","16-Apr","1 Wok Entree",2,"Asian","Spring 2025","Control","Wok","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5063","16-Apr","Side White or Brown Rice",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5064","16-Apr","Side Vegetable Spring Rolls",1,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5065","16-Apr","Create Your Pasta Bowl MEAT",118,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5066","16-Apr","Create Your Pasta Bowl VEG",26,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"5065","16-Apr","Create Your Pasta Bowl MEAT",118,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,73.8202686287627,5644.94522398956,1060.82
+"5066","16-Apr","Create Your Pasta Bowl VEG",26,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
 "5067","16-Apr","Pizza with Toppings",27,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5068","16-Apr","Add Extra Meat",33,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5069","16-Apr","Pizza Cheese",16,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -5114,8 +5114,8 @@
 "5113","17-Apr","Side Vegetable Spring Rolls",3,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5114","17-Apr","Side Fried Spring Roll",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5115","17-Apr","Side Vegetarian Fried Rice with",2,"Asian","Spring 2025","Control","Wok","Side","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5116","17-Apr","Create Your Pasta Bowl MEAT",85,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5117","17-Apr","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"5116","17-Apr","Create Your Pasta Bowl MEAT",85,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,53.1756172325833,4066.27410202638,764.15
+"5117","17-Apr","Create Your Pasta Bowl VEG",27,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
 "5118","17-Apr","Pizza with Toppings",30,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5119","17-Apr","Pizza Cheese",19,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5120","17-Apr","Add Extra Meat",22,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
@@ -5174,8 +5174,8 @@
 "5173","18-Apr","Pancake Single",5,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "5174","18-Apr","Trillium Home Fries",4,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
 "5175","18-Apr","2 Slices Toast",2,"Breakfast","Spring 2025","Control","Breakfast","Side","Satellite","Breakfast",NA,NA,NA,NA,NA,NA
-"5176","18-Apr","Create Your Pasta Bowl MEAT",63,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
-"5177","18-Apr","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
+"5176","18-Apr","Create Your Pasta Bowl MEAT",63,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,39.412516301797,3013.82668738426,566.37
+"5177","18-Apr","Create Your Pasta Bowl VEG",18,"Italian","Spring 2025","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.52530201765797,189.938748985251,152.82
 "5178","18-Apr","Pizza with Toppings",19,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5179","18-Apr","Add Extra Meat",28,"Italian","Spring 2025","Control","Pasta","Modification","Satellite","Lunch",NA,NA,NA,NA,NA,NA
 "5180","18-Apr","Pizza Cheese",12,"Italian","Spring 2025","Control","Pizza","Main","Satellite","Lunch",NA,NA,NA,NA,NA,NA
