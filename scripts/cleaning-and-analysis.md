@@ -2988,7 +2988,7 @@ fall_prop_low <- ggarrange(fall_prop_low_ramen,fall_prop_low_grill,fall_prop_low
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ``` r
-fall_prop_low <- annotate_figure(fall_prop_low,top=text_grob("Daily Sales Percentages of Lowest-Carbon Offerings", 
+fall_prop_low <- annotate_figure(fall_prop_low,top=text_grob("Daily Sales Percentages of Lowest-Carbon Offerings (%)", 
                color="black",face="bold",size = 12))
 ggsave(filename="fall_prop_low.png",plot=fall_prop_low,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
 fall_prop_low
@@ -3920,7 +3920,7 @@ fall_prop_high <- ggarrange(fall_prop_high_ramen,fall_prop_high_grill,fall_prop_
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ``` r
-fall_prop_high <- annotate_figure(fall_prop_high,top=text_grob("Daily Sales Percentages of Highest-Carbon Offerings", 
+fall_prop_high <- annotate_figure(fall_prop_high,top=text_grob("Daily Sales Percentages of Highest-Carbon Offerings (%)", 
                color="black",face="bold",size=12))
 ggsave(filename="fall_prop_high.png",plot=fall_prop_high,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
 fall_prop_high
@@ -4009,7 +4009,7 @@ fall_mean_carbon_grill <- fall_data %>%
   geom_point() +
   geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
   xlab("Date") + 
-  ylab("Proportion of Station Sales") +
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
   scale_color_brewer(palette="Dark2",name="") +
   scale_fill_brewer(palette="Dark2",name="") +
   scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
@@ -4115,7 +4115,7 @@ fall_mean_carbon_ramen <- fall_data %>%
   geom_point() +
   geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
   xlab("Date") + 
-  ylab("Proportion of Station Sales") +
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
   scale_color_brewer(palette="Dark2",name="") +
   scale_fill_brewer(palette="Dark2",name="") +
   scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
@@ -4218,7 +4218,7 @@ fall_mean_carbon_treatment <- fall_data %>%
   geom_point() +
   geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
   xlab("Date") + 
-  ylab("Proportion of Station Sales") +
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
   scale_color_brewer(palette="Dark2",name="") +
   scale_fill_brewer(palette="Dark2",name="") +
   scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
@@ -4320,7 +4320,7 @@ fall_mean_carbon_control <- fall_data %>%
   geom_point() +
   geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
   xlab("Date") + 
-  ylab("Proportion of Station Sales") +
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
   scale_color_brewer(palette="Set1",name="") +
   scale_fill_brewer(palette="Set1",name="") +
   scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
@@ -4359,13 +4359,442 @@ fall_mean_carbon <- ggarrange(fall_mean_carbon_ramen,fall_mean_carbon_grill,fall
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ``` r
-fall_mean_carbon <- annotate_figure(fall_mean_carbon,top=text_grob("Average Carbon Cost of Station Sales", 
-               color="black",face="bold",size=12))
+fall_mean_carbon <- annotate_figure(fall_mean_carbon,top=text_grob("Mean Emissions Cost of Station Sales (kg CO2e)",color="black",face="bold",size=12))
 ggsave(filename="fall_mean_carbon.png",plot=fall_mean_carbon,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
 fall_mean_carbon
 ```
 
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-88-1.png)<!-- -->
+
+mean_spend
+
+``` r
+fall_data %>% 
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 4 × 4
+    ##   menu_condition total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 Carbon Label              11554.        1285             8.99
+    ## 2 Control                    9409.        1048             8.98
+    ## 3 Default                   11421.        1270             8.99
+    ## 4 Multimodal                14342.        1595             8.99
+
+``` r
+fall_mean_spend_grill <- fall_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
+  labs(title="Grill Station (Treated)") +
+  annotate("text",x=as.Date("2024-10-22"),y=8.978359-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=8.991089-0.01,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=8.992835-0.01,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=8.992006-0.01,label="Multimodal",size=10/.pt) +
+  annotate("point",x=as.Date("2024-10-22"),y=8.978359) +
+  annotate("point",x=as.Date("2024-11-4"),y=8.991089) +
+  annotate("point",x=as.Date("2024-11-18"),y=8.992835) +
+  annotate("point",x=as.Date("2024-12-7"),y=8.992006) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition'. You can override
+    ## using the `.groups` argument.
+
+``` r
+fall_mean_spend_grill
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-90-1.png)<!-- -->
+
+``` r
+fall_data %>% 
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 4 × 4
+    ##   menu_condition total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 Carbon Label               7782.         820             9.49
+    ## 2 Control                    6368.         671             9.49
+    ## 3 Default                    8256.         870             9.49
+    ## 4 Multimodal                 9889.        1042             9.49
+
+``` r
+fall_mean_spend_ramen <- fall_data %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
+  labs(title="Ramen Station (Treated)") +
+  annotate("text",x=as.Date("2024-10-22"),y=9.49-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=9.49-0.01,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=9.49-0.01,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=9.49-0.01,label="Multimodal",size=10/.pt) +
+  annotate("point",x=as.Date("2024-10-22"),y=9.49) +
+  annotate("point",x=as.Date("2024-11-4"),y=9.49) +
+  annotate("point",x=as.Date("2024-11-18"),y=9.49) +
+  annotate("point",x=as.Date("2024-12-7"),y=9.49) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition'. You can override
+    ## using the `.groups` argument.
+
+``` r
+fall_mean_spend_ramen
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-92-1.png)<!-- -->
+
+``` r
+fall_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 4 × 4
+    ##   menu_condition total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 Carbon Label              19335.        2105             9.19
+    ## 2 Control                   15777.        1719             9.18
+    ## 3 Default                   19677.        2140             9.19
+    ## 4 Multimodal                24231.        2637             9.19
+
+``` r
+fall_mean_spend_treatment <- fall_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  mutate(station="Treatment") %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
+  labs(title="Ramen & Grill Stations (Treated)") +
+  annotate("text",x=as.Date("2024-10-22"),y=9.178074-0.005,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=9.185439-0.005,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=9.194953-0.005,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=9.188786-0.005,label="Multimodal",size=10/.pt) +
+  annotate("point",x=as.Date("2024-10-22"),y=9.178074) +
+  annotate("point",x=as.Date("2024-11-4"),y=9.185439) +
+  annotate("point",x=as.Date("2024-11-18"),y=9.194953) +
+  annotate("point",x=as.Date("2024-12-7"),y=9.188786) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date'. You can override using the
+    ## `.groups` argument.
+
+``` r
+fall_mean_spend_treatment
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-94-1.png)<!-- -->
+
+``` r
+fall_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(menu_condition) %>% 
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) 
+```
+
+    ## # A tibble: 4 × 4
+    ##   menu_condition total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 Carbon Label              12533.        1408             8.90
+    ## 2 Control                   10307.        1158             8.90
+    ## 3 Default                   11936.        1341             8.90
+    ## 4 Multimodal                11817.        1329             8.89
+
+``` r
+fall_mean_spend_control <- fall_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Set1",name="") +
+  scale_fill_brewer(palette="Set1",name="") +
+  scale_x_date(breaks=as.Date(c("2024-10-16","2024-10-28","2024-11-11","2024-11-25","2024-12-20")),labels=c("Oct 16","Oct 28","Nov 11","Nov 25","Dec 20")) +
+  labs(title="Pasta Station (Untreated)") +
+  annotate("text",x=as.Date("2024-10-22"),y=8.900622-0.005,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=8.901577-0.005,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=8.900515-0.005,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=8.891806-0.005,label="Multimodal",size=10/.pt) +
+  annotate("point",x=as.Date("2024-10-22"),y=8.900622) +
+  annotate("point",x=as.Date("2024-11-4"),y=8.901577) +
+  annotate("point",x=as.Date("2024-11-18"),y=8.900515) +
+  annotate("point",x=as.Date("2024-12-7"),y=8.891806) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition'. You can override
+    ## using the `.groups` argument.
+
+``` r
+fall_mean_spend_control
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-96-1.png)<!-- -->
+
+``` r
+fall_mean_spend <- ggarrange(fall_mean_spend_ramen,fall_mean_spend_grill,fall_mean_spend_treatment,fall_mean_spend_control,
+          labels=c("A","B","C","D"),
+          legend="none")
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+``` r
+fall_mean_spend <- annotate_figure(fall_mean_spend,top=text_grob("Mean Revenue Per Station Sale ($)",color="black",face="bold",size=12))
+ggsave(filename="fall_mean_spend.png",plot=fall_mean_spend,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
+fall_mean_spend
+```
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-97-1.png)<!-- -->
 
 ### Proportion of medium-emitting selections???? OMG Consider fixing code for prop-low and prop-high
 
@@ -4452,7 +4881,7 @@ period_prop_middle_fall_data %>%
   geom_col(position="dodge") 
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-100-1.png)<!-- -->
 
 ``` r
 daily_prop_middle_fall_data <-fall_data %>%
@@ -4579,7 +5008,7 @@ grill_prop_mid
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-94-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-103-1.png)<!-- -->
 ggsave(filename=“prop_middle.png”,plot=grill_prop_mid,path=“/Users/kenjinchang/github/multimodal-framework-validation/figures”,width=30,height=20,units=“cm”,dpi=150,limitsize=TRUE)
 
 Now trying just prop of all items at grill
@@ -4695,7 +5124,7 @@ ggplot(daily_prop_fall_data,aes(x=date,y=prop,color=item)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-96-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-105-1.png)<!-- -->
 
 ### Mean carbon costs
 
@@ -4741,7 +5170,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-98-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-107-1.png)<!-- -->
 
 ``` r
 mean_per_day_carbon_cost_fall_data <- fall_data %>%
@@ -4810,7 +5239,7 @@ ggplot(mean_per_day_carbon_cost_fall_data,aes(x=date,y=mean_carbon_cost,color=st
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-100-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-109-1.png)<!-- -->
 
 ``` r
 grill_mean_carbon_cost <- fall_data %>%
@@ -4887,7 +5316,7 @@ grill_mean_carbon_cost
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-101-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-110-1.png)<!-- -->
 ggsave(filename=“mean_carbon.png”,plot=grill_mean_carbon_cost,path=“/Users/kenjinchang/github/multimodal-framework-validation/figures”,width=30,height=20,units=“cm”,dpi=150,limitsize=TRUE)
 
 ### Mean spend
@@ -4909,7 +5338,7 @@ fall_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-102-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-111-1.png)<!-- -->
 
 ``` r
 mean_daily_spend_fall_data <- fall_data %>%
@@ -4978,7 +5407,7 @@ ggplot(mean_daily_spend_fall_data,aes(x=date,y=mean_spend,color=station)) +
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-104-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-113-1.png)<!-- -->
 
 ``` r
 mean_spend <- fall_data %>%
@@ -5055,7 +5484,7 @@ mean_spend
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-105-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-114-1.png)<!-- -->
 ggsave(filename=“mean_spend.png”,plot=mean_spend,path=“/Users/kenjinchang/github/multimodal-framework-validation/figures”,width=30,height=20,units=“cm”,dpi=150,limitsize=TRUE)
 
 ## CLeaning and Analysis (Spring 2025)
@@ -5157,7 +5586,7 @@ spring_data %>%
     ## `summarise()` has grouped output by 'phase_interval'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-106-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-115-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -5612,7 +6041,7 @@ spring_prop_low_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-114-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-123-1.png)<!-- -->
 
 FOR RAMEN STATION
 
@@ -5798,7 +6227,7 @@ spring_prop_low_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-116-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-125-1.png)<!-- -->
 
 FOR AGGREGATE
 
@@ -6007,7 +6436,7 @@ spring_prop_low_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-118-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-127-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -6290,7 +6719,7 @@ spring_prop_low_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-121-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-130-1.png)<!-- -->
 
 ``` r
 spring_prop_low <- ggarrange(spring_prop_low_ramen,spring_prop_low_grill,spring_prop_low_treatment,spring_prop_low_control,
@@ -6304,13 +6733,13 @@ spring_prop_low <- ggarrange(spring_prop_low_ramen,spring_prop_low_grill,spring_
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ``` r
-spring_prop_low <- annotate_figure(spring_prop_low,top=text_grob("Daily Sales Percentages of Lowest-Carbon Offerings", 
-               color="black",face="bold",size = 12))
+spring_prop_low <- annotate_figure(spring_prop_low,top=text_grob("Daily Sales Percentages of Lowest-Carbon Offerings (%)", 
+               color="black",face="bold",size=12))
 ggsave(filename="spring_prop_low.png",plot=spring_prop_low,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
 spring_prop_low
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-122-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-131-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -6347,6 +6776,8 @@ spring_prop_high_grill <- daily_prop_spring_data %>%
   geom_smooth(alpha=0.2) + 
   geom_point() + 
   geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab("Proportion of Station Sales") + 
   scale_color_brewer(palette="Dark2",name="") +
   scale_fill_brewer(palette="Dark2",name="") +
   scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
@@ -6367,7 +6798,7 @@ spring_prop_high_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-124-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-133-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -6551,7 +6982,7 @@ spring_prop_high_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-126-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-135-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -6758,7 +7189,7 @@ spring_prop_high_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-128-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-137-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -6942,7 +7373,7 @@ spring_prop_high_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-130-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-139-1.png)<!-- -->
 
 ``` r
 spring_prop_high <- ggarrange(spring_prop_high_ramen,spring_prop_high_grill,spring_prop_high_treatment,spring_prop_high_control,
@@ -6956,13 +7387,999 @@ spring_prop_high <- ggarrange(spring_prop_high_ramen,spring_prop_high_grill,spri
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
 ``` r
-spring_prop_high <- annotate_figure(spring_prop_high,top=text_grob("Daily Sales Percentages of Highest-Carbon Offerings", 
+spring_prop_high <- annotate_figure(spring_prop_high,top=text_grob("Daily Sales Percentages of Highest-Carbon Offerings (%)", 
                color="black",face="bold",size = 12))
 ggsave(filename="spring_prop_high.png",plot=spring_prop_high,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
 spring_prop_high
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-131-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-140-1.png)<!-- -->
+
+mean_carbon
+
+``` r
+spring_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales)
+```
+
+    ## `summarise()` has grouped output by 'phase_interval'. You can override using
+    ## the `.groups` argument.
+
+    ## # A tibble: 5 × 5
+    ## # Groups:   phase_interval [5]
+    ##   phase_interval station total_carbon_cost total_sales mean_carbon_cost
+    ##   <chr>          <chr>               <dbl>       <int>            <dbl>
+    ## 1 1              Grill               3251.        1122             2.90
+    ## 2 2              Grill               4324.        1477             2.93
+    ## 3 3              Grill               3746.        1276             2.94
+    ## 4 4              Grill               3626.        1243             2.92
+    ## 5 5              Grill               5412.        1903             2.84
+
+``` r
+spring_mean_carbon_grill <- spring_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_carbon_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  annotate("text",x=as.Date("2025-01-27"),y=2.897567-0.04,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=2.927513-0.04,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=2.935598-0.04,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=2.916774-0.04,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=2.844186-0.04,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=2.897567) +
+  annotate("point",x=as.Date("2025-02-14"),y=2.927513) +
+  annotate("point",x=as.Date("2025-03-03"),y=2.935598) +
+  annotate("point",x=as.Date("2025-03-17"),y=2.916774) +
+  annotate("point",x=as.Date("2025-04-06"),y=2.844186) +
+  labs(title="Grill Station (Treated)") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_carbon_grill
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-142-1.png)<!-- -->
+
+``` r
+spring_data %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales)
+```
+
+    ## `summarise()` has grouped output by 'phase_interval'. You can override using
+    ## the `.groups` argument.
+
+    ## # A tibble: 5 × 5
+    ## # Groups:   phase_interval [5]
+    ##   phase_interval station total_carbon_cost total_sales mean_carbon_cost
+    ##   <chr>          <chr>               <dbl>       <int>            <dbl>
+    ## 1 1              Ramen                328.         892            0.367
+    ## 2 2              Ramen                418.        1141            0.366
+    ## 3 3              Ramen                330.         902            0.365
+    ## 4 4              Ramen                279.         765            0.364
+    ## 5 5              Ramen                418.        1152            0.363
+
+``` r
+spring_mean_carbon_ramen <- spring_data %>%
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_carbon_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  annotate("text",x=as.Date("2025-01-27"),y=0.3672164-0.001,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=0.3660254-0.001,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=0.3654076-0.001,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=0.3640941-0.001,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=0.3630433-0.001,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=0.3672164) +
+  annotate("point",x=as.Date("2025-02-14"),y=0.3660254) +
+  annotate("point",x=as.Date("2025-03-03"),y=0.3654076) +
+  annotate("point",x=as.Date("2025-03-17"),y=0.3640941) +
+  annotate("point",x=as.Date("2025-04-06"),y=0.3630433) +
+  labs(title="Ramen Station (Treated)") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_carbon_ramen
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-144-1.png)<!-- -->
+
+``` r
+spring_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales)
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_carbon_cost total_sales mean_carbon_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                          3579.        2014             1.78
+    ## 2 2                          4742.        2618             1.81
+    ## 3 3                          4075.        2178             1.87
+    ## 4 4                          3904.        2008             1.94
+    ## 5 5                          5831.        3055             1.91
+
+``` r
+spring_mean_carbon_treatment <- spring_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station_type) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_carbon_cost,color=station_type,fill=station_type)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  annotate("text",x=as.Date("2025-01-27"),y=1.776875-0.1,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=1.811143-0.1,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=1.871176-0.1,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=1.944264-0.1,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=1.908580-0.1,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=1.776875) +
+  annotate("point",x=as.Date("2025-02-14"),y=1.811143) +
+  annotate("point",x=as.Date("2025-03-03"),y=1.871176) +
+  annotate("point",x=as.Date("2025-03-17"),y=1.944264) +
+  annotate("point",x=as.Date("2025-04-06"),y=1.908580) +
+  labs(title="Ramen & Grill Stations (Treated)") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_carbon_treatment
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-146-1.png)<!-- -->
+
+``` r
+spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>% 
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales)
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_carbon_cost total_sales mean_carbon_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                           736.        1352            0.544
+    ## 2 2                           877.        1632            0.538
+    ## 3 3                           665.        1224            0.544
+    ## 4 4                           621.        1158            0.536
+    ## 5 5                           872.        1655            0.527
+
+``` r
+spring_mean_carbon_control <- spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station) %>%
+  summarise(total_carbon_cost=sum(corr_carbon_cost),total_sales=sum(count)) %>%
+  mutate(mean_carbon_cost=total_carbon_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_carbon_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab(bquote('Kilograms of CO'[2]*'e')) +
+  scale_color_brewer(palette="Set1",name="") +
+  scale_fill_brewer(palette="Set1",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  annotate("text",x=as.Date("2025-01-27"),y=0.5444727-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=0.5375752-0.01,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=0.5435225-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=0.5363303-0.01,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=0.5270691-0.01,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=0.5444727) +
+  annotate("point",x=as.Date("2025-02-14"),y=0.5375752) +
+  annotate("point",x=as.Date("2025-03-03"),y=0.5435225) +
+  annotate("point",x=as.Date("2025-03-17"),y=0.5363303) +
+  annotate("point",x=as.Date("2025-04-06"),y=0.5270691) +
+  labs(title="Pasta Station (Untreated)") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_carbon_control
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-148-1.png)<!-- -->
+
+``` r
+spring_mean_carbon <- ggarrange(spring_mean_carbon_ramen,spring_mean_carbon_grill,spring_mean_carbon_treatment,spring_mean_carbon_control,
+          labels=c("A","B","C","D"),
+          legend="none")
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+``` r
+spring_mean_carbon <- annotate_figure(spring_mean_carbon,top=text_grob("Mean Emissions Cost of Station Sales (kg CO2e)", 
+               color="black",face="bold",size=12))
+ggsave(filename="spring_mean_carbon.png",plot=spring_mean_carbon,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
+spring_mean_carbon
+```
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-149-1.png)<!-- -->
+mean_spend
+
+``` r
+spring_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                         10090.        1122             8.99
+    ## 2 2                         13235.        1477             8.96
+    ## 3 3                         11438.        1276             8.96
+    ## 4 4                         11162.        1243             8.98
+    ## 5 5                         17092.        1903             8.98
+
+``` r
+spring_mean_spend_grill <- spring_data %>%
+  filter(station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  labs(title="Grill Station (Treated)") +
+  annotate("text",x=as.Date("2025-01-27"),y=8.992674-0.015,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=8.960887-0.015,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=8.963824-0.015,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=8.980024-0.015,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=8.981435-0.015,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=8.992674) +
+  annotate("point",x=as.Date("2025-02-14"),y=8.960887) +
+  annotate("point",x=as.Date("2025-03-03"),y=8.963824) +
+  annotate("point",x=as.Date("2025-03-17"),y=8.980024) +
+  annotate("point",x=as.Date("2025-04-06"),y=8.981435) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_spend_grill
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-151-1.png)<!-- -->
+
+``` r
+spring_data %>% 
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                          8465.         892             9.49
+    ## 2 2                         10828.        1141             9.49
+    ## 3 3                          8560.         902             9.49
+    ## 4 4                          7260.         765             9.49
+    ## 5 5                         10932.        1152             9.49
+
+``` r
+spring_mean_spend_ramen <- spring_data %>% 
+  filter(station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  labs(title="Ramen Station (Treated)") +
+  annotate("text",x=as.Date("2025-01-27"),y=9.49-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=9.49-0.01,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=9.49-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=9.49-0.01,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=9.49-0.01,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=9.49) +
+  annotate("point",x=as.Date("2025-02-14"),y=9.49) +
+  annotate("point",x=as.Date("2025-03-03"),y=9.49) +
+  annotate("point",x=as.Date("2025-03-17"),y=9.49) +
+  annotate("point",x=as.Date("2025-04-06"),y=9.49) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_spend_ramen
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-153-1.png)<!-- -->
+
+``` r
+spring_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales)
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                         18555.        2014             9.21
+    ## 2 2                         24063.        2618             9.19
+    ## 3 3                         19998.        2178             9.18
+    ## 4 4                         18422.        2008             9.17
+    ## 5 5                         28024.        3055             9.17
+
+``` r
+spring_mean_spend_treatment <- spring_data %>%
+  filter(station=="Ramen"|station=="Grill") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,phase_interval,station_type) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station_type,fill=station_type)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Dark2",name="") +
+  scale_fill_brewer(palette="Dark2",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  labs(title="Ramen & Grill Stations (Treated)") +
+  annotate("text",x=as.Date("2025-01-27"),y=9.212939-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=9.191490-0.01,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=9.181736-0.01,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=9.174313-0.01,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=9.173208-0.01,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=9.212939) +
+  annotate("point",x=as.Date("2025-02-14"),y=9.191490) +
+  annotate("point",x=as.Date("2025-03-03"),y=9.181736) +
+  annotate("point",x=as.Date("2025-03-17"),y=9.174313) +
+  annotate("point",x=as.Date("2025-04-06"),y=9.173208) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'phase_interval'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_spend_treatment
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-155-1.png)<!-- -->
+
+``` r
+spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(phase_interval) %>% 
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) 
+```
+
+    ## # A tibble: 5 × 4
+    ##   phase_interval total_dollar_cost total_sales mean_dollar_cost
+    ##   <chr>                      <dbl>       <int>            <dbl>
+    ## 1 1                         12041.        1352             8.91
+    ## 2 2                         14524.        1632             8.90
+    ## 3 3                         10900.        1224             8.91
+    ## 4 4                         10304.        1158             8.90
+    ## 5 5                         14710.        1655             8.89
+
+``` r
+spring_mean_spend_control <- spring_data %>%
+  filter(station=="Pasta") %>%
+  filter(item_cat=="Main") %>%
+  group_by(date,menu_condition,station) %>%
+  summarise(total_dollar_cost=sum(corr_dollar_cost),total_sales=sum(count)) %>%
+  mutate(mean_dollar_cost=total_dollar_cost/total_sales) %>%
+  mutate(date=case_when(date=="10-Apr"~"2025-4-10",
+                        date=="10-Feb"~"2025-2-10",
+                        date=="10-Mar"~"2025-3-10",
+                        date=="11-Apr"~"2025-4-11",
+                        date=="11-Feb"~"2025-2-11",
+                        date=="11-Mar"~"2025-3-11",
+                        date=="12-Feb"~"2025-2-12",
+                        date=="12-Mar"~"2025-3-12",
+                        date=="13-Feb"~"2025-2-13",
+                        date=="13-Mar"~"2025-3-13",
+                        date=="14-Apr"~"2025-4-14",
+                        date=="14-Feb"~"2025-2-14",
+                        date=="14-Mar"~"2025-3-14",
+                        date=="15-Apr"~"2025-4-15",
+                        date=="16-Apr"~"2025-4-16",
+                        date=="17-Apr"~"2025-4-17",
+                        date=="17-Mar"~"2025-3-17",
+                        date=="18-Apr"~"2025-4-18",
+                        date=="18-Mar"~"2025-3-18",
+                        date=="19-Feb"~"2025-2-19",
+                        date=="19-Mar"~"2025-3-19",
+                        date=="20-Feb"~"2025-2-20",
+                        date=="20-Mar"~"2025-3-20",
+                        date=="21-Feb"~"2025-2-21",
+                        date=="21-Jan"~"2025-1-21",
+                        date=="21-Mar"~"2025-3-21",
+                        date=="22-Jan"~"2025-1-22",
+                        date=="23-Jan"~"2025-1-23",
+                        date=="24-Feb"~"2025-2-24",
+                        date=="24-Jan"~"2025-1-24",
+                        date=="24-Mar"~"2025-3-24",
+                        date=="25-Feb"~"2025-2-25",
+                        date=="25-Mar"~"2025-3-25",
+                        date=="26-Feb"~"2025-2-26",
+                        date=="26-Mar"~"2025-3-26",
+                        date=="27-Feb"~"2025-2-27",
+                        date=="27-Jan"~"2025-1-27",
+                        date=="27-Mar"~"2025-3-27",
+                        date=="28-Feb"~"2025-2-28",
+                        date=="28-Jan"~"2025-1-28",
+                        date=="28-Mar"~"2025-3-28",
+                        date=="29-Jan"~"2025-1-29",
+                        date=="3-Feb"~"2025-2-3",
+                        date=="3-Mar"~"2025-3-3",
+                        date=="30-Jan"~"2025-1-30",
+                        date=="31-Jan"~"2025-1-31",
+                        date=="4-Feb"~"2025-2-4",
+                        date=="4-Mar"~"2025-3-4",
+                        date=="5-Feb"~"2025-2-5",
+                        date=="5-Mar"~"2025-3-5",
+                        date=="6-Feb"~"2025-2-6",
+                        date=="6-Mar"~"2025-3-6",
+                        date=="7-Apr"~"2025-4-7",
+                        date=="7-Feb"~"2025-2-7",
+                        date=="7-Mar"~"2025-3-7",
+                        date=="8-Apr"~"2025-4-8",
+                        date=="9-Apr"~"2025-4-9")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=mean_dollar_cost,color=station,fill=station)) + 
+  geom_smooth(alpha=0.2) + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_spring_data$date[spring_vline]),linetype=2) + 
+  xlab("Date") + 
+  ylab("U.S. Dollars ($)") +
+  scale_color_brewer(palette="Set1",name="") +
+  scale_fill_brewer(palette="Set1",name="") +
+  scale_x_date(breaks=as.Date(c("2025-01-21","2025-02-03","2025-02-24","2025-03-10","2025-03-24","2025-04-18")),labels=c("Jan 21","Feb 3","Feb 24","Mar 10","Mar 24","Apr 18")) +
+  annotate("text",x=as.Date("2025-01-27"),y=8.906420-0.005,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-02-14"),y=8.899314-0.005,label="Multimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-03"),y=8.905441-0.005,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2025-03-17"),y=8.898031-0.005,label="Unimodal",size=10/.pt) +
+  annotate("text",x=as.Date("2025-04-06"),y=8.888489-0.005,label="Control",size=10/.pt) +
+  annotate("point",x=as.Date("2025-01-27"),y=8.906420) +
+  annotate("point",x=as.Date("2025-02-14"),y=8.899314) +
+  annotate("point",x=as.Date("2025-03-03"),y=8.905441) +
+  annotate("point",x=as.Date("2025-03-17"),y=8.898031) +
+  annotate("point",x=as.Date("2025-04-06"),y=8.888489) +
+  labs(title="Pasta Station (Untreated)") +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10),axis.title=element_text(size=10),axis.text=element_text(size=10)) 
+```
+
+    ## `summarise()` has grouped output by 'date', 'menu_condition'. You can override
+    ## using the `.groups` argument.
+
+``` r
+spring_mean_spend_control
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-157-1.png)<!-- -->
+
+``` r
+spring_mean_spend <- ggarrange(spring_mean_spend_ramen,spring_mean_spend_grill,spring_mean_spend_treatment,spring_mean_spend_control,
+          labels=c("A","B","C","D"),
+          legend="none")
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+``` r
+spring_mean_spend <- annotate_figure(spring_mean_spend,top=text_grob("Mean Revenue Per Station Sale ($)",color="black",face="bold",size=12))
+ggsave(filename="spring_mean_spend.png",plot=spring_mean_spend,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=40,height=24,units="cm",dpi=150,limitsize=TRUE)
+spring_mean_spend
+```
+
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-158-1.png)<!-- -->
 
 REVISE FIGURE NAMING NOMENCLATURE from semester-station-outcome TO
 SEMESTER-OUTCOME-STATION
@@ -7001,7 +8418,7 @@ grill_prop_middle_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-132-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-159-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -7022,7 +8439,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-133-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-160-1.png)<!-- -->
 
 ## Preliminary Checks
 
@@ -7590,7 +9007,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-156-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-183-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken
