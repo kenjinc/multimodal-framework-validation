@@ -11098,6 +11098,11 @@ spring_prop_middle <- annotate_figure(spring_prop_middle,top=text_grob("Daily Sa
 ggsave(filename="spring_prop_middle.png",plot=spring_prop_middle,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=34,height=12,units="cm",dpi=150,limitsize=TRUE)
 spring_prop_middle
 ```
+
+
+
+
+
 ```{r}
 fall_data %>%
   filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
