@@ -13586,6 +13586,214 @@ spring_prop_middle
 
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-214-1.png)<!-- -->
 
+``` r
+fall_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+
+    ##   sum(count)
+    ## 1      13837
+
+``` r
+spring_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+
+    ##   sum(count)
+    ## 1      18894
+
+``` r
+fall_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  distinct(date)
+```
+
+    ##      date
+    ## 1  16-Oct
+    ## 2  17-Oct
+    ## 3  18-Oct
+    ## 4  21-Oct
+    ## 5  22-Oct
+    ## 6  23-Oct
+    ## 7  24-Oct
+    ## 8  25-Oct
+    ## 9  28-Oct
+    ## 10 29-Oct
+    ## 11 30-Oct
+    ## 12 31-Oct
+    ## 13  1-Nov
+    ## 14  4-Nov
+    ## 15  5-Nov
+    ## 16  6-Nov
+    ## 17  7-Nov
+    ## 18  8-Nov
+    ## 19 11-Nov
+    ## 20 12-Nov
+    ## 21 13-Nov
+    ## 22 14-Nov
+    ## 23 15-Nov
+    ## 24 18-Nov
+    ## 25 19-Nov
+    ## 26 20-Nov
+    ## 27 21-Nov
+    ## 28 22-Nov
+    ## 29 25-Nov
+    ## 30 26-Nov
+    ## 31  2-Dec
+    ## 32  3-Dec
+    ## 33  4-Dec
+    ## 34  5-Dec
+    ## 35  6-Dec
+    ## 36  9-Dec
+    ## 37 10-Dec
+    ## 38 11-Dec
+    ## 39 12-Dec
+    ## 40 13-Dec
+    ## 41 16-Dec
+    ## 42 17-Dec
+    ## 43 18-Dec
+    ## 44 19-Dec
+    ## 45 20-Dec
+
+``` r
+spring_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  distinct(date)
+```
+
+    ##      date
+    ## 1  21-Jan
+    ## 2  22-Jan
+    ## 3  23-Jan
+    ## 4  24-Jan
+    ## 5  27-Jan
+    ## 6  28-Jan
+    ## 7  29-Jan
+    ## 8  30-Jan
+    ## 9  31-Jan
+    ## 10  3-Feb
+    ## 11  4-Feb
+    ## 12  5-Feb
+    ## 13  6-Feb
+    ## 14  7-Feb
+    ## 15 10-Feb
+    ## 16 11-Feb
+    ## 17 12-Feb
+    ## 18 13-Feb
+    ## 19 14-Feb
+    ## 20 19-Feb
+    ## 21 20-Feb
+    ## 22 21-Feb
+    ## 23 24-Feb
+    ## 24 25-Feb
+    ## 25 26-Feb
+    ## 26 27-Feb
+    ## 27 28-Feb
+    ## 28  3-Mar
+    ## 29  4-Mar
+    ## 30  5-Mar
+    ## 31  6-Mar
+    ## 32  7-Mar
+    ## 33 10-Mar
+    ## 34 11-Mar
+    ## 35 12-Mar
+    ## 36 13-Mar
+    ## 37 14-Mar
+    ## 38 17-Mar
+    ## 39 18-Mar
+    ## 40 19-Mar
+    ## 41 20-Mar
+    ## 42 21-Mar
+    ## 43 24-Mar
+    ## 44 25-Mar
+    ## 45 26-Mar
+    ## 46 27-Mar
+    ## 47 28-Mar
+    ## 48  7-Apr
+    ## 49  8-Apr
+    ## 50  9-Apr
+    ## 51 10-Apr
+    ## 52 11-Apr
+    ## 53 14-Apr
+    ## 54 15-Apr
+    ## 55 16-Apr
+    ## 56 17-Apr
+    ## 57 18-Apr
+
+``` r
+fall_data %>%
+  distinct(item)
+```
+
+    ##                                item
+    ## 1        Quesadilla Deluxe Trillium
+    ## 2                 Grilled Hamburger
+    ## 3             Fried Chicken Tenders
+    ## 4     Burrito Una Mano Trillium BYO
+    ## 5                      French Fries
+    ## 6                 Quesadilla Cheese
+    ## 7   Grilled Chicken Breast Sandwich
+    ## 8              Seared Salmon Burger
+    ## 9  Trillium Grill Impossible Burger
+    ## 10               Sweet Potato Fries
+    ## 11                     + Beef Patty
+    ## 12                Black Bean Burger
+    ## 13      Add Impossible Burger Patty
+    ## 14                      Add Egg .99
+    ## 15                       ADD Cheese
+    ## 16              Add Sausage 2 Patty
+    ## 17        ADD Burger Salmon Grilled
+    ## 18                1 Entree + 1 Side
+    ## 19                1 Entree + 2 Side
+    ## 20               Bowl Ramen Chicken
+    ## 21              2 Entrees + 2 Sides
+    ## 22                  Bowl Ramen Tofu
+    ## 23          Side Vegetarian Lo Mein
+    ## 24           Side Fried Spring Roll
+    ## 25         Side White or Brown Rice
+    ## 26      Side Vegetable Spring Rolls
+    ## 27                     1 Wok Entree
+    ## 28                  Side Vegetables
+    ## 29  Side Vegetarian Fried Rice with
+    ## 30      Create Your Pasta Bowl MEAT
+    ## 31       Create Your Pasta Bowl VEG
+    ## 32                     Pizza Cheese
+    ## 33                   Add Extra Meat
+    ## 34              Pizza with Toppings
+    ## 35         Side Bread Pasta Station
+    ## 36                Burrito Breakfast
+    ## 37              Small French Omelet
+    ## 38 Egg Cheese Sausage Breakfast San
+    ## 39 Egg Cheese Bacon Breakfast Sandw
+    ## 40             Grand Slam Breakfast
+    ## 41                        Add Bacon
+    ## 42                         Two Eggs
+    ## 43                   Pancake Single
+    ## 44                   2 Slices Toast
+    ## 45              Trillium Home Fries
+    ## 46                 Burrito Bowl BYO
+    ## 47                      Single Taco
+    ## 48                  Side Sour Cream
+    ## 49               Salad by the Pound
+    ## 50           Add Extra Protein 2.99
+    ## 51                       Soup 12 oz
+    ## 52                        8 oz Soup
+    ## 53                 Side Potato Tots
+    ## 54               ADD Chicken Breast
+    ## 55                            Toast
+    ## 56                   Side Guacamole
+    ## 57                       Side Salsa
+    ## 58      Add Extra Toppings Una Mano
+    ## 59                         PC Jelly
+    ## 60                 PC Peanut Butter
+    ## 61               Add Extra Toppings
+
 REVISE FIGURE NAMING NOMENCLATURE from semester-station-outcome TO
 SEMESTER-OUTCOME-STATION
 
@@ -13623,7 +13831,7 @@ grill_prop_middle_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-215-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-220-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -13644,7 +13852,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-216-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-221-1.png)<!-- -->
 
 ## Preliminary Checks
 
@@ -14212,7 +14420,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-239-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-244-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken

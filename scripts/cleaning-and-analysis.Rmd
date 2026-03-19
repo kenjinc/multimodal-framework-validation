@@ -6346,6 +6346,7 @@ mean_spend
 ```
 ggsave(filename="mean_spend.png",plot=mean_spend,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
 
+
 ## CLeaning and Analysis (Spring 2025)
 
 ### Proportion of lowest-carbon selections 
@@ -11097,7 +11098,36 @@ spring_prop_middle <- annotate_figure(spring_prop_middle,top=text_grob("Daily Sa
 ggsave(filename="spring_prop_middle.png",plot=spring_prop_middle,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=34,height=12,units="cm",dpi=150,limitsize=TRUE)
 spring_prop_middle
 ```
+```{r}
+fall_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+```{r}
+spring_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  summarise(sum(count))
+```
+```{r}
+fall_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  distinct(date)
+```
 
+```{r}
+spring_data %>%
+  filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  filter(item_cat=="Main") %>%
+  distinct(date)
+```
+
+```{r}
+fall_data %>%
+  distinct(item)
+```
 
 REVISE FIGURE NAMING NOMENCLATURE from semester-station-outcome TO SEMESTER-OUTCOME-STATION
 
