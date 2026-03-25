@@ -7893,6 +7893,14 @@ mean_spend
 ![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-141-1.png)<!-- -->
 ggsave(filename=“mean_spend.png”,plot=mean_spend,path=“/Users/kenjinchang/github/multimodal-framework-validation/figures”,width=30,height=20,units=“cm”,dpi=150,limitsize=TRUE)
 
+``` r
+fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  summarise(sum(count))
+```
+
+    ##   sum(count)
+    ## 1      13837
+
 ## CLeaning and Analysis (Spring 2025)
 
 ### Proportion of lowest-carbon selections
@@ -7992,7 +8000,7 @@ spring_data %>%
     ## `summarise()` has grouped output by 'phase_interval'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-142-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-143-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -8492,7 +8500,7 @@ spring_prop_low_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-152-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-153-1.png)<!-- -->
 
 FOR RAMEN STATION
 
@@ -8827,7 +8835,7 @@ spring_prop_low_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-155-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-156-1.png)<!-- -->
 
 FOR AGGREGATE
 
@@ -9197,7 +9205,7 @@ spring_prop_low_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-158-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-159-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -9631,7 +9639,7 @@ spring_prop_low_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-162-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-163-1.png)<!-- -->
 
 ``` r
 spring_prop_low <- ggarrange(spring_prop_low_ramen,spring_prop_low_grill,spring_prop_low_treatment,spring_prop_low_control,
@@ -9651,7 +9659,7 @@ ggsave(filename="spring_prop_low.png",plot=spring_prop_low,path="/Users/kenjinch
 spring_prop_low
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-163-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-164-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -9736,7 +9744,7 @@ spring_prop_high_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-166-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-167-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -10071,7 +10079,7 @@ spring_prop_high_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-169-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-170-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -10473,7 +10481,7 @@ spring_prop_high_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-173-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-174-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -10808,7 +10816,7 @@ spring_prop_high_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-176-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-177-1.png)<!-- -->
 
 ``` r
 spring_prop_high <- ggarrange(spring_prop_high_ramen,spring_prop_high_grill,spring_prop_high_treatment,spring_prop_high_control,
@@ -10828,7 +10836,7 @@ ggsave(filename="spring_prop_high.png",plot=spring_prop_high,path="/Users/kenjin
 spring_prop_high
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-177-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-178-1.png)<!-- -->
 
 mean_carbon
 
@@ -11044,7 +11052,7 @@ spring_mean_carbon_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-180-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-181-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -11258,7 +11266,7 @@ spring_mean_carbon_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-183-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-184-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -11468,7 +11476,7 @@ spring_mean_carbon_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-186-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-187-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -11678,7 +11686,7 @@ spring_mean_carbon_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-189-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-190-1.png)<!-- -->
 
 ``` r
 spring_mean_carbon <- ggarrange(spring_mean_carbon_ramen,spring_mean_carbon_grill,spring_mean_carbon_treatment,spring_mean_carbon_control,
@@ -11698,7 +11706,7 @@ ggsave(filename="spring_mean_carbon.png",plot=spring_mean_carbon,path="/Users/ke
 spring_mean_carbon
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-190-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-191-1.png)<!-- -->
 mean_spend
 
 ``` r
@@ -11909,7 +11917,7 @@ spring_mean_spend_grill
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-193-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-194-1.png)<!-- -->
 
 ``` r
 spring_data %>% 
@@ -12109,7 +12117,7 @@ spring_mean_spend_ramen
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-196-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-197-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -12319,7 +12327,7 @@ spring_mean_spend_treatment
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-199-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-200-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -12529,7 +12537,7 @@ spring_mean_spend_control
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-202-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-203-1.png)<!-- -->
 
 ``` r
 spring_mean_spend <- ggarrange(spring_mean_spend_ramen,spring_mean_spend_grill,spring_mean_spend_treatment,spring_mean_spend_control,
@@ -12548,7 +12556,7 @@ ggsave(filename="spring_mean_spend.png",plot=spring_mean_spend,path="/Users/kenj
 spring_mean_spend
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-203-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-204-1.png)<!-- -->
 
 prop_mid
 
@@ -12896,7 +12904,7 @@ spring_prop_middle_aggregate
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-206-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-207-1.png)<!-- -->
 
 ``` r
 spring_data %>%
@@ -13567,7 +13575,7 @@ spring_prop_middle_individual
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-213-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-214-1.png)<!-- -->
 
 ``` r
 spring_prop_middle <- ggarrange(spring_prop_middle_aggregate,spring_prop_middle_individual,
@@ -13584,7 +13592,7 @@ ggsave(filename="spring_prop_middle.png",plot=spring_prop_middle,path="/Users/ke
 spring_prop_middle
 ```
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-214-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-215-1.png)<!-- -->
 
 ``` r
 fall_data %>%
@@ -13831,7 +13839,7 @@ grill_prop_middle_s2
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-220-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-221-1.png)<!-- -->
 
 ``` r
 daily_prop_spring_data %>%
@@ -13852,7 +13860,7 @@ daily_prop_spring_data %>%
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-221-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-222-1.png)<!-- -->
 
 ## Preliminary Checks
 
@@ -14420,7 +14428,7 @@ foot_traffic_data %>%
     ## `summarise()` has grouped output by 'menu_condition'. You can override using
     ## the `.groups` argument.
 
-![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-244-1.png)<!-- -->
+![](cleaning-and-analysis_files/figure-gfm/unnamed-chunk-245-1.png)<!-- -->
 
 sales_data %\>% mutate(item_cat=case_when(item==“Quesadilla Deluxe
 Trillium”~“Main”, item==“Grilled Hamburger”~“Main”, item==“Fried Chicken

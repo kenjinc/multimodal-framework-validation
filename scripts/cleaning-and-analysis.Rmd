@@ -6346,6 +6346,11 @@ mean_spend
 ```
 ggsave(filename="mean_spend.png",plot=mean_spend,path="/Users/kenjinchang/github/multimodal-framework-validation/figures",width=30,height=20,units="cm",dpi=150,limitsize=TRUE)
 
+```{r}
+fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  summarise(sum(count))
+```
+
 
 ## CLeaning and Analysis (Spring 2025)
 
