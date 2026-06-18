@@ -6351,6 +6351,257 @@ fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Gri
   summarise(sum(count))
 ```
 
+```{r}
+fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  group_by(menu_condition) %>%
+  summarise(sum(count))
+```
+
+```{r}
+fall_data_daily_total <- fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  group_by(date) %>%
+  summarise(daily_total=sum(count))
+fall_data_daily_total
+```
+
+```{r}
+fall_data_daily_total %>%
+  mutate(date=case_when(date=="16-Oct"~"2024-10-16",
+                        date=="17-Oct"~"2024-10-17",
+                        date=="18-Oct"~"2024-10-18",
+                        date=="21-Oct"~"2024-10-21",
+                        date=="22-Oct"~"2024-10-22",
+                        date=="23-Oct"~"2024-10-23",
+                        date=="24-Oct"~"2024-10-24",
+                        date=="25-Oct"~"2024-10-25",
+                        date=="28-Oct"~"2024-10-28",
+                        date=="29-Oct"~"2024-10-29",
+                        date=="30-Oct"~"2024-10-30",
+                        date=="31-Oct"~"2024-10-31",
+                        date=="1-Nov"~"2024-11-1",
+                        date=="4-Nov"~"2024-11-4",
+                        date=="5-Nov"~"2024-11-5",
+                        date=="6-Nov"~"2024-11-6",
+                        date=="7-Nov"~"2024-11-7",
+                        date=="8-Nov"~"2024-11-8",
+                        date=="11-Nov"~"2024-11-11",
+                        date=="12-Nov"~"2024-11-12",
+                        date=="13-Nov"~"2024-11-13",
+                        date=="14-Nov"~"2024-11-14",
+                        date=="15-Nov"~"2024-11-15",
+                        date=="18-Nov"~"2024-11-18",
+                        date=="19-Nov"~"2024-11-19",
+                        date=="20-Nov"~"2024-11-20",
+                        date=="21-Nov"~"2024-11-21",
+                        date=="22-Nov"~"2024-11-22",
+                        date=="25-Nov"~"2024-11-25",
+                        date=="26-Nov"~"2024-11-26",
+                        date=="2-Dec"~"2024-12-2",
+                        date=="3-Dec"~"2024-12-3",
+                        date=="4-Dec"~"2024-12-4",
+                        date=="5-Dec"~"2024-12-5",
+                        date=="6-Dec"~"2024-12-6",
+                        date=="9-Dec"~"2024-12-9",
+                        date=="10-Dec"~"2024-12-10",
+                        date=="11-Dec"~"2024-12-11",
+                        date=="12-Dec"~"2024-12-12",
+                        date=="13-Dec"~"2024-12-13",
+                        date=="16-Dec"~"2024-12-16",
+                        date=="17-Dec"~"2024-12-17",
+                        date=="18-Dec"~"2024-12-18",
+                        date=="19-Dec"~"2024-12-19",
+                        date=="20-Dec"~"2024-12-20")) %>%
+  mutate(date=as.Date(date)) %>%
+  ggplot(aes(x=date,y=daily_total)) + 
+  geom_smooth() + 
+  geom_point() +
+  geom_vline(xintercept=as.numeric(daily_prop_low_fall_data$date[fall_vline]),linetype=2) +
+  theme(aspect.ratio=0.55,legend.position="bottom",panel.grid=element_blank(),panel.background=element_rect(fill="white"),panel.border=element_rect(fill=NA),legend.title=element_text(size=10),legend.text=element_text(size=10),plot.title=element_text(size=10)) +
+  annotate("text",x=as.Date("2024-10-20"),y=9.06,label="Control",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-4"),y=9.06,label="Carbon Label",size=10/.pt) +
+  annotate("text",x=as.Date("2024-11-18"),y=9.06,label="Default",size=10/.pt) +
+  annotate("text",x=as.Date("2024-12-7"),y=9.06,label="Multimodal",size=10/.pt) 
+```
+
+
+```{r}
+fall_data_daily_summary <- fall_data %>% filter(item_cat=="Main") %>% filter(station=="Pasta"|station=="Grill"|station=="Ramen") %>%
+  mutate(meal_selection=case_when(item=="Grilled Hamburger"~"High",
+                                  item=="Grilled Chicken Breast Sandwich"~"Middle",
+                                  item=="Seared Salmon Burger"~"Middle",
+                                  item=="Trillium Grill Impossible Burger"~"Middle",
+                                  item=="Black Bean Burger" ~ "Low",
+                                  item=="Bowl Ramen Chicken"~"High",
+                                  item=="Bowl Ramen Tofu"~"Low",
+                                  item=="Create Your Pasta Bowl MEAT"~"High",
+                                  item=="Create Your Pasta Bowl VEG"~"Low")) 
+```
+
+```{r}
+fall_data_daily_summary <- left_join(fall_data_daily_summary,fall_data_daily_total)
+fall_data_daily_summary
+```
+
+```{r}
+fall_data_daily_summary <- fall_data_daily_summary %>%
+  relocate(meal_selection,.after=item) %>%
+  relocate(station_type,.after=meal_selection) %>%
+  mutate(daily_total_by_station_type=case_when(date=="16-Oct"&station_type=="Treatment"~91+14+9+7+2+83+16+5,
+                                               date=="16-Oct"&station_type=="Satellite"~149+24,
+                                               date=="17-Oct"&station_type=="Treatment"~109+22+12+9+1+68+14,
+                                               date=="17-Oct"&station_type=="Satellite"~128+33,
+                                               date=="18-Oct"&station_type=="Treatment"~66+11+8+2+2+44+21,
+                                               date=="18-Oct"&station_type=="Satellite"~83+13,
+                                               date=="21-Oct"&station_type=="Treatment"~105+18+11+8+1+71+14,
+                                               date=="21-Oct"&station_type=="Satellite"~124+37,
+                                               date=="22-Oct"&station_type=="Treatment"~127+18+10+6+2+73+10,
+                                               date=="22-Oct"&station_type=="Satellite"~132+26,
+                                               date=="23-Oct"&station_type=="Treatment"~100+20+10+3+2+83+9,
+                                               date=="23-Oct"&station_type=="Satellite"~124+28,
+                                               date=="24-Oct"&station_type=="Treatment"~107+14+9+10+5+92+15,
+                                               date=="24-Oct"&station_type=="Satellite"~131+32,
+                                               date=="25-Oct"&station_type=="Treatment"~71+8+8+6+4+44+9,
+                                               date=="25-Oct"&station_type=="Satellite"~80+14,
+                                               date=="28-Oct"&station_type=="Treatment"~96+15+8+4+4+65+11,
+                                               date=="28-Oct"&station_type=="Satellite"~127+38,
+                                               date=="29-Oct"&station_type=="Treatment"~102+22+9+6+6+67+13,
+                                               date=="29-Oct"&station_type=="Satellite"~108+25,
+                                               date=="30-Oct"&station_type=="Treatment"~95+19+6+7+5+70+12,
+                                               date=="30-Oct"&station_type=="Satellite"~136+23,
+                                               date=="31-Oct"&station_type=="Treatment"~107+21+13+7+1+79+10,
+                                               date=="31-Oct"&station_type=="Satellite"~120+27,
+                                               date=="1-Nov"&station_type=="Treatment"~66+12+9+4+3+34+13,
+                                               date=="1-Nov"&station_type=="Satellite"~87+8,
+                                               date=="4-Nov"&station_type=="Treatment"~80+12+11+7+4+65+20,
+                                               date=="4-Nov"&station_type=="Satellite"~118+34,
+                                               date=="5-Nov"&station_type=="Treatment"~107+14+11+4+2+73+11,
+                                               date=="5-Nov"&station_type=="Satellite"~103+20,
+                                               date=="6-Nov"&station_type=="Treatment"~104+16+9+6+2+90+17,
+                                               date=="6-Nov"&station_type=="Satellite"~136+30,
+                                               date=="7-Nov"&station_type=="Treatment"~98+19+14+7+4+82+14+1,
+                                               date=="7-Nov"&station_type=="Satellite"~132+28,
+                                               date=="8-Nov"&station_type=="Treatment"~80+12+7+7+1+59+14,
+                                               date=="8-Nov"&station_type=="Satellite"~92+16,
+                                               date=="11-Nov"&station_type=="Treatment"~81+16+8+4+3+69+12,
+                                               date=="11-Nov"&station_type=="Satellite"~119+25,
+                                               date=="12-Nov"&station_type=="Treatment"~89+27+8+7+3+75+19+1,
+                                               date=="12-Nov"&station_type=="Satellite"~112+20,
+                                               date=="13-Nov"&station_type=="Treatment"~107+15+9+6+2+74+17,
+                                               date=="13-Nov"&station_type=="Satellite"~113+26,
+                                               date=="14-Nov"&station_type=="Treatment"~99+20+15+8+3+78+21,
+                                               date=="14-Nov"&station_type=="Satellite"~103+31,
+                                               date=="15-Nov"&station_type=="Treatment"~72+7+7+4+4+59+17,
+                                               date=="15-Nov"&station_type=="Satellite"~79+15,
+                                               date=="18-Nov"&station_type=="Treatment"~82+15+12+14+7+66+11,
+                                               date=="18-Nov"&station_type=="Satellite"~116+30,
+                                               date=="19-Nov"&station_type=="Treatment"~122+26+10+6+3+70+28,
+                                               date=="19-Nov"&station_type=="Satellite"~115+28,
+                                               date=="20-Nov"&station_type=="Treatment"~92+14+13+7+3+80+19,
+                                               date=="20-Nov"&station_type=="Satellite"~143+32,
+                                               date=="21-Nov"&station_type=="Treatment"~109+13+9+9+4+77+20,
+                                               date=="21-Nov"&station_type=="Satellite"~131+24,
+                                               date=="22-Nov"&station_type=="Treatment"~51+15+8+1+1+49+8,
+                                               date=="22-Nov"&station_type=="Satellite"~70+9,
+                                               date=="25-Nov"&station_type=="Treatment"~67+14+9+6+2+56+10,
+                                               date=="25-Nov"&station_type=="Satellite"~55+20,
+                                               date=="26-Nov"&station_type=="Treatment"~52+12+4+4+3+45+6,
+                                               date=="26-Nov"&station_type=="Satellite"~29+6,
+                                               date=="2-Dec"&station_type=="Treatment"~97+9+6+6+89+19+5,
+                                               date=="2-Dec"&station_type=="Satellite"~128+24,
+                                               date=="3-Dec"&station_type=="Treatment"~97+14+9+7+4+76+21,
+                                               date=="3-Dec"&station_type=="Satellite"~116+28,
+                                               date=="4-Dec"&station_type=="Treatment"~117+16+7+5+1+84+13,
+                                               date=="4-Dec"&station_type=="Satellite"~142+27,
+                                               date=="5-Dec"&station_type=="Treatment"~118+22+16+11+6+70+22,
+                                               date=="5-Dec"&station_type=="Satellite"~113+32,
+                                               date=="6-Dec"&station_type=="Treatment"~76+8+8+6+5+58+18,
+                                               date=="6-Dec"&station_type=="Satellite"~83+12,
+                                               date=="9-Dec"&station_type=="Treatment"~96+12+9+8+4+57+20,
+                                               date=="9-Dec"&station_type=="Satellite"~108+32,
+                                               date=="10-Dec"&station_type=="Treatment"~52+8+6+6+37+4,
+                                               date=="10-Dec"&station_type=="Satellite"~45+9,
+                                               date=="11-Dec"&station_type=="Treatment"~47+8+5+6+2+42+7,
+                                               date=="11-Dec"&station_type=="Satellite"~41+15,
+                                               date=="12-Dec"&station_type=="Treatment"~69+13+8+8+1+46+9,
+                                               date=="12-Dec"&station_type=="Satellite"~34+14,
+                                               date=="13-Dec"&station_type=="Treatment"~49+13+2+1+1+50+7,
+                                               date=="13-Dec"&station_type=="Satellite"~45+5,
+                                               date=="16-Dec"&station_type=="Treatment"~55+6+4+4+1+40+7,
+                                               date=="16-Dec"&station_type=="Satellite"~46+7,
+                                               date=="17-Dec"&station_type=="Treatment"~61+10+6+7+3+35+6,
+                                               date=="17-Dec"&station_type=="Satellite"~30+10,
+                                               date=="18-Dec"&station_type=="Treatment"~47+10+6+7+1+38+7,
+                                               date=="18-Dec"&station_type=="Satellite"~25+11,
+                                               date=="19-Dec"&station_type=="Treatment"~33+7+6+4+10+4,
+                                               date=="19-Dec"&station_type=="Satellite"~12+4,
+                                               date=="20-Dec"&station_type=="Treatment"~24+8+3+3+1+20+2+1,
+                                               date=="20-Dec"&station_type=="Satellite"~16+5)) %>%
+  mutate(daily_proportion_by_station_type=count/daily_total_by_station_type)
+```
+
+```{r}
+fall_data_daily_summary
+```
+
+
+```{r}
+fall_data_daily_summary %>%
+  group_by(menu_condition,station_type,meal_selection) %>%
+  summarise(mean(daily_proportion_by_station_type))
+```
+
+
+```{r}
+fall_data_meal_selection_summary <- fall_data_daily_summary %>%
+  group_by(menu_condition,station_type,meal_selection) %>%
+  summarise(total_count=sum(count))
+fall_data_meal_selection_summary
+```
+
+```{r}
+fall_data_meal_selection_summary <- fall_data_meal_selection_summary %>% 
+  mutate(selection_prop=case_when(menu_condition=="Carbon Label"&station_type=="Satellite"~total_count/(1159+249),
+                                  menu_condition=="Carbon Label"&station_type=="Treatment"~total_count/(1620+167+318),
+                                  menu_condition=="Control"&station_type=="Satellite"~total_count/(951+207),
+                                  menu_condition=="Control"&station_type=="Treatment"~total_count/(1339+127+253),
+                                  menu_condition=="Default"&station_type=="Satellite"~total_count/(1101+240),
+                                  menu_condition=="Default"&station_type=="Treatment"~total_count/(1602+205+333),
+                                  menu_condition=="Multimodal"&station_type=="Satellite"~total_count/(1068+261),
+                                  menu_condition=="Multimodal"&station_type=="Treatment"~total_count/(2017+223+397)))
+fall_data_meal_selection_summary
+```
+
+```{r}
+fall_data_meal_selection_summary %>%
+  filter(station_type=="Satellite") %>%
+  filter(meal_selection=="Low")
+```
+
+```{r}
+fall_data_meal_selection_summary %>%
+  filter(station_type=="Treatment") %>%
+  filter(meal_selection=="Low")
+```
+
+```{r}
+fall_data_meal_selection_summary %>%
+  filter(station_type=="Satellite") %>%
+  filter(meal_selection=="High")
+```
+
+```{r}
+fall_data_meal_selection_summary %>%
+  filter(station_type=="Treatment") %>%
+  filter(meal_selection=="High")
+```
+
+```{r}
+fall_data_meal_selection_summary %>%
+  filter(station_type=="Treatment") %>%
+  filter(meal_selection=="Middle")
+```
+
+
 
 ## CLeaning and Analysis (Spring 2025)
 

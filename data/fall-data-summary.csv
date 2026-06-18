@@ -1,0 +1,409 @@
+"","date","item","count","sales_cat","semester","menu_condition","station","item_cat","station_type","meal_period","ind_carbon_cost","ind_water_cost","ind_dollar_cost","corr_carbon_cost","corr_water_cost","corr_dollar_cost"
+"1","16-Oct","Grilled Hamburger",91,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,353.190307889984,8088.02182793042,818.09
+"2","16-Oct","Grilled Chicken Breast Sandwich",14,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.22175243837104,972.589084057471,118.86
+"3","16-Oct","Seared Salmon Burger",9,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"4","16-Oct","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"5","16-Oct","Black Bean Burger",2,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"6","16-Oct","Bowl Ramen Chicken",83,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,31.5139309494054,8682.43431437533,787.67
+"7","16-Oct","Bowl Ramen Tofu",16,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.90415071966669,1471.81891678254,151.84
+"8","16-Oct","Bowl Ramen Chicken",5,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,1.89842957526538,523.038211709357,47.45
+"9","16-Oct","Create Your Pasta Bowl MEAT",149,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,93.2137290312343,7127.93930825801,1339.51
+"10","16-Oct","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
+"11","17-Oct","Grilled Hamburger",109,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,423.052127033058,9687.85032136721,979.91
+"12","17-Oct","Grilled Chicken Breast Sandwich",22,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.6341824031545,1528.35427494746,186.78
+"13","17-Oct","Trillium Grill Impossible Burger",12,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.53093305718934,279.043122217276,125.88
+"14","17-Oct","Seared Salmon Burger",9,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"15","17-Oct","Black Bean Burger",1,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"16","17-Oct","Bowl Ramen Chicken",68,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,25.8186422236092,7113.31967924726,645.32
+"17","17-Oct","Bowl Ramen Tofu",14,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.29113187970835,1287.84155218472,132.86
+"18","17-Oct","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,80.0762235973019,6123.33041246326,1150.72
+"19","17-Oct","Create Your Pasta Bowl VEG",33,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.62972036570628,348.221039806294,280.17
+"20","18-Oct","Grilled Hamburger",66,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,256.160003524604,5866.03780926822,593.34
+"21","18-Oct","Grilled Chicken Breast Sandwich",11,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.31709120157725,764.177137473728,93.39
+"22","18-Oct","Seared Salmon Burger",8,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"23","18-Oct","Trillium Grill Impossible Burger",2,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.421822176198224,46.5071870362126,20.98
+"24","18-Oct","Black Bean Burger",2,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"25","18-Oct","Bowl Ramen Chicken",44,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,16.7061802623354,4602.73626304235,417.56
+"26","18-Oct","Bowl Ramen Tofu",21,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.43669781956253,1931.76232827708,199.29
+"27","18-Oct","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,51.9244262388755,3970.59706433164,746.17
+"28","18-Oct","Create Your Pasta Bowl VEG",13,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.8238292349752,137.177985378237,110.37
+"29","21-Oct","Grilled Hamburger",105,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,407.527278334597,9332.33287838126,943.95
+"30","21-Oct","Grilled Chicken Breast Sandwich",18,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,5.42796742076277,1250.47167950246,152.82
+"31","21-Oct","Seared Salmon Burger",11,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.92718681309828,491.66944393887,93.39
+"32","21-Oct","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"33","21-Oct","Black Bean Burger",1,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"34","21-Oct","Bowl Ramen Chicken",71,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,26.9576999687685,7427.14260627288,673.79
+"35","21-Oct","Bowl Ramen Tofu",14,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.29113187970835,1287.84155218472,132.86
+"36","21-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,77.5738416098862,5931.97633707378,1114.76
+"37","21-Oct","Create Your Pasta Bowl VEG",37,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.1908985918525,390.429650691906,314.13
+"38","22-Oct","Grilled Hamburger",127,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,492.913946176131,11287.678814804,1141.73
+"39","22-Oct","Grilled Chicken Breast Sandwich",18,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,5.42796742076277,1250.47167950246,152.82
+"40","22-Oct","Seared Salmon Burger",10,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.47926073918026,446.97222176261,84.9
+"41","22-Oct","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"42","22-Oct","Black Bean Burger",2,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"43","22-Oct","Bowl Ramen Chicken",73,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,27.7170717988746,7636.35789095662,692.77
+"44","22-Oct","Bowl Ramen Tofu",10,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.06509419979168,919.886822989085,94.9
+"45","22-Oct","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,82.5786055847176,6314.68448785273,1186.68
+"46","22-Oct","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
+"47","23-Oct","Grilled Hamburger",100,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,388.121217461521,8887.93607464882,899
+"48","23-Oct","Grilled Chicken Breast Sandwich",20,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.03107491195863,1389.41297722496,169.8
+"49","23-Oct","Trillium Grill Impossible Burger",10,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.10911088099112,232.535935181063,104.9
+"50","23-Oct","Seared Salmon Burger",3,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.34377822175408,134.091666528783,25.47
+"51","23-Oct","Black Bean Burger",2,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"52","23-Oct","Bowl Ramen Chicken",83,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,31.5139309494054,8682.43431437533,787.67
+"53","23-Oct","Bowl Ramen Tofu",9,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.75858477981251,827.898140690177,85.41
+"54","23-Oct","Create Your Pasta Bowl MEAT",124,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,77.5738416098862,5931.97633707378,1114.76
+"55","23-Oct","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
+"56","24-Oct","Grilled Hamburger",107,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,415.289702683827,9510.09159987423,961.93
+"57","24-Oct","Grilled Chicken Breast Sandwich",14,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.22175243837104,972.589084057471,118.86
+"58","24-Oct","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"59","24-Oct","Seared Salmon Burger",10,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.47926073918026,446.97222176261,84.9
+"60","24-Oct","Black Bean Burger",5,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.554723561642208,274.944113900874,43.45
+"61","24-Oct","Bowl Ramen Chicken",92,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,34.9311041848831,9623.90309545218,873.08
+"62","24-Oct","Bowl Ramen Tofu",15,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.59764129968752,1379.83023448363,142.35
+"63","24-Oct","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,81.9530100878637,6266.84596900536,1177.69
+"64","24-Oct","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
+"65","25-Oct","Grilled Hamburger",71,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,275.56606439768,6310.43461300066,638.29
+"66","25-Oct","Grilled Chicken Breast Sandwich",8,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,2.41242996478345,555.765190889984,67.92
+"67","25-Oct","Seared Salmon Burger",8,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"68","25-Oct","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"69","25-Oct","Black Bean Burger",4,"Grill","Fall 2024","Control","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"70","25-Oct","Bowl Ramen Chicken",44,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,16.7061802623354,4602.73626304235,417.56
+"71","25-Oct","Bowl Ramen Tofu",9,"Asian","Fall 2024","Control","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.75858477981251,827.898140690177,85.41
+"72","25-Oct","Create Your Pasta Bowl MEAT",80,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,50.0476397483137,3827.08150778954,719.2
+"73","25-Oct","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Control","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.96412379151176,147.73013809964,118.86
+"74","28-Oct","Grilled Hamburger",96,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,372.59636876306,8532.41863166286,863.04
+"75","28-Oct","Grilled Chicken Breast Sandwich",15,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.52330618396897,1042.05973291872,127.35
+"76","28-Oct","Seared Salmon Burger",8,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"77","28-Oct","Trillium Grill Impossible Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.843644352396447,93.0143740724252,41.96
+"78","28-Oct","Black Bean Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"79","28-Oct","Bowl Ramen Chicken",65,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,24.67958447845,6799.49675222165,616.85
+"80","28-Oct","Bowl Ramen Tofu",11,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.37160361977085,1011.87550528799,104.39
+"81","28-Oct","Create Your Pasta Bowl MEAT",127,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,79.450628100448,6075.49189361589,1141.73
+"82","28-Oct","Create Your Pasta Bowl VEG",38,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,5.33119314838905,400.981803413308,322.62
+"83","29-Oct","Grilled Hamburger",102,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,395.883641810751,9065.69479614179,916.98
+"84","29-Oct","Grilled Chicken Breast Sandwich",22,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.6341824031545,1528.35427494746,186.78
+"85","29-Oct","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"86","29-Oct","Black Bean Burger",6,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.66566827397065,329.932936681049,52.14
+"87","29-Oct","Seared Salmon Burger",6,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"88","29-Oct","Bowl Ramen Chicken",67,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,25.4389563085562,7008.71203690539,635.83
+"89","29-Oct","Bowl Ramen Tofu",13,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.98462245972918,1195.85286988581,123.37
+"90","29-Oct","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,67.5643136602235,5166.56003551587,970.92
+"91","29-Oct","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.50736391341385,263.803818035071,212.25
+"92","30-Oct","Grilled Hamburger",95,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,368.715156588445,8443.53927091638,854.05
+"93","30-Oct","Grilled Chicken Breast Sandwich",19,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,5.7295211663607,1319.94232836371,161.31
+"94","30-Oct","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"95","30-Oct","Seared Salmon Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"96","30-Oct","Black Bean Burger",5,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.554723561642208,274.944113900874,43.45
+"97","30-Oct","Bowl Ramen Chicken",70,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,26.5780140537154,7322.534963931,664.3
+"98","30-Oct","Bowl Ramen Tofu",12,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.67811303975002,1103.8641875869,113.88
+"99","30-Oct","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,85.0809875721333,6506.03856324221,1222.64
+"100","30-Oct","Create Your Pasta Bowl VEG",23,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.22677480034074,242.699512592266,195.27
+"101","31-Oct","Grilled Hamburger",107,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,415.289702683827,9510.09159987423,961.93
+"102","31-Oct","Grilled Chicken Breast Sandwich",21,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.33262865755656,1458.88362608621,178.29
+"103","31-Oct","Trillium Grill Impossible Burger",13,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.74184414528845,302.296715735382,136.37
+"104","31-Oct","Seared Salmon Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"105","31-Oct","Black Bean Burger",1,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"106","31-Oct","Bowl Ramen Chicken",79,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,29.9951872891931,8264.00374500785,749.71
+"107","31-Oct","Bowl Ramen Tofu",10,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.06509419979168,919.886822989085,94.9
+"108","31-Oct","Create Your Pasta Bowl MEAT",120,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,75.0714596224706,5740.6222616843,1078.8
+"109","31-Oct","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
+"110","1-Nov","Grilled Hamburger",66,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,256.160003524604,5866.03780926822,593.34
+"111","1-Nov","Grilled Chicken Breast Sandwich",12,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.61864494717518,833.647786334976,101.88
+"112","1-Nov","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"113","1-Nov","Seared Salmon Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.7917042956721,178.788888705044,33.96
+"114","1-Nov","Black Bean Burger",3,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"115","1-Nov","Bowl Ramen Chicken",34,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,12.9093211118046,3556.65983962363,322.66
+"116","1-Nov","Bowl Ramen Tofu",13,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.98462245972918,1195.85286988581,123.37
+"117","1-Nov","Create Your Pasta Bowl MEAT",87,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,54.4268082262912,4161.95113972112,782.13
+"118","1-Nov","Create Your Pasta Bowl VEG",8,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.12235645229243,84.4172217712228,67.92
+"119","4-Nov","Grilled Hamburger",80,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,310.496973969217,7110.34885971905,719.2
+"120","4-Nov","Grilled Chicken Breast Sandwich",12,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.61864494717518,833.647786334976,101.88
+"121","4-Nov","Seared Salmon Burger",11,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.92718681309828,491.66944393887,93.39
+"122","4-Nov","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"123","4-Nov","Black Bean Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"124","4-Nov","Bowl Ramen Chicken",65,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,24.67958447845,6799.49675222165,616.85
+"125","4-Nov","Bowl Ramen Tofu",20,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.13018839958336,1839.77364597817,189.8
+"126","4-Nov","Create Your Pasta Bowl MEAT",118,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,73.8202686287627,5644.94522398956,1060.82
+"127","4-Nov","Create Your Pasta Bowl VEG",34,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.77001492224284,358.773192527697,288.66
+"128","5-Nov","Grilled Hamburger",107,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,415.289702683827,9510.09159987423,961.93
+"129","5-Nov","Trillium Grill Impossible Burger",14,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.95275523338757,325.550309253488,146.86
+"130","5-Nov","Grilled Chicken Breast Sandwich",11,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.31709120157725,764.177137473728,93.39
+"131","5-Nov","Seared Salmon Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.7917042956721,178.788888705044,33.96
+"132","5-Nov","Black Bean Burger",2,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"133","5-Nov","Bowl Ramen Chicken",73,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,27.7170717988746,7636.35789095662,692.77
+"134","5-Nov","Bowl Ramen Tofu",11,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.37160361977085,1011.87550528799,104.39
+"135","5-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,64.4363361759539,4927.36744127903,925.97
+"136","5-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
+"137","6-Nov","Grilled Hamburger",104,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,403.646066159982,9243.45351763477,934.96
+"138","6-Nov","Grilled Chicken Breast Sandwich",16,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.8248599295669,1111.53038177997,135.84
+"139","6-Nov","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"140","6-Nov","Seared Salmon Burger",6,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"141","6-Nov","Black Bean Burger",2,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"142","6-Nov","Bowl Ramen Chicken",90,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,34.1717323547769,9414.68781076844,854.1
+"143","6-Nov","Bowl Ramen Tofu",17,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.21066013964585,1563.80759908145,161.33
+"144","6-Nov","Create Your Pasta Bowl MEAT",136,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,85.0809875721333,6506.03856324221,1222.64
+"145","6-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.20883669609662,316.564581642086,254.7
+"146","7-Nov","Grilled Hamburger",98,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,380.35879311229,8710.17735315584,881.02
+"147","7-Nov","Grilled Chicken Breast Sandwich",19,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,5.7295211663607,1319.94232836371,161.31
+"148","7-Nov","Seared Salmon Burger",14,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,6.27096503485236,625.761110467653,118.86
+"149","7-Nov","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"150","7-Nov","Black Bean Burger",4,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"151","7-Nov","Bowl Ramen Chicken",82,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,31.1342450343523,8577.82667203346,778.18
+"152","7-Nov","Bowl Ramen Tofu",14,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.29113187970835,1287.84155218472,132.86
+"153","7-Nov","Bowl Ramen Chicken",1,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
+"154","7-Nov","Create Your Pasta Bowl MEAT",132,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,82.5786055847176,6314.68448785273,1186.68
+"155","7-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
+"156","8-Nov","Grilled Hamburger",80,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,310.496973969217,7110.34885971905,719.2
+"157","8-Nov","Grilled Chicken Breast Sandwich",12,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.61864494717518,833.647786334976,101.88
+"158","8-Nov","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"159","8-Nov","Seared Salmon Burger",7,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"160","8-Nov","Black Bean Burger",1,"Grill","Fall 2024","Carbon Label","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"161","8-Nov","Bowl Ramen Chicken",59,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,22.4014689881315,6171.85089817042,559.91
+"162","8-Nov","Bowl Ramen Tofu",14,"Asian","Fall 2024","Carbon Label","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,4.29113187970835,1287.84155218472,132.86
+"163","8-Nov","Create Your Pasta Bowl MEAT",92,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,57.5547857105608,4401.14373395797,827.08
+"164","8-Nov","Create Your Pasta Bowl VEG",16,"Italian","Fall 2024","Carbon Label","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.24471290458486,168.834443542446,135.84
+"165","11-Nov","Grilled Hamburger",81,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,314.378186143832,7199.22822046554,728.19
+"166","11-Nov","Grilled Chicken Breast Sandwich",16,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.8248599295669,1111.53038177997,135.84
+"167","11-Nov","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"168","11-Nov","Seared Salmon Burger",4,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.7917042956721,178.788888705044,33.96
+"169","11-Nov","Black Bean Burger",3,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"170","11-Nov","Bowl Ramen Chicken",69,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,26.1983281386623,7217.92732158913,654.81
+"171","11-Nov","Bowl Ramen Tofu",12,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.67811303975002,1103.8641875869,113.88
+"172","11-Nov","Create Your Pasta Bowl MEAT",119,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,74.4458641256166,5692.78374283693,1069.81
+"173","11-Nov","Create Your Pasta Bowl VEG",25,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.50736391341385,263.803818035071,212.25
+"174","12-Nov","Grilled Hamburger",89,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,345.427883540753,7910.26310643745,800.11
+"175","12-Nov","Grilled Chicken Breast Sandwich",27,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,8.14195113114415,1875.7075192537,229.23
+"176","12-Nov","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"177","12-Nov","Seared Salmon Burger",7,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"178","12-Nov","Black Bean Burger",3,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"179","12-Nov","Bowl Ramen Chicken",75,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,28.4764436289808,7845.57317564036,711.75
+"180","12-Nov","Bowl Ramen Tofu",19,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.82367897960419,1747.78496367926,180.31
+"181","12-Nov","Bowl Ramen Chicken",1,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
+"182","12-Nov","Create Your Pasta Bowl MEAT",112,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.0666956476392,5357.91411090535,1006.88
+"183","12-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
+"184","13-Nov","Grilled Hamburger",107,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,415.289702683827,9510.09159987423,961.93
+"185","13-Nov","Grilled Chicken Breast Sandwich",15,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.52330618396897,1042.05973291872,127.35
+"186","13-Nov","Seared Salmon Burger",9,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"187","13-Nov","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"188","13-Nov","Black Bean Burger",2,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"189","13-Nov","Bowl Ramen Chicken",74,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,28.0967577139277,7740.96553329849,702.26
+"190","13-Nov","Bowl Ramen Tofu",17,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.21066013964585,1563.80759908145,161.33
+"191","13-Nov","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.6922911444931,5405.75262975272,1015.87
+"192","13-Nov","Create Your Pasta Bowl VEG",26,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.6476584699504,274.355970756474,220.74
+"193","14-Nov","Grilled Hamburger",99,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,384.240005286906,8799.05671390233,890.01
+"194","14-Nov","Grilled Chicken Breast Sandwich",20,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.03107491195863,1389.41297722496,169.8
+"195","14-Nov","Trillium Grill Impossible Burger",15,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,3.16366632148668,348.803902771595,157.35
+"196","14-Nov","Seared Salmon Burger",8,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"197","14-Nov","Black Bean Burger",3,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"198","14-Nov","Bowl Ramen Chicken",78,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,29.61550137414,8159.39610266598,740.22
+"199","14-Nov","Bowl Ramen Tofu",21,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.43669781956253,1931.76232827708,199.29
+"200","14-Nov","Create Your Pasta Bowl MEAT",103,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,64.4363361759539,4927.36744127903,925.97
+"201","14-Nov","Create Your Pasta Bowl VEG",31,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.34913125263317,327.116734363488,263.19
+"202","15-Nov","Grilled Hamburger",72,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,279.447276572295,6399.31397374715,647.28
+"203","15-Nov","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"204","15-Nov","Grilled Chicken Breast Sandwich",7,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,2.11087621918552,486.294542028736,59.43
+"205","15-Nov","Black Bean Burger",4,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"206","15-Nov","Seared Salmon Burger",4,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.7917042956721,178.788888705044,33.96
+"207","15-Nov","Bowl Ramen Chicken",59,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,22.4014689881315,6171.85089817042,559.91
+"208","15-Nov","Bowl Ramen Tofu",17,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.21066013964585,1563.80759908145,161.33
+"209","15-Nov","Create Your Pasta Bowl MEAT",79,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,49.4220442514598,3779.24298894217,710.21
+"210","15-Nov","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
+"211","18-Nov","Grilled Hamburger",82,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,318.259398318447,7288.10758121203,737.18
+"212","18-Nov","Grilled Chicken Breast Sandwich",15,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.52330618396897,1042.05973291872,127.35
+"213","18-Nov","Trillium Grill Impossible Burger",12,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.53093305718934,279.043122217276,125.88
+"214","18-Nov","Seared Salmon Burger",14,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,6.27096503485236,625.761110467653,118.86
+"215","18-Nov","Black Bean Burger",7,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.776612986299092,384.921759461223,60.83
+"216","18-Nov","Bowl Ramen Chicken",66,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,25.0592703935031,6904.10439456352,626.34
+"217","18-Nov","Bowl Ramen Tofu",11,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.37160361977085,1011.87550528799,104.39
+"218","18-Nov","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,72.5690776350549,5549.26818629483,1042.84
+"219","18-Nov","Create Your Pasta Bowl VEG",30,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.20883669609662,316.564581642086,254.7
+"220","19-Nov","Grilled Hamburger",122,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,473.507885303055,10843.2820110716,1096.78
+"221","19-Nov","Grilled Chicken Breast Sandwich",26,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,7.84039738554622,1806.23687039245,220.74
+"222","19-Nov","Trillium Grill Impossible Burger",10,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,2.10911088099112,232.535935181063,104.9
+"223","19-Nov","Seared Salmon Burger",6,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"224","19-Nov","Black Bean Burger",3,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"225","19-Nov","Bowl Ramen Chicken",70,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,26.5780140537154,7322.534963931,664.3
+"226","19-Nov","Bowl Ramen Tofu",28,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,8.5822637594167,2575.68310436944,265.72
+"227","19-Nov","Create Your Pasta Bowl MEAT",115,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,71.943482138201,5501.42966744746,1033.85
+"228","19-Nov","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
+"229","20-Nov","Grilled Hamburger",92,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,357.071520064599,8176.90118867691,827.08
+"230","20-Nov","Seared Salmon Burger",14,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,6.27096503485236,625.761110467653,118.86
+"231","20-Nov","Grilled Chicken Breast Sandwich",13,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.92019869277311,903.118435196224,110.37
+"232","20-Nov","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"233","20-Nov","Black Bean Burger",3,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"234","20-Nov","Bowl Ramen Chicken",80,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,30.3748732042462,8368.61138734972,759.2
+"235","20-Nov","Bowl Ramen Tofu",19,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.82367897960419,1747.78496367926,180.31
+"236","20-Nov","Create Your Pasta Bowl MEAT",143,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,89.4601560501108,6840.9081951738,1285.57
+"237","20-Nov","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
+"238","21-Nov","Grilled Hamburger",109,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,423.052127033058,9687.85032136721,979.91
+"239","21-Nov","Grilled Chicken Breast Sandwich",13,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.92019869277311,903.118435196224,110.37
+"240","21-Nov","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"241","21-Nov","Seared Salmon Burger",9,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"242","21-Nov","Black Bean Burger",4,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"243","21-Nov","Bowl Ramen Chicken",77,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,29.2358154590869,8054.7884603241,730.73
+"244","21-Nov","Bowl Ramen Tofu",20,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.13018839958336,1839.77364597817,189.8
+"245","21-Nov","Create Your Pasta Bowl MEAT",131,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,81.9530100878637,6266.84596900536,1177.69
+"246","21-Nov","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
+"247","22-Nov","Grilled Hamburger",51,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,197.941820905376,4532.8473980709,458.49
+"248","22-Nov","Grilled Chicken Breast Sandwich",15,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.52330618396897,1042.05973291872,127.35
+"249","22-Nov","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"250","22-Nov","Black Bean Burger",1,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"251","22-Nov","Seared Salmon Burger",1,"Grill","Fall 2024","Default","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,0.447926073918026,44.697222176261,8.49
+"252","22-Nov","Bowl Ramen Chicken",49,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,18.6046098376008,5125.7744747517,465.01
+"253","22-Nov","Bowl Ramen Tofu",8,"Asian","Fall 2024","Default","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.45207535983334,735.909458391268,75.92
+"254","22-Nov","Create Your Pasta Bowl MEAT",70,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,43.7916847797745,3348.69631931584,629.3
+"255","22-Nov","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Default","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.26265100882899,94.9693744926257,76.41
+"256","25-Nov","Grilled Hamburger",67,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,260.041215699219,5954.91717001471,602.33
+"257","25-Nov","Grilled Chicken Breast Sandwich",14,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.22175243837104,972.589084057471,118.86
+"258","25-Nov","Seared Salmon Burger",9,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"259","25-Nov","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"260","25-Nov","Black Bean Burger",2,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"261","25-Nov","Bowl Ramen Chicken",56,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,21.2624112429723,5858.0279711448,531.44
+"262","25-Nov","Bowl Ramen Tofu",10,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.06509419979168,919.886822989085,94.9
+"263","25-Nov","Create Your Pasta Bowl MEAT",55,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,34.4077523269657,2631.11853660531,494.45
+"264","25-Nov","Create Your Pasta Bowl VEG",20,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.80589113073108,211.043054428057,169.8
+"265","26-Nov","Grilled Hamburger",52,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,201.823033079991,4621.72675881738,467.48
+"266","26-Nov","Seared Salmon Burger",12,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,5.37511288701631,536.366666115131,101.88
+"267","26-Nov","Trillium Grill Impossible Burger",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.843644352396447,93.0143740724252,41.96
+"268","26-Nov","Grilled Chicken Breast Sandwich",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,1.20621498239173,277.882595444992,33.96
+"269","26-Nov","Black Bean Burger",3,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"270","26-Nov","Bowl Ramen Chicken",45,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,17.0858661773885,4707.34390538422,427.05
+"271","26-Nov","Bowl Ramen Tofu",6,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,1.83905651987501,551.932093793451,56.94
+"272","26-Nov","Create Your Pasta Bowl MEAT",29,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,18.1422694087637,1387.31704657371,260.71
+"273","26-Nov","Create Your Pasta Bowl VEG",6,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.841767339219324,63.3129163284171,50.94
+"274","2-Dec","Grilled Hamburger",97,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,376.477580937675,8621.29799240935,872.03
+"275","2-Dec","Seared Salmon Burger",9,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.03133466526223,402.274999586349,76.41
+"276","2-Dec","Black Bean Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.66566827397065,329.932936681049,52.14
+"277","2-Dec","Grilled Chicken Breast Sandwich",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,1.80932247358759,416.823893167488,50.94
+"278","2-Dec","Bowl Ramen Chicken",89,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,33.7920464397238,9310.08016842656,844.61
+"279","2-Dec","Bowl Ramen Tofu",19,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.82367897960419,1747.78496367926,180.31
+"280","2-Dec","Bowl Ramen Chicken",5,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,1.89842957526538,523.038211709357,47.45
+"281","2-Dec","Create Your Pasta Bowl MEAT",128,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,80.0762235973019,6123.33041246326,1150.72
+"282","2-Dec","Create Your Pasta Bowl VEG",24,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.3670693568773,253.251665313668,203.76
+"283","3-Dec","Grilled Hamburger",97,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,376.477580937675,8621.29799240935,872.03
+"284","3-Dec","Grilled Chicken Breast Sandwich",14,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.22175243837104,972.589084057471,118.86
+"285","3-Dec","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"286","3-Dec","Seared Salmon Burger",7,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"287","3-Dec","Black Bean Burger",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"288","3-Dec","Bowl Ramen Chicken",76,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,28.8561295440338,7950.18081798223,721.24
+"289","3-Dec","Bowl Ramen Tofu",21,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.43669781956253,1931.76232827708,199.29
+"290","3-Dec","Create Your Pasta Bowl MEAT",116,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,72.5690776350549,5549.26818629483,1042.84
+"291","3-Dec","Create Your Pasta Bowl VEG",28,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.92824758302351,295.46027619928,237.72
+"292","4-Dec","Grilled Hamburger",117,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,454.101824429979,10398.8852073391,1051.83
+"293","4-Dec","Grilled Chicken Breast Sandwich",16,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,4.8248599295669,1111.53038177997,135.84
+"294","4-Dec","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"295","4-Dec","Seared Salmon Burger",5,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.23963036959013,223.486110881305,42.45
+"296","4-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"297","4-Dec","Bowl Ramen Chicken",84,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,31.8936168644585,8787.04195671721,797.16
+"298","4-Dec","Bowl Ramen Tofu",13,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,3.98462245972918,1195.85286988581,123.37
+"299","4-Dec","Create Your Pasta Bowl MEAT",142,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,88.8345605532568,6793.06967632643,1276.58
+"300","4-Dec","Create Your Pasta Bowl VEG",27,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,3.78795302648696,284.908123477877,229.23
+"301","5-Dec","Grilled Hamburger",118,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,457.983036604594,10487.7645680856,1060.82
+"302","5-Dec","Grilled Chicken Breast Sandwich",22,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,6.6341824031545,1528.35427494746,186.78
+"303","5-Dec","Trillium Grill Impossible Burger",16,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,3.37457740958579,372.057496289701,167.84
+"304","5-Dec","Seared Salmon Burger",11,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,4.92718681309828,491.66944393887,93.39
+"305","5-Dec","Black Bean Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.66566827397065,329.932936681049,52.14
+"306","5-Dec","Bowl Ramen Chicken",70,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,26.5780140537154,7322.534963931,664.3
+"307","5-Dec","Bowl Ramen Tofu",22,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.74320723954169,2023.75101057599,208.78
+"308","5-Dec","Create Your Pasta Bowl MEAT",113,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,70.6922911444931,5405.75262975272,1015.87
+"309","5-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
+"310","6-Dec","Grilled Hamburger",76,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,294.972125270756,6754.8314167331,683.24
+"311","6-Dec","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"312","6-Dec","Grilled Chicken Breast Sandwich",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,2.41242996478345,555.765190889984,67.92
+"313","6-Dec","Seared Salmon Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"314","6-Dec","Black Bean Burger",5,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.554723561642208,274.944113900874,43.45
+"315","6-Dec","Bowl Ramen Chicken",58,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,22.0217830730785,6067.24325582855,550.42
+"316","6-Dec","Bowl Ramen Tofu",18,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,5.51716955962502,1655.79628138035,170.82
+"317","6-Dec","Create Your Pasta Bowl MEAT",83,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,51.9244262388755,3970.59706433164,746.17
+"318","6-Dec","Create Your Pasta Bowl VEG",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.68353467843865,126.625832656834,101.88
+"319","9-Dec","Grilled Hamburger",96,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,372.59636876306,8532.41863166286,863.04
+"320","9-Dec","Seared Salmon Burger",12,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,5.37511288701631,536.366666115131,101.88
+"321","9-Dec","Trillium Grill Impossible Burger",9,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.89819979289201,209.282341662957,94.41
+"322","9-Dec","Grilled Chicken Breast Sandwich",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,2.41242996478345,555.765190889984,67.92
+"323","9-Dec","Black Bean Burger",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.443778849313767,219.955291120699,34.76
+"324","9-Dec","Bowl Ramen Chicken",57,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,21.6420971580254,5962.63561348668,540.93
+"325","9-Dec","Bowl Ramen Tofu",20,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,6.13018839958336,1839.77364597817,189.8
+"326","9-Dec","Create Your Pasta Bowl MEAT",108,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,67.5643136602235,5166.56003551587,970.92
+"327","9-Dec","Create Your Pasta Bowl VEG",32,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,4.48942580916973,337.668887084891,271.68
+"328","10-Dec","Grilled Hamburger",52,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,201.823033079991,4621.72675881738,467.48
+"329","10-Dec","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"330","10-Dec","Grilled Chicken Breast Sandwich",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,1.80932247358759,416.823893167488,50.94
+"331","10-Dec","Seared Salmon Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"332","10-Dec","Bowl Ramen Chicken",37,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,14.0483788569638,3870.48276664925,351.13
+"333","10-Dec","Bowl Ramen Tofu",4,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,1.22603767991667,367.954729195634,37.96
+"334","10-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.1517973584265,2152.73334813161,404.55
+"335","10-Dec","Create Your Pasta Bowl VEG",9,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.26265100882899,94.9693744926257,76.41
+"336","11-Dec","Grilled Hamburger",47,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,182.416972206915,4177.32995508494,422.53
+"337","11-Dec","Grilled Chicken Breast Sandwich",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,2.41242996478345,555.765190889984,67.92
+"338","11-Dec","Trillium Grill Impossible Burger",5,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.05455544049556,116.267967590532,52.45
+"339","11-Dec","Seared Salmon Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"340","11-Dec","Black Bean Burger",2,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.221889424656883,109.97764556035,17.38
+"341","11-Dec","Bowl Ramen Chicken",42,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,15.9468084322292,4393.5209783586,398.58
+"342","11-Dec","Bowl Ramen Tofu",7,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.14556593985418,643.92077609236,66.43
+"343","11-Dec","Create Your Pasta Bowl MEAT",41,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,25.6494153710108,1961.37927274214,368.59
+"344","11-Dec","Create Your Pasta Bowl VEG",15,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,2.10441834804831,158.282290821043,127.35
+"345","12-Dec","Grilled Hamburger",69,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,267.803640048449,6132.67589150768,620.31
+"346","12-Dec","Grilled Chicken Breast Sandwich",13,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.92019869277311,903.118435196224,110.37
+"347","12-Dec","Trillium Grill Impossible Burger",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.68728870479289,186.02874814485,83.92
+"348","12-Dec","Seared Salmon Burger",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"349","12-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"350","12-Dec","Bowl Ramen Chicken",46,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,17.4655520924415,4811.95154772609,436.54
+"351","12-Dec","Bowl Ramen Tofu",9,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.75858477981251,827.898140690177,85.41
+"352","12-Dec","Create Your Pasta Bowl MEAT",34,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,21.2702468930333,1626.50964081055,305.66
+"353","12-Dec","Create Your Pasta Bowl VEG",14,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.96412379151176,147.73013809964,118.86
+"354","13-Dec","Grilled Hamburger",49,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,190.179396556145,4355.08867657792,440.51
+"355","13-Dec","Grilled Chicken Breast Sandwich",13,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.92019869277311,903.118435196224,110.37
+"356","13-Dec","Seared Salmon Burger",2,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,0.895852147836051,89.3944443525219,16.98
+"357","13-Dec","Trillium Grill Impossible Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.210911088099112,23.2535935181063,10.49
+"358","13-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"359","13-Dec","Bowl Ramen Chicken",50,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,18.9842957526538,5230.38211709358,474.5
+"360","13-Dec","Bowl Ramen Tofu",7,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.14556593985418,643.92077609236,66.43
+"361","13-Dec","Create Your Pasta Bowl MEAT",45,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.1517973584265,2152.73334813161,404.55
+"362","13-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.70147278268277,52.7607636070143,42.45
+"363","16-Dec","Grilled Hamburger",55,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,213.466669603836,4888.36484105685,494.45
+"364","16-Dec","Seared Salmon Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,2.68755644350815,268.183333057566,50.94
+"365","16-Dec","Trillium Grill Impossible Burger",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.843644352396447,93.0143740724252,41.96
+"366","16-Dec","Grilled Chicken Breast Sandwich",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,1.20621498239173,277.882595444992,33.96
+"367","16-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"368","16-Dec","Bowl Ramen Chicken",40,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,15.1874366021231,4184.30569367486,379.6
+"369","16-Dec","Bowl Ramen Tofu",7,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.14556593985418,643.92077609236,66.43
+"370","16-Dec","Create Your Pasta Bowl MEAT",46,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,28.7773928552804,2200.57186697898,413.54
+"371","16-Dec","Create Your Pasta Bowl VEG",7,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.982061895755878,73.86506904982,59.43
+"372","17-Dec","Grilled Hamburger",61,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,236.753942651528,5421.64100553578,548.39
+"373","17-Dec","Grilled Chicken Breast Sandwich",10,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.01553745597932,694.70648861248,84.9
+"374","17-Dec","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"375","17-Dec","Seared Salmon Burger",7,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"376","17-Dec","Black Bean Burger",3,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.332834136985325,164.966468340524,26.07
+"377","17-Dec","Bowl Ramen Chicken",35,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,13.2890070268577,3661.2674819655,332.15
+"378","17-Dec","Bowl Ramen Tofu",6,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,1.83905651987501,551.932093793451,56.94
+"379","17-Dec","Create Your Pasta Bowl MEAT",30,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,18.7678649056176,1435.15556542108,269.7
+"380","17-Dec","Create Your Pasta Bowl VEG",10,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.40294556536554,105.521527214029,84.9
+"381","18-Dec","Grilled Hamburger",47,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,182.416972206915,4177.32995508494,422.53
+"382","18-Dec","Grilled Chicken Breast Sandwich",10,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,3.01553745597932,694.70648861248,84.9
+"383","18-Dec","Trillium Grill Impossible Burger",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.26546652859467,139.521561108638,62.94
+"384","18-Dec","Seared Salmon Burger",7,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.13548251742618,312.880555233827,59.43
+"385","18-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"386","18-Dec","Bowl Ramen Chicken",38,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,14.4280647720169,3975.09040899112,360.62
+"387","18-Dec","Bowl Ramen Tofu",7,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,2.14556593985418,643.92077609236,66.43
+"388","18-Dec","Bowl Ramen Chicken",1,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
+"389","18-Dec","Create Your Pasta Bowl MEAT",25,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,15.639887421348,1195.96297118423,224.75
+"390","18-Dec","Create Your Pasta Bowl VEG",11,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,1.54324012190209,116.073679935431,93.39
+"391","19-Dec","Grilled Hamburger",33,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,128.080001762302,2933.01890463411,296.67
+"392","19-Dec","Trillium Grill Impossible Burger",7,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,1.47637761669378,162.775154626744,73.43
+"393","19-Dec","Grilled Chicken Breast Sandwich",6,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,1.80932247358759,416.823893167488,50.94
+"394","19-Dec","Seared Salmon Burger",4,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,1.7917042956721,178.788888705044,33.96
+"395","19-Dec","Bowl Ramen Chicken",10,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,3.79685915053077,1046.07642341871,94.9
+"396","19-Dec","Bowl Ramen Tofu",4,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,1.22603767991667,367.954729195634,37.96
+"397","19-Dec","Create Your Pasta Bowl MEAT",12,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,7.50714596224706,574.06222616843,107.88
+"398","19-Dec","Create Your Pasta Bowl VEG",4,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.561178226146216,42.2086108856114,33.96
+"399","20-Dec","Grilled Hamburger",24,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",3.88121217461521,88.8793607464882,8.99,93.149092190765,2133.10465791572,215.76
+"400","20-Dec","Seared Salmon Burger",8,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.447926073918026,44.697222176261,8.49,3.5834085913442,357.577777410088,67.92
+"401","20-Dec","Trillium Grill Impossible Burger",3,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.210911088099112,23.2535935181063,10.49,0.632733264297335,69.7607805543189,31.47
+"402","20-Dec","Grilled Chicken Breast Sandwich",3,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.301553745597932,69.470648861248,8.49,0.904661236793795,208.411946583744,25.47
+"403","20-Dec","Black Bean Burger",1,"Grill","Fall 2024","Multimodal","Grill","Main","Treatment","Lunch",0.110944712328442,54.9888227801748,8.69,0.110944712328442,54.9888227801748,8.69
+"404","20-Dec","Bowl Ramen Chicken",20,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,7.59371830106154,2092.15284683743,189.8
+"405","20-Dec","Bowl Ramen Tofu",2,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.306509419979168,91.9886822989085,9.49,0.613018839958336,183.977364597817,18.98
+"406","20-Dec","Bowl Ramen Chicken",1,"Asian","Fall 2024","Multimodal","Ramen","Main","Treatment","Lunch",0.379685915053077,104.607642341871,9.49,0.379685915053077,104.607642341871,9.49
+"407","20-Dec","Create Your Pasta Bowl MEAT",16,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.625595496853921,47.8385188473692,8.99,10.0095279496627,765.416301557907,143.84
+"408","20-Dec","Create Your Pasta Bowl VEG",5,"Italian","Fall 2024","Multimodal","Pasta","Main","Satellite","Lunch",0.140294556536554,10.5521527214029,8.49,0.70147278268277,52.7607636070143,42.45
